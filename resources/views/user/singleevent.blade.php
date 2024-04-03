@@ -6,8 +6,7 @@
 	<!-- Meta Tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="Webestica.com">
-	<meta name="description" content="Bootstrap based Creative Agency Portfolio Theme">
+    <meta name="author" content="aduvieevents.com">
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="assets/images/main.png">

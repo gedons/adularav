@@ -7,9 +7,10 @@ use App\Http\Controllers\UserFrontController;
 //     return view('welcome');
 // });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', [UserFrontController::class, 'index'])->name('user.index');
 Route::get('/about-us', [UserFrontController::class, 'about'])->name('user.about');
