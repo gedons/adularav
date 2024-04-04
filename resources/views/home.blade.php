@@ -185,8 +185,8 @@
 											</div>
 											<div class="col-7 d-flex align-items-center">
 												<div class="numbers">
-													<p class="card-category">Number</p>
-													<h4 class="card-title">150GB</h4>
+													<p class="card-category">Events</p>
+													<h4 class="card-title">{{ $totalEvents }}</h4>
 												</div>
 											</div>
 										</div>
@@ -199,20 +199,20 @@
 										<div class="row">
 											<div class="col-5">
 												<div class="icon-big text-center">
-													<i class="la la-bar-chart text-success"></i>
+													<i class="la la-jsfiddle text-success"></i>
 												</div>
 											</div>
 											<div class="col-7 d-flex align-items-center">
 												<div class="numbers">
-													<p class="card-category">Revenue</p>
-													<h4 class="card-title">$ 1,345</h4>
+													<p class="card-category">Blog Posts</p>
+													<h4 class="card-title">{{ $totalBlogPosts }}</h4>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3">
+							{{-- <div class="col-md-3">
 								<div class="card card-stats">
 									<div class="card-body">
 										<div class="row">
@@ -249,50 +249,115 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> --}}
 						</div>
 					 
 						<div class="row">
-							 
 							<div class="col-md-12">
 								<div class="card">
-									<div class="card-header ">
-										<h4 class="card-title">Events</h4>								
+									<div class="card-header">										
+										<a href="{{route('eventCreate')}}" class="btn btn-link float-right">Create New Event </a>		
 									</div>
 									<div class="card-body">
-										<table class="table table-head-bg-primary table-striped table-hover">
-											<thead>
-												<tr>
-													<th scope="col">#</th>
-													<th scope="col">First</th>
-													<th scope="col">Last</th>
-													<th scope="col">Handle</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>1</td>
-													<td>Mark</td>
-													<td>Otto</td>
-													<td>@mdo</td>
-												</tr>
-												<tr>
-													<td>2</td>
-													<td>Jacob</td>
-													<td>Thornton</td>
-													<td>@fat</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td colspan="2">Larry the Bird</td>
-													<td>@twitter</td>
-												</tr>
-											</tbody>
-										</table>
+										<div class="table-responsive">
+											<table class="table table-head-bg-primary table-striped table-hover">
+												<thead>
+													<tr>
+														<th scope="col">#</th>
+														<th scope="col">Image</th>
+														<th scope="col">Event Name</th>
+														<th scope="col">Date</th>
+														<th scope="col">User Email</th>
+														<th scope="col">Status</th>
+														<th scope="col">Actions</th>
+													</tr>
+												</thead>
+												<tbody>
+													@foreach($events as $event)
+														<tr>
+															<td>{{ $loop->index + 1 }}</td>
+															<td><img src="{{ $event->url }}" alt="Event Image" style="max-width: 100px; height: 60px;"></td>
+															<td>{{ $event->name }}</td>
+															<td>{{ $event->date }}</td>
+															<td>{{ $event->email }}</td>
+															<td>{{ $event->status }}</td>																														
+															<td class="td-actions text-right">
+																<div class="form-button-action">
+																	<a href="{{ route('events.edit', $event->id) }}" data-toggle="tooltip" title="Edit Task" class="btn btn-link <btn-simple-primary">
+																		<i class="la la-edit"></i>
+																	</a>
+																	<form action="{{ route('events.destroy', $event->id) }}" method="POST" style="display: inline;">
+																		@csrf
+																		@method('DELETE')
+																		<button type="submit" data-toggle="tooltip" title="Remove" onclick="return confirm('Are you sure you want to delete this event?')" class="btn btn-link btn-simple-danger">
+																			<i class="la la-times"></i>
+																		</button>
+																	</form>
+																</div>
+															</td>
+														</tr>
+													@endforeach
+													
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>
 							</div>
 							 
+						</div>
+
+						<div class="row">							
+							<div class="col-md-12">
+								<div class="card">
+									<div class="card-header">										
+										<a href="{{route('blogCreate')}}" class="btn btn-link float-right">New Blog Post </a>		
+									</div>
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class="table table-head-bg-primary table-striped table-hover">
+												<thead>
+													<tr>
+														<th scope="col">#</th>
+														<th scope="col">Image</th>
+														<th scope="col">Post Title</th>
+														<th scope="col">Content</th>
+														<th scope="col">Created</th>															
+														<th scope="col">Actions</th>
+													</tr>
+												</thead>
+												<tbody>
+													@foreach($blogs as $blog)
+														<tr>
+															<td>{{ $loop->index + 1 }}</td>
+															<td><img src="{{ $blog->url }}" alt="Blog Image" style="max-width: 100px; height: 60px;"></td>
+															<td>{{ $blog->title }}</td>
+															<td>{{ $blog->content }}</td>
+															<td>{{ $blog->created_at->diffForHumans(); }}</td>																																													
+															<td  class="td-actions text-right">
+																<div class="form-button-action">
+																	<a href="{{ route('blog.edit', $blog->id) }}" data-toggle="tooltip" title="Edit Post" class="btn btn-link <btn-simple-primary">
+																		<i class="la la-edit"></i>
+																	</a>
+																	<form action="{{ route('blog.destroy', $blog->id) }}" method="POST" style="display: inline;">
+																		@csrf
+																		@method('DELETE')
+																		<button type="submit" data-toggle="tooltip" title="Remove" onclick="return confirm('Are you sure you want to delete this post?')" class="btn btn-link btn-simple-danger">
+																			<i class="la la-times"></i>
+																		</button>
+																	</form>
+																</div>
+															</td>
+														</tr>
+													@endforeach
+													
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							
 						</div>
 					</div>
 				</div>

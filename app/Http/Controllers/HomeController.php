@@ -25,7 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //get all 
+        $events = Event::all();
+        $blogs = BlogPost::all();
+
+        //get count
+        $totalEvents = Event::count();
+        $totalBlogPosts = BlogPost::count();
+
+        return view('home',  compact('events', 'blogs', 'totalEvents', 'totalBlogPosts'));
     }
 
     public function events()
