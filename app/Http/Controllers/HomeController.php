@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
+use App\Models\BlogPost;
 
 class HomeController extends Controller
 {
@@ -40,7 +41,8 @@ class HomeController extends Controller
 
     public function blogs()
     {
-        return view('blogs');
+        $blogs = BlogPost::all();
+        return view('blogs', compact('blogs'));
     }
 
     public function sliders()
@@ -61,5 +63,10 @@ class HomeController extends Controller
     public function eventCreate()
     {
         return view('eventCreate');
+    }
+
+    public function blogCreate()
+    {
+        return view('blogCreate');
     }
 }

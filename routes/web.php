@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserFrontController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\BlogController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -14,6 +15,7 @@ Auth::routes(['register' => false]);
 Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin/events', [App\Http\Controllers\HomeController::class, 'events'])->name('events');
 Route::get('/admin/events/create', [App\Http\Controllers\HomeController::class, 'eventCreate'])->name('eventCreate');
+Route::get('/admin/blogs/create', [App\Http\Controllers\HomeController::class, 'blogCreate'])->name('blogCreate');
 Route::get('/admin/bookings', [App\Http\Controllers\HomeController::class, 'bookings'])->name('bookings');
 Route::get('/admin/blogs', [App\Http\Controllers\HomeController::class, 'blogs'])->name('blogs');
 Route::get('/admin/sliders', [App\Http\Controllers\HomeController::class, 'sliders'])->name('sliders');
@@ -27,6 +29,14 @@ Route::get('/events/{event}', [EventController::class, 'show'])->name('events.sh
 Route::get('/events/{event}/edit', [EventController::class, 'edit'])->name('events.edit');
 Route::put('/events/{event}', [EventController::class, 'update'])->name('events.update');
 Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('events.destroy');
+
+//blog routes
+
+Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+Route::get('/blogs/{blog}', [BlogController::class, 'show'])->name('blogs.show');
+Route::get('/blogs/{blog}/edit', [BlogController::class, 'edit'])->name('blog.edit');
+Route::put('/blog/{blog}', [BlogController::class, 'update'])->name('blog.update');
+Route::delete('/blog/{blog}', [BlogController::class, 'destroy'])->name('blog.destroy');
 // end admin route
 
 

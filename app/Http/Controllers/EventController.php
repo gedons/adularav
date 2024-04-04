@@ -71,35 +71,62 @@ class EventController extends Controller
         return view('eventEdit', compact('event'));
     }
 
-    public function update(Request $request, Event $event)
+    public function update(Request $request, $id)
     {
-        $request->validate([
+        // Validation rules
+        $rules = [
             'name' => 'required|string|max:255',
             'date' => 'required|date',
-            'status' => 'required|string|in:pending,booked,completed',
             'email' => 'required|email',
+            'status' => 'required|string|in:pending,booked,completed',
             'description' => 'required|string',
-            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', 
-        ]);
-    
-        // Update event details
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Optional image update
+        ];
+
+        // Validate request data
+        $validator = Validator::make($request->all(), $rules);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+
+        // Fetch the event to update
+        $event = Event::findOrFail($id);
+
+        // Handle image update (if image is provided in the request)
+        if ($request->hasFile('image')) {
+            try {
+                // Delete existing image (optional, depending on your logic)
+                if ($event->url) {
+                    $existingImagePath = public_path(str_replace('/images/', '', $event->url));
+                    if (File::exists($existingImagePath)) {
+                        File::delete($existingImagePath);
+                    }
+                }
+
+                $imageName = time() . '.' . $request->image->extension();
+                $request->image->move(public_path('images'), $imageName);
+                $event->url = '/images/' . $imageName;
+            } catch (Exception $e) {
+                return response()->json(['message' => 'Failed to upload image: '  . $e->getMessage()], 500);
+            }
+        }
+
+        // Update event data
         $event->name = $request->name;
         $event->date = $request->date;
         $event->status = $request->status;
         $event->email = $request->email;
         $event->description = $request->description;
-    
-        // Handle image upload
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->storeAs('public/images');
 
-            $event->url = $imagePath;
-        }
-    
+        // Save changes to the database
         $event->save();
-    
-        return redirect()->route('events')->with('success', 'Event updated successfully.');
+
+        $request->session()->flash('success', 'Event updated successfully!');
+
+        return Redirect::route('events', $event->id);  
     }
+
 
     public function destroy($id)
     {
