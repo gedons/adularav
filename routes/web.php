@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserFrontController;
+use App\Http\Controllers\EventController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -18,6 +19,14 @@ Route::get('/admin/blogs', [App\Http\Controllers\HomeController::class, 'blogs']
 Route::get('/admin/sliders', [App\Http\Controllers\HomeController::class, 'sliders'])->name('sliders');
 Route::get('/admin/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');
 Route::get('/admin/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+
+
+//event routes
+Route::post('/events', [EventController::class, 'store'])->name('events.store');
+Route::get('/events/{event}', [EventController::class, 'show'])->name('events.show');
+Route::get('/events/{event}/edit', [EventController::class, 'edit'])->name('events.edit');
+Route::put('/events/{event}', [EventController::class, 'update'])->name('events.update');
+Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('events.destroy');
 // end admin route
 
 

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('url');
             $table->string('name');
             $table->date('date');
-            $table->enum('status', ['pending', 'booked', 'completed'])->default('pending');
+            $table->enum('status', ['pending', 'booked', 'completed'])->default('booked');
             $table->string('email');
             $table->text('description');
             $table->timestamps();

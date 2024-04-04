@@ -171,14 +171,15 @@
 							<div class="col-md-12">
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">Add New Event</div>
+										<div class="card-title">Editing <b>{{$event->name}}</b></div>
 									</div>
-                                    <form method="POST" action="{{ route('events.store') }}" enctype="multipart/form-data">
+                                    <form method="POST" action="{{ route('events.update', $event->id) }}" enctype="multipart/form-data">
                                         @csrf
+                                        @method('PUT')
                                         <div class="card-body">
                                             <div class="form-group">
                                                 <label for="name">Event Name</label>
-                                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" id="name" required autocomplete="name" autofocus placeholder="Enter Event Name">
+                                                <input type="text" value="{{ $event->name }}" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" id="name" required autocomplete="name" autofocus placeholder="Enter Event Name">
                                                 <small id="nameHelp" class="form-text text-muted">The name of the event.</small>
                                                 @error('name')
                                                 <span class="invalid-feedback" role="alert">
@@ -188,7 +189,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="name">Event Date</label>
-                                                <input type="date" class="form-control @error('date') is-invalid @enderror" name="date" value="{{ old('date') }}" id="date">
+                                                <input type="date" value="{{$event->date}}" class="form-control @error('date') is-invalid @enderror" name="date" value="{{ old('date') }}" id="date">
                                                 <small id="nameHelp" class="form-text text-muted">The date of the event.</small>
                                                 @error('date')
                                                 <span class="invalid-feedback" role="alert">
@@ -198,7 +199,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="email">Email Address</label>
-                                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" id="email" placeholder="Enter Email">
+                                                <input type="email" value="{{ $event->email }}"  class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" id="email" placeholder="Enter Email">
                                                 <small id="emailHelp" class="form-text text-muted">Email of the client. An email confirmation will be sent.</small>
                                                 @error('email')
                                                 <span class="invalid-feedback" role="alert">
@@ -206,10 +207,20 @@
                                                 </span>
                                             @enderror
                                             </div>
-                                    
+                                            <div class="form-group">
+                                                <label for="status">Status:</label>
+                                                <select name="status" id="status" class="form-control">
+                                                    <option value="pending" {{ $event->status === 'pending' ? 'selected' : '' }}>Pending</option>
+                                                    <option value="booked" {{ $event->status === 'booked' ? 'selected' : '' }}>Booked</option>
+                                                    <option value="completed" {{ $event->status === 'completed' ? 'selected' : '' }}>Completed</option>
+                                                </select>
+                                            </div>
                                                 <div class="form-group">
                                                     <label for="exampleFormControlFile1">Event Image</label>
                                                     <input type="file" class="form-control-file @error('image') is-invalid @enderror" name="image" id="exampleFormControlFile1">
+                                                    @if ($event->url)
+                                                        <img src="{{ $event->url }}" alt="Event Image" class="mt-2" style="max-width: 200px;">
+                                                    @endif
                                                     @error('image')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
@@ -219,7 +230,7 @@
                                                 <div class="form-group">
                                                     <label for="comment">Description</label>
                                                     <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="comment" rows="5">
-                                                        {{ old('description') }}
+                                                        {{ $event->description }}
                                                     </textarea>
                                                     @error('description')
                                                     <span class="invalid-feedback" role="alert">
@@ -229,7 +240,7 @@
                                                 </div>										 
                                             </div>
                                             <div class="card-action">
-                                                <button type="submit" class="btn btn-primary">Create Event</button>											 
+                                                <button type="submit" class="btn btn-primary">Update Event</button>											 
                                             </div>
                                         </div>
                                     </form>

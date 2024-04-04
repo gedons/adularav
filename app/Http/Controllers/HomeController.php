@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Event;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,8 @@ class HomeController extends Controller
 
     public function events()
     {
-        return view('events');
+        $events = Event::all();
+        return view('events', compact('events'));
     }
 
     public function bookings()

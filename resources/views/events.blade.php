@@ -163,94 +163,93 @@
 					</ul>
 				</div>
 			</div>
-            <div class="main-panel">
-				<div class="content">
-					<div class="container-fluid">
-						<h4 class="page-title">Events</h4>
-						<div class="row">
-							 
-							<div class="col-md-12">
-								<div class="card">
-									<div class="card-header">										
-										<a href="{{route('eventCreate')}}" class="btn btn-link float-right">Create New Event </a>		
+			 
+				<div class="main-panel h-100">
+					<div class="content">
+						<div class="container-fluid">
+							<h4 class="page-title">Events</h4>
+							@if (session('success'))
+									<div class="alert alert-success" role="alert">
+										{{ session('success') }}
 									</div>
-									<div class="card-body">
-										<table class="table table-head-bg-primary table-striped table-hover">
-											<thead>
-												<tr>
-													<th scope="col">#</th>
-													<th scope="col">First</th>
-													<th scope="col">Last</th>
-													<th scope="col">Handle</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>1</td>
-													<td>Mark</td>
-													<td>Otto</td>
-													<td>@mdo</td>
-												</tr>
-												<tr>
-													<td>2</td>
-													<td>Jacob</td>
-													<td>Thornton</td>
-													<td>@fat</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td colspan="2">Larry the Bird</td>
-													<td>@twitter</td>
-												</tr>
-											</tbody>
-										</table>
+							@endif
+							<div class="row">							
+								<div class="col-md-12">
+									<div class="card">
+										<div class="card-header">										
+											<a href="{{route('eventCreate')}}" class="btn btn-link float-right">Create New Event </a>		
+										</div>
+										<div class="card-body">
+											<div class="table-responsive">
+												<table class="table table-head-bg-primary table-striped table-hover">
+													<thead>
+														<tr>
+															<th scope="col">#</th>
+															<th scope="col">Image</th>
+															<th scope="col">Event Name</th>
+															<th scope="col">Date</th>
+															<th scope="col">User Email</th>
+															<th scope="col">Status</th>
+															<th scope="col">Actions</th>
+														</tr>
+													</thead>
+													<tbody>
+														@foreach($events as $event)
+															<tr>
+																<td>{{ $loop->index + 1 }}</td>
+																<td><img src="{{ $event->url }}" alt="Event Image" style="max-width: 100px; height: 60px;"></td>
+																<td>{{ $event->name }}</td>
+																<td>{{ $event->date }}</td>
+																<td>{{ $event->email }}</td>
+																<td>{{ $event->status }}</td>																														
+																<td class="td-actions text-right">
+																	<div class="form-button-action">
+																		<a href="{{ route('events.edit', $event->id) }}" data-toggle="tooltip" title="Edit Task" class="btn btn-link <btn-simple-primary">
+																			<i class="la la-edit"></i>
+																		</a>
+																		<form action="{{ route('events.destroy', $event->id) }}" method="POST" style="display: inline;">
+																			@csrf
+																			@method('DELETE')
+																			<button type="submit" data-toggle="tooltip" title="Remove" onclick="return confirm('Are you sure you want to delete this event?')" class="btn btn-link btn-simple-danger">
+																				<i class="la la-times"></i>
+																			</button>
+																		</form>
+																	</div>
+																</td>
+															</tr>
+														@endforeach
+														
+													</tbody>
+												</table>
+											</div>
+										</div>
 									</div>
 								</div>
+								
 							</div>
-							 
 						</div>
 					</div>
+					<footer class="footer">
+						<div class="container-fluid">
+							<nav class="pull-left">
+								<ul class="nav">
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.aduvieevents.com">
+											Aduvie Events Center
+										</a>
+									</li>								
+								</ul>
+							</nav>
+							<div class="copyright ml-auto">
+								2024, made with <i class="la la-heart heart text-danger"></i> by <a href="https://www.gedonidev.vercel.app">NTech</a>
+							</div>				
+						</div>
+					</footer>
 				</div>
-				<footer class="footer">
-					<div class="container-fluid">
-						<nav class="pull-left">
-							<ul class="nav">
-								<li class="nav-item">
-									<a class="nav-link" href="https://www.aduvieevents.com">
-										Aduvie Events Center
-									</a>
-								</li>								
-							</ul>
-						</nav>
-						<div class="copyright ml-auto">
-							2024, made with <i class="la la-heart heart text-danger"></i> by <a href="https://www.gedonidev.vercel.app">NTech</a>
-						</div>				
-					</div>
-				</footer>
-			</div>
+		
 		</div>
 	</div>
-	<!-- Modal -->
-	<div class="modal fade" id="modalUpdate" tabindex="-1" role="dialog" aria-labelledby="modalUpdatePro" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header bg-primary">
-					<h6 class="modal-title"><i class="la la-frown-o"></i> Under Development</h6>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body text-center">									
-					<p>Currently the pro version of the <b>Ready Dashboard</b> Bootstrap is in progress development</p>
-					<p>
-						<b>We'll let you know when it's done</b></p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
+
 </body>
 <script src="../adminAssets/assets/js/core/jquery.3.2.1.min.js"></script>
 <script src="../adminAssets/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
@@ -265,4 +264,11 @@
 <script src="../adminAssets/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 <script src="../adminAssets/assets/js/ready.min.js"></script>
 <script src="../adminAssets/assets/js/demo.js"></script>
+<script>
+	$(document).ready(function() {
+	  setTimeout(function() {
+		$(".alert").alert("close");
+	  }, 3000); 
+	});
+	</script>
 </html>
