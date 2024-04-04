@@ -9,7 +9,7 @@
     <meta name="author" content="aduvieevents.com">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" href="assets/images/main.png">
 
     <!-- Google Font -->
     <link

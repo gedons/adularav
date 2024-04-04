@@ -95,13 +95,13 @@
 						</div>
 					</div>
 					<ul class="nav">
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a href="{{ route('home') }}">
 								<i class="la la-dashboard"></i>
 								<p>Dashboard</p>								 
 							</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item active">
 							<a href="{{ route('events') }}">
 								<i class="la la-table"></i>
 								<p>Events</p>								
@@ -163,101 +163,16 @@
 					</ul>
 				</div>
 			</div>
-			<div class="main-panel">
+            <div class="main-panel">
 				<div class="content">
 					<div class="container-fluid">
-                        @if (session('status'))
-                                <div class="alert alert-success" role="alert">
-                                    {{ session('status') }}
-                                </div>
-                        @endif  
-						<h4 class="page-title">Dashboard</h4>
-						<div class="row">
-						 
-							<div class="col-md-3">
-								<div class="card card-stats">
-									<div class="card-body ">
-										<div class="row">
-											<div class="col-5">
-												<div class="icon-big text-center icon-warning">
-													<i class="la la-pie-chart text-warning"></i>
-												</div>
-											</div>
-											<div class="col-7 d-flex align-items-center">
-												<div class="numbers">
-													<p class="card-category">Number</p>
-													<h4 class="card-title">150GB</h4>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="card card-stats">
-									<div class="card-body ">
-										<div class="row">
-											<div class="col-5">
-												<div class="icon-big text-center">
-													<i class="la la-bar-chart text-success"></i>
-												</div>
-											</div>
-											<div class="col-7 d-flex align-items-center">
-												<div class="numbers">
-													<p class="card-category">Revenue</p>
-													<h4 class="card-title">$ 1,345</h4>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="card card-stats">
-									<div class="card-body">
-										<div class="row">
-											<div class="col-5">
-												<div class="icon-big text-center">
-													<i class="la la-times-circle-o text-danger"></i>
-												</div>
-											</div>
-											<div class="col-7 d-flex align-items-center">
-												<div class="numbers">
-													<p class="card-category">Errors</p>
-													<h4 class="card-title">23</h4>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="card card-stats">
-									<div class="card-body">
-										<div class="row">
-											<div class="col-5">
-												<div class="icon-big text-center">
-													<i class="la la-heart-o text-primary"></i>
-												</div>
-											</div>
-											<div class="col-7 d-flex align-items-center">
-												<div class="numbers">
-													<p class="card-category">Followers</p>
-													<h4 class="card-title">+45K</h4>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					 
+						<h4 class="page-title">Events</h4>
 						<div class="row">
 							 
 							<div class="col-md-12">
 								<div class="card">
-									<div class="card-header ">
-										<h4 class="card-title">Events</h4>								
+									<div class="card-header">										
+										<a href="{{route('eventCreate')}}" class="btn btn-link float-right">Create New Event </a>		
 									</div>
 									<div class="card-body">
 										<table class="table table-head-bg-primary table-striped table-hover">
