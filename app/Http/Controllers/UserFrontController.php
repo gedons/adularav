@@ -36,8 +36,12 @@ class UserFrontController extends Controller
         return view('user.singleevent');
     }
 
-    public function testimonial()
+    public function gallery()
     {
-        return view('user.testimonial');
+        return view('user.gallery');
+    }
+    public function blog()
+    {
+        return view('user.blog');
     }
 }

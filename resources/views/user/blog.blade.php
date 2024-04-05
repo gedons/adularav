@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>About - Aduvie Events Center</title>
+	<title>Blog Posts - Aduvie Events Center</title>
 	<!-- Meta Tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -54,12 +54,12 @@ Header START -->
 			<div class="collapse navbar-collapse " id="navbarCollapse">
 				<ul class="navbar-nav navbar-nav-scroll navbar-nav-scroll mx-auto">
 					<li class="nav-item">	<a class="nav-link" href="{{ route('user.index') }}">Home</a></li>
-					<li class="nav-item">	<a class="nav-link active" href="{{ route('user.about') }}">About Us</a></li>
+					<li class="nav-item">	<a class="nav-link" href="{{ route('user.about') }}">About Us</a></li>
 					<li class="nav-item"> <a class="nav-link"
 						href="{{ route('user.gallery') }}">Gallery</a></li>
-					<li class="nav-item"> <a class="nav-link"
+					<li class="nav-item"> <a class="nav-link active"
 							href="{{ route('user.blog') }}">Blog Posts</a></li>
-					<li class="nav-item">	<a class="nav-link" href="{{ route('user.event') }}">Event Calendar</a></li>
+					<li class="nav-item">	<a class="nav-link " href="{{ route('user.event') }}">Event Calendar</a></li>
 					<li class="nav-item">	<a class="nav-link" href="{{ route('user.contact') }}">Contact Us</a></li>
 				</ul>
 			</div>
@@ -156,12 +156,12 @@ Inner intro START -->
 		<div class="row d-flex justify-content-lg-between">
 			<!-- Inner intro title -->
 			<div class="col-lg-7">
-				<h1 class="display-5 text-white-stroke">About <span class="text-white-stroke text-primary-shadow"> Us</span></h1>
+				<h1 class="display-5 text-white-stroke">Blog Posts </h1>
 				<h5 class="text-white">
 					<nav class="d-flex">
 					<ol class="breadcrumb breadcrumb-dark">
 						<li class="breadcrumb-item text-white"><a href="index.html">Aduvie Events Center</a></li>
-						<li class="breadcrumb-item text-white">About Us</li>
+						<li class="breadcrumb-item text-white">Blog Posts</li>
 					</ol>
 				</nav>
 				</h5>
@@ -173,286 +173,223 @@ Inner intro START -->
 Inner intro END -->
 
 <!-- =======================
-About START -->
-<section class="mb-md-n8 mb-n6">
+EVENT 1 START -->
+<section class="pt-0">
 	<div class="container">
-		<div class="row justify-content-lg-between">
-			<!-- About Title -->
-			<div class="col-md-4 col-xl-5">				
-				<h2 class="display-6">Aduvie Events Center</h2>
-				<p class="lead">Welcome to <b>Aduvie Events Center,
-					</b>your premier destination for exceptional events in the vibrant city of Abuja, Nigeria. 
-						Nestled in the heart of Nigeria's capital, Aduvie Events Center is renowned for its unparalleled service,
-						exquisite amenities, and stunning event spaces that set the stage for unforgettable occasions.</p>
-					
-					<div class="d-flex me-auto">
-						<h6 class="mt-2 me-4 text-primary">Follow Us:</h6>
-						<div class="list-group-inline list-unstyled text-primary-hover">
-							<a href="https://www.instagram.com/aduvieeventscentre?igsh=MXQxa214Y3phNmt4dQ=="
-								class="list-group-item text-white bg-transparent">
-							<svg width="19px" height="19px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>instagram [#223387167]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="#223387"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792" id="instagram-[#223387167]"> </path> </g> </g> </g> </g></svg>
-							</a>
-							<a href="https://x.com/aduvieschool?s=20"
-								class="list-group-item text-white bg-transparent">
-								<svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7828 3.91825C20.1313 3.83565 20.3743 3.75444 20.5734 3.66915C20.8524 3.54961 21.0837 3.40641 21.4492 3.16524C21.7563 2.96255 22.1499 2.9449 22.4739 3.11928C22.7979 3.29366 23 3.6319 23 3.99986C23 5.08079 22.8653 5.96673 22.5535 6.7464C22.2911 7.40221 21.9225 7.93487 21.4816 8.41968C21.2954 11.7828 20.3219 14.4239 18.8336 16.4248C17.291 18.4987 15.2386 19.8268 13.0751 20.5706C10.9179 21.3121 8.63863 21.4778 6.5967 21.2267C4.56816 20.9773 2.69304 20.3057 1.38605 19.2892C1.02813 19.0108 0.902313 18.5264 1.07951 18.109C1.25671 17.6916 1.69256 17.4457 2.14144 17.5099C3.42741 17.6936 4.6653 17.4012 5.6832 16.9832C5.48282 16.8742 5.29389 16.7562 5.11828 16.6346C4.19075 15.9925 3.4424 15.1208 3.10557 14.4471C2.96618 14.1684 2.96474 13.8405 3.10168 13.5606C3.17232 13.4161 3.27562 13.293 3.40104 13.1991C2.04677 12.0814 1.49999 10.5355 1.49999 9.49986C1.49999 9.19192 1.64187 8.90115 1.88459 8.71165C1.98665 8.63197 2.10175 8.57392 2.22308 8.53896C2.12174 8.24222 2.0431 7.94241 1.98316 7.65216C1.71739 6.3653 1.74098 4.91284 2.02985 3.75733C2.1287 3.36191 2.45764 3.06606 2.86129 3.00952C3.26493 2.95299 3.6625 3.14709 3.86618 3.50014C4.94369 5.36782 6.93116 6.50943 8.78086 7.18568C9.6505 7.50362 10.4559 7.70622 11.0596 7.83078C11.1899 6.61019 11.5307 5.6036 12.0538 4.80411C12.7439 3.74932 13.7064 3.12525 14.74 2.84698C16.5227 2.36708 18.5008 2.91382 19.7828 3.91825ZM10.7484 9.80845C10.0633 9.67087 9.12171 9.43976 8.09412 9.06408C6.7369 8.56789 5.16088 7.79418 3.84072 6.59571C3.86435 6.81625 3.89789 7.03492 3.94183 7.24766C4.16308 8.31899 4.5742 8.91899 4.94721 9.10549C5.40342 9.3336 5.61484 9.8685 5.43787 10.3469C5.19827 10.9946 4.56809 11.0477 3.99551 10.9046C4.45603 11.595 5.28377 12.2834 6.66439 12.5135C7.14057 12.5929 7.49208 13.0011 7.49986 13.4838C7.50765 13.9665 7.16949 14.3858 6.69611 14.4805L5.82565 14.6546C5.95881 14.7703 6.103 14.8838 6.2567 14.9902C6.95362 15.4727 7.65336 15.6808 8.25746 15.5298C8.70991 15.4167 9.18047 15.6313 9.39163 16.0472C9.60278 16.463 9.49846 16.9696 9.14018 17.2681C8.49626 17.8041 7.74425 18.2342 6.99057 18.5911C6.63675 18.7587 6.24134 18.9241 5.8119 19.0697C6.14218 19.1402 6.48586 19.198 6.84078 19.2417C8.61136 19.4594 10.5821 19.3126 12.4249 18.6792C14.2614 18.0479 15.9589 16.9385 17.2289 15.2312C18.497 13.5262 19.382 11.1667 19.5007 7.96291C19.51 7.71067 19.6144 7.47129 19.7929 7.29281C20.2425 6.84316 20.6141 6.32777 20.7969 5.7143C20.477 5.81403 20.1168 5.90035 19.6878 5.98237C19.3623 6.04459 19.0272 5.94156 18.7929 5.70727C18.0284 4.94274 16.5164 4.43998 15.2599 4.77822C14.6686 4.93741 14.1311 5.28203 13.7274 5.89906C13.3153 6.52904 13 7.51045 13 8.9999C13 9.28288 12.8801 9.5526 12.6701 9.74221C12.1721 10.1917 11.334 9.92603 10.7484 9.80845Z" fill="#223387"></path> </g></svg>
-							</a>
-							<a href="https://www.facebook.com/aduvieschool?mibextid=ZbWKwL"
-								class="list-group-item text-white bg-transparent">
-								<svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#223387"></path> </g></svg>
-							</a>
-						</div>
-					</div>
+		<!-- Title -->
+		<div class="row d-flex justify-content-between align-items-center mt-5">
+			<div class="col-sm-8 mb-3">
+				<h2 class="display-5 mb-0 mb-sm-4 text-dark-stroke">Upcoming Events</h2>
 			</div>
-
-			<!-- Our services -->
-			<div class="col-md-8 col-xl-6 mt-5 mt-md-0">
-				<div class="row">
-					<!-- Item -->
-					<div class="col-sm-6 mb-4">
-						<i class="display-7 text-primary bi bi-sliders"></i>
-						<h4 class="my-3">Our Services</h4>
-						<p>Hall Decoration,
-
-							Disc Jockeying,
-							
-							Drinks Sales and Cooling,
-
-							Swimming Pool,
-
-							Vendor Coordination,
-
-							Furniture and Decor Rental,
-							
-							Energy supply and use.</p>
-					</div>
-					<!-- Item -->
-					<div class="col-sm-6 mb-4">
-						<i class="display-7 text-primary bi bi-droplet-half"></i>
-						<h4 class="my-3">Amenities</h4>
-						<p> Changing Rooms,
-							
-							Disabled Access,
-							
-							Wi-Fi Internet Access,
-
-							Serveries for Caterers & Vendors,
-
-							Cold Room & Storage Room,
-							
-							Hygienic Restrooms.
-							
-							</p>
-					</div>
-					 
-				</div>
-			</div>
-		</div> <!-- Row END -->
-	</div>
-</section>
-
-<section>
-	<div class="container">
-		<div class="row d-flex justify-content-lg-between align-items-center">
-
-			<!-- About left -->
-			<div class="col-lg-5">
-				<!-- Since text -->
-				<div class="mb-n6 ms-3 position-relative z-index-9">
-					<h5>Making minds since</h5>
-					<h2 class="display-4 text-dark-stroke text-primary-shadow">2008</h2>
-				</div>
-				<!-- Image -->
-				<div class="reveal-item bg-light rounded" data-aos="reveal-item">
-					<div class="reveal-animation reveal-end reveal-primary aos" data-aos="reveal-end"></div>
-					<img class="w-100" style="height:400px" src="assets/images/IMG20211022180926.jpg" alt="Portfolio image">
-				</div>
-				<!-- Label -->
-				<span class="font-alt fw-normal display-8 bg-primary text-white float-end d-inline-block mt-n5 me-lg-n5 px-3 rotate-10">Every moment is an occasion to remember!</span>
-			</div>
-
-			<!-- About Right -->
-			<div class="col-lg-6 mt-5 mt-lg-0 mt-xl-5">
-				<!-- Title -->	
-				<span class="font-alt fw-normal display-8 d-block mb-3">At Aduvie Event Center,</span>			
-				<h3 class="mb-5">0ur commitment to professionalism, attention to detail, and dedication to customer satisfaction makes every event a resounding success. </h3>
-				<!-- Features -->
-				<div class="row">
-					<div class="col-sm-6 mb-4">
-						<i class="display-6 text-primary bi bi-bullseye"></i>
-						<h5 class="my-3">1000 Banquet Seat</h5>						
-					</div>
-					<div class="col-sm-6 mb-4">
-						<i class="display-6 text-primary bi bi-bookmark-star"></i>
-						<h5 class="my-3">200
-							Car Parking</h5>						
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6 mb-4">
-						<i class="display-6 text-primary bi bi-bullseye"></i>
-						<h5 class="my-3">865
-							Theatre Seat</h5>						
-					</div>
-					<div class="col-sm-6 mb-4">
-						<i class="display-6 text-primary bi bi-archive"></i>
-						<h5 class="my-3">3
-							Dressing Room</h5>						
-					</div>
-				</div>
+			<div class="col-sm-4 mb-4 text-start text-sm-end">
+				<a href="#" class="btn btn-line text-dark mt-3">Swipe</a>
 			</div>
 		</div>
-	</div>
-</section>
-<!-- =======================
-About END -->
-
-<!-- =======================
-Venue START -->
-<section class="pt-5">
-	<div class="container">
-			<!-- Title -->
-			<div class="row d-flex justify-content-between align-items-center">
-				<div class="col-sm-8 mb-3">
-					<h2 class="display-6 mb-0 mb-sm-4 text-dark-stroke">Our Venue</h2>
-				</div>
-			</div>
-		<!-- Portfolio items -->
 		<div class="row">
-			<div class="col-lg-12">
-				<div class="tiny-slider dots-bordered">
-					<div class="tiny-slider-inner" data-arrow="true" data-dots="true" data-items-xl="3"
-						data-items-lg="3" data-items-md="3" data-items-sm="2" data-items-xs="1">
+			<!-- Card item START -->
+			<div class="col-sm-6 col-lg-4 mb-30">
+				<div class="card card-metro">
+					<!-- Card Image -->
+					<div class="card-image">
+						<img src="assets/images/blog/01.jpg" alt="card image">
+					</div>
+					<!-- Card Overlay -->
+					<div class="card-img-overlay d-flex flex-column">
+						<div class="mt-auto card-text">
+							<!-- Featured label-->
+							<span class="featured-label" title="Featured Blog"><i class="fas fa-star"></i></span>
 
-						<!-- Card item START -->
-						<div class="item">
-							<a href="assets/images/IMG-20240319-WA0021.jpg" class="card card-metro"
-								data-glightbox data-gallery="gallery-1">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img src="assets/images/IMG-20240319-WA0025.jpg" alt="card image">
+							<div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
+								<!-- Card Categories -->
+								<div class="text-primary-hover">
+									<a href="#" class="text-white me-2">Business</a>
 								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-								 
-									<div class="mt-auto card-text">
-										<h5 class="text-white">The missing link in e-Mobility</h5>
-										<p class="small text-white mb-0 text-truncate">What hasn’t been a great
-											fit in e-mobility until now.</p>
-									</div>
-								</div>
-							</a>
+								<!-- Divider -->
+								<i class="fas fa-circle smaller me-2 fw-bold"></i>
+								<!-- Min of read -->
+								<span>5 min read</span>
+							</div>
+
+							<h4><a href="#" class="text-white text-primary-hover">Reliable sources to learn about folio</a></h4>
+							<p class="text-white text-truncate">He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire difficulty gay assistance joy</p>
+							<a href="#" class="btn btn-line text-white mb-0">Read Article</a>
 						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="assets/images/IMG-20240319-WA0024.jpg" data-glightbox data-gallery="gallery-1" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img src="assets/images/IMG-20240319-WA0024.jpg"  alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-								   
-									<div class="mt-auto card-text">
-										<h5 class="text-white">Trumer brewed happiness</h5>
-										<p class="small text-white mb-0 text-truncate">Private brewery for
-											excellent beer</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="assets/images/IMG-20240319-WA0031.jpg"  data-glightbox data-gallery="gallery-1" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img src="assets/images/IMG-20240319-WA0031.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-									
-									<div class="mt-auto card-text">
-										<h5 class="text-white">Enticing like the ocean</h5>
-										<p class="small text-white mb-0 text-truncate">Viktoria Louise is the
-											blossoming fashion label of Vicky Heiler</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="assets/images/IMG-20240319-WA0033.jpg" data-glightbox data-gallery="gallery-1" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img src="assets/images/IMG-20240319-WA0033.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-									 
-									<div class="mt-auto card-text">
-										<h5 class="text-white">Pure design branding</h5>
-										<p class="small text-white mb-0 text-truncate">Art collector and
-											architect Axel</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="assets/images/IMG-20240320-WA0020.jpg" data-glightbox data-gallery="gallery-1" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img src="assets/images/IMG-20240320-WA0020.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-								   
-									<div class="mt-auto card-text">
-										<h5 class="text-white">The missing link</h5>
-										<p class="small text-white mb-0 text-truncate">Small things that make
-											difference</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="assets/images/IMG-20240320-WA0016.jpg" data-glightbox data-gallery="gallery-1" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img src="assets/images/IMG-20240320-WA0016.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-									 
-									<div class="mt-auto card-text">
-										<h5 class="text-white">Life's hard in the mountains</h5>
-										<p class="small text-white mb-0 text-truncate">Ten wineries with strong
-											personalities, individual stories and multi-faceted wines</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
 					</div>
 				</div>
 			</div>
+			<!-- Card item END -->
+			<!-- Card item START -->
+			<div class="col-sm-6 col-lg-4 mb-30">
+				<div class="card card-metro">
+					<!-- Card Image -->
+					<div class="card-image">
+						<img src="assets/images/blog/02.jpg" alt="card image">
+					</div>
+					<!-- Card Overlay -->
+					<div class="card-img-overlay d-flex flex-column">
+						<div class="mt-auto card-text">
+							<div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
+								<!-- Card Categories -->
+								<div class="text-primary-hover">
+									<a href="#" class="text-white me-2">Start-up</a>
+								</div>
+								<!-- Divider -->
+								<i class="fas fa-circle smaller me-2 fw-bold"></i>
+								<!-- Min of read -->
+								<span>3 min read</span>
+							</div>
+							<h4><a href="#" class="text-white text-primary-hover">Never underestimate the influence of folio</a></h4>
+							<p class="text-white text-truncate">See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered Jennings</p>
+							<a href="#" class="btn btn-line text-white mb-0">Read Article</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item END -->
+			<!-- Card item START -->
+			<div class="col-sm-6 col-lg-4 mb-30">
+				<div class="card card-metro">
+					<!-- Card Image -->
+					<div class="card-image">
+						<img src="assets/images/blog/03.jpg" alt="card image">
+					</div>
+					<!-- Card Overlay -->
+					<div class="card-img-overlay d-flex flex-column">
+						<div class="mt-auto card-text">
+							<div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
+								<!-- Card Categories -->
+								<div class="text-primary-hover">
+									<a href="#" class="text-white me-2">Story</a>
+								</div>
+								<!-- Divider -->
+								<i class="fas fa-circle smaller me-2 fw-bold"></i>
+								<!-- Min of read -->
+								<span>6 min read</span>
+							</div>
+							<h4><a href="#" class="text-white text-primary-hover">Skills that you can learn from business</a></h4>
+							<p class="text-white text-truncate">Rooms oh fully taken by worse do. Points afraid but may end law lasted. Was out laughter raptures</p>
+							<a href="#" class="btn btn-line text-white mb-0">Read Article</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item END -->
+
 		</div><!-- row END -->
 	</div>
 </section>
 <!-- =======================
-Venue END -->
+EVENT 1 END -->
+
+<!-- =======================
+EVENT 2 START -->
+<section class="pt-1">
+	<div class="container">
+		<div class="row">
+			<!-- Card item START -->
+			<div class="col-sm-6 col-lg-4 mb-30">
+				<div class="card card-metro">
+					<!-- Card Image -->
+					<div class="card-image">
+						<img src="assets/images/blog/01.jpg" alt="card image">
+					</div>
+					<!-- Card Overlay -->
+					<div class="card-img-overlay d-flex flex-column">
+						<div class="mt-auto card-text">
+							<!-- Featured label-->
+							<span class="featured-label" title="Featured Blog"><i class="fas fa-star"></i></span>
+
+							<div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
+								<!-- Card Categories -->
+								<div class="text-primary-hover">
+									<a href="#" class="text-white me-2">Business</a>
+								</div>
+								<!-- Divider -->
+								<i class="fas fa-circle smaller me-2 fw-bold"></i>
+								<!-- Min of read -->
+								<span>5 min read</span>
+							</div>
+
+							<h4><a href="#" class="text-white text-primary-hover">Reliable sources to learn about folio</a></h4>
+							<p class="text-white text-truncate">He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire difficulty gay assistance joy</p>
+							<a href="#" class="btn btn-line text-white mb-0">Read Article</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item END -->
+			<!-- Card item START -->
+			<div class="col-sm-6 col-lg-4 mb-30">
+				<div class="card card-metro">
+					<!-- Card Image -->
+					<div class="card-image">
+						<img src="assets/images/blog/02.jpg" alt="card image">
+					</div>
+					<!-- Card Overlay -->
+					<div class="card-img-overlay d-flex flex-column">
+						<div class="mt-auto card-text">
+							<div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
+								<!-- Card Categories -->
+								<div class="text-primary-hover">
+									<a href="#" class="text-white me-2">Start-up</a>
+								</div>
+								<!-- Divider -->
+								<i class="fas fa-circle smaller me-2 fw-bold"></i>
+								<!-- Min of read -->
+								<span>3 min read</span>
+							</div>
+							<h4><a href="#" class="text-white text-primary-hover">Never underestimate the influence of folio</a></h4>
+							<p class="text-white text-truncate">See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered Jennings</p>
+							<a href="#" class="btn btn-line text-white mb-0">Read Article</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item END -->
+			<!-- Card item START -->
+			<div class="col-sm-6 col-lg-4 mb-30">
+				<div class="card card-metro">
+					<!-- Card Image -->
+					<div class="card-image">
+						<img src="assets/images/blog/03.jpg" alt="card image">
+					</div>
+					<!-- Card Overlay -->
+					<div class="card-img-overlay d-flex flex-column">
+						<div class="mt-auto card-text">
+							<div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
+								<!-- Card Categories -->
+								<div class="text-primary-hover">
+									<a href="#" class="text-white me-2">Story</a>
+								</div>
+								<!-- Divider -->
+								<i class="fas fa-circle smaller me-2 fw-bold"></i>
+								<!-- Min of read -->
+								<span>6 min read</span>
+							</div>
+							<h4><a href="#" class="text-white text-primary-hover">Skills that you can learn from business</a></h4>
+							<p class="text-white text-truncate">Rooms oh fully taken by worse do. Points afraid but may end law lasted. Was out laughter raptures</p>
+							<a href="#" class="btn btn-line text-white mb-0">Read Article</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item END -->
+
+		</div><!-- row END -->
+
+		<!-- Load more START -->
+		<div class="row">
+			<div class="col-12">
+				<div class="text-center mt-5">
+					<button type="button" class="btn btn-light">Load more! <i class="fas fa-sync ms-3 text-primary"></i></button>
+				</div>
+			</div>
+		</div>
+		<!-- Load more END -->
+	</div>
+</section>
+<!-- =======================
+EVENT 2 END -->
 
 </main>
 <!-- **************** MAIN CONTENT END **************** -->

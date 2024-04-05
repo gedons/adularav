@@ -43,9 +43,10 @@ Route::delete('/blog/{blog}', [BlogController::class, 'destroy'])->name('blog.de
 // start user routes
 Route::get('/', [UserFrontController::class, 'index'])->name('user.index');
 Route::get('/about-us', [UserFrontController::class, 'about'])->name('user.about');
-Route::get('/contact', [UserFrontController::class, 'contact'])->name('user.contact');
-Route::get('/event', [UserFrontController::class, 'event'])->name('user.event');
+Route::get('/contact-us', [UserFrontController::class, 'contact'])->name('user.contact');
+Route::get('/events', [UserFrontController::class, 'event'])->name('user.event');
+Route::get('/blog-post', [UserFrontController::class, 'blog'])->name('user.blog');
 Route::get('/single-blog', [UserFrontController::class, 'singleBlog'])->name('user.singleBlog');
 Route::get('/single-event', [UserFrontController::class, 'singleEvent'])->name('user.singleEvent');
-Route::get('/testimonial', [UserFrontController::class, 'testimonial'])->name('user.testimonial');
+Route::get('/gallery', [UserFrontController::class, 'gallery'])->name('user.gallery');
 // end user routes

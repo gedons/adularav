@@ -53,7 +53,10 @@ Header START -->
 				<ul class="navbar-nav navbar-nav-scroll navbar-nav-scroll mx-auto">
 					<li class="nav-item">	<a class="nav-link" href="{{ route('user.index') }}">Home</a></li>
 					<li class="nav-item">	<a class="nav-link" href="{{ route('user.about') }}">About Us</a></li>
-					<li class="nav-item">	<a class="nav-link" href="{{ route('user.testimonial') }}">Testimonial</a></li>
+					<li class="nav-item"> <a class="nav-link"
+						href="{{ route('user.gallery') }}">Gallery</a></li>
+					<li class="nav-item"> <a class="nav-link"
+							href="{{ route('user.blog') }}">Blog Posts</a></li>
 					<li class="nav-item">	<a class="nav-link" href="{{ route('user.event') }}">Event Calendar</a></li>
 					<li class="nav-item">	<a class="nav-link active" href="{{ route('user.contact') }}">Contact Us</a></li>
 				</ul>
@@ -80,7 +83,7 @@ Header END -->
 
 <!-- =======================
 Inner intro START -->
-<section class="bg-parallax bg-dark-overlay-4 py-5 py-md-8" style="background:url(assets/images/bg/09.jpg) no-repeat center center; background-size:cover;">
+<section class="bg-parallax bg-dark-overlay-4 py-5 py-md-8" style="background:url(assets/images/pagebanner.jpg) no-repeat center center; background-size:cover;">
 	<!-- Shape Decoration START -->
 	<figure class="position-absolute end-0 bottom-0 mb-n6 me-8 d-none d-lg-block">
 		<svg width="180" height="188" viewBox="0 0 379 395" xmlns="http://www.w3.org/2000/svg">
@@ -313,8 +316,10 @@ Footer START -->
                             </li>
                             <li class="nav-item"> <a class="nav-link active"
                                     href="{{ route('user.about') }}">About Us</a></li>
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="{{ route('user.testimonial') }}">Testimonial</a></li>
+									<li class="nav-item"> <a class="nav-link"
+										href="{{ route('user.gallery') }}">Gallery</a></li>
+									<li class="nav-item"> <a class="nav-link"
+											href="{{ route('user.blog') }}">Blog Posts</a></li>
                             <li class="nav-item"> <a class="nav-link" href="{{ route('user.event') }}">Event
                                     Calendar</a></li>
                             <li class="nav-item"> <a class="nav-link" href="{{ route('user.contact') }}">Contact

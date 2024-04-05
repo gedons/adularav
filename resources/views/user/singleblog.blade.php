@@ -53,9 +53,12 @@ Header START -->
 			<!-- Main Menu START -->
 			<div class="collapse navbar-collapse " id="navbarCollapse">
 				<ul class="navbar-nav navbar-nav-scroll navbar-nav-scroll mx-auto">
-					<li class="nav-item">	<a class="nav-link active" href="{{ route('user.index') }}">Home</a></li>
+					<li class="nav-item">	<a class="nav-link" href="{{ route('user.index') }}">Home</a></li>
 					<li class="nav-item">	<a class="nav-link" href="{{ route('user.about') }}">About Us</a></li>
-					<li class="nav-item">	<a class="nav-link" href="{{ route('user.testimonial') }}">Testimonial</a></li>
+                    <li class="nav-item"> <a class="nav-link"
+                        href="{{ route('user.gallery') }}">Gallery</a></li>
+                    <li class="nav-item"> <a class="nav-link"
+                            href="{{ route('user.blog') }}">Blog Posts</a></li>
 					<li class="nav-item">	<a class="nav-link" href="{{ route('user.event') }}">Event Calendar</a></li>
 					<li class="nav-item">	<a class="nav-link" href="{{ route('user.contact') }}">Contact Us</a></li>
 				</ul>
@@ -240,8 +243,10 @@ Footer START -->
                             </li>
                             <li class="nav-item"> <a class="nav-link active"
                                     href="{{ route('user.about') }}">About Us</a></li>
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="{{ route('user.testimonial') }}">Testimonial</a></li>
+                                    <li class="nav-item"> <a class="nav-link"
+                                        href="{{ route('user.gallery') }}">Gallery</a></li>
+                                    <li class="nav-item"> <a class="nav-link"
+                                            href="{{ route('user.blog') }}">Blog Posts</a></li>
                             <li class="nav-item"> <a class="nav-link" href="{{ route('user.event') }}">Event
                                     Calendar</a></li>
                             <li class="nav-item"> <a class="nav-link" href="{{ route('user.contact') }}">Contact

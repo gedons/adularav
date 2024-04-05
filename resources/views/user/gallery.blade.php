@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Testimonials - Aduvie Events Center</title>
+    <title>Gallery - Aduvie Events Center</title>
     <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -61,7 +61,9 @@ Header START -->
                         <li class="nav-item"> <a class="nav-link" href="{{ route('user.index') }}">Home</a></li>
                         <li class="nav-item"> <a class="nav-link" href="{{ route('user.about') }}">About Us</a></li>
                         <li class="nav-item"> <a class="nav-link active"
-                                href="{{ route('user.testimonial') }}">Testimonial</a></li>
+                            href="{{ route('user.gallery') }}">Gallery</a></li>
+                        <li class="nav-item"> <a class="nav-link"
+                                href="{{ route('user.blog') }}">Blog Posts</a></li>
                         <li class="nav-item"> <a class="nav-link" href="{{ route('user.event') }}">Event Calendar</a>
                         </li>
                         <li class="nav-item"> <a class="nav-link" href="{{ route('user.contact') }}">Contact Us</a></li>
@@ -90,7 +92,7 @@ Header END -->
         <!-- =======================
 Inner intro START -->
         <section class="bg-parallax bg-dark-overlay-4 py-5 py-md-8"
-            style="background:url(assets/images/bg/09.jpg) no-repeat center center; background-size:cover;">
+            style="background:url(assets/images/pagebanner.jpg) no-repeat center center; background-size:cover;">
             <!-- Shape Decoration START -->
             <figure class="position-absolute end-0 bottom-0 mb-n6 me-8 d-none d-lg-block">
                 <svg width="180" height="188" viewBox="0 0 379 395" xmlns="http://www.w3.org/2000/svg">
@@ -221,14 +223,14 @@ Inner intro START -->
                 <div class="row d-flex justify-content-lg-between">
                     <!-- Inner intro title -->
                     <div class="col-lg-7">
-                        <h1 class="display-5 text-white-stroke">Testimonials <span
+                        <h1 class="display-5 text-white-stroke">Gallery <span
                                 class="text-white-stroke text-primary-shadow"></span></h1>
                         <h5 class="text-white">
                             <nav class="d-flex">
                                 <ol class="breadcrumb breadcrumb-dark">
                                     <li class="breadcrumb-item text-white"><a href="index.html">Aduvie Events
                                             Center</a></li>
-                                    <li class="breadcrumb-item text-white">Testimonials</li>
+                                    <li class="breadcrumb-item text-white">Gallery</li>
                                 </ol>
                             </nav>
                         </h5>
@@ -240,146 +242,151 @@ Inner intro START -->
 Inner intro END -->
 
 
-        <!-- =======================
-Featured START -->
-        <section class="pt-7">
-            <div class="container">
-                <div class="row g-4 overflow-hidden" data-isotope='{ "layoutMode": "masonry" }'>
-                    <!-- Title -->
-                    <div class="row d-flex justify-content-between align-items-center">
-                        <div class="col-sm-8">
-                            <h2 class="display-6 mb-0 mb-sm-4 text-dark-stroke">Featured</h2>
-                        </div>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<!-- Title -->
+                <div class="row d-flex justify-content-between align-items-center">
+                    <div class="col-sm-8 mb-3">
+                        <h2 class="display-6 mb-0 mb-sm-4 text-dark-stroke">Gallery Images</h2>
                     </div>
-                    <!-- Testimonial item -->
-                    <div class="col-md-6 grid-item">
-                        <div class="bg-light p-4 p-md-5">
-                            <!-- Avatar and info-->
-                            <div class="d-flex mb-4">
-                                <div class="avatar">
-                                    <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg"
-                                        alt="author image">
-                                </div>
-                                <div class="ms-3 my-2 text-start">
-                                    <h6 class="mb-0">Louis Crawford</h6>
-                                    <p class="mb-0">CEO, Google INC</p>
-                                </div>
-                            </div>
-                            <!-- Testimonial text -->
-                            <p class="lead">A nice touch of creativity, easy to use, especially bootstrap 5. I love
-                                this, good work team !</p>
-                            <!-- Footer -->
-                            <div class="d-flex justify-content-between mt-5">
-                                <img src="assets/images/clients/colored/01.svg" alt="">
-                                <a href="#" class="btn btn-line text-dark mb-0">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-6 grid-item">
-                        <div class="bg-light p-4 p-md-5">
-                            <!-- Avatar and info-->
-                            <div class="d-flex mb-4">
-                                <div class="avatar">
-                                    <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg"
-                                        alt="author image">
-                                </div>
-                                <div class="ms-3 my-2 text-start">
-                                    <h6 class="mb-0">Louis Crawford</h6>
-                                    <p class="mb-0">CEO, Google INC</p>
-                                </div>
-                            </div>
-                            <!-- Testimonial text -->
-                            <p class="lead">A nice touch of creativity, easy to use, especially bootstrap 5. I love
-                                this, good work team !</p>
-                            <!-- Footer -->
-                            <div class="d-flex justify-content-between mt-5">
-                                <img src="assets/images/clients/colored/01.svg" alt="">
-                                <a href="#" class="btn btn-line text-dark mb-0">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
                 </div>
-            </div>
-        </section>
-        <!-- =======================
-Featured END -->
-
-        <!-- =======================
-Testimonials START -->
-        <section class="p-0">
-            <div class="container">
-                <div class="row position-relative">
-                    <!-- Title -->
-                    <div class="col-sm-8 mb-3 mx-auto text-center pt-7">
-                        <h2 class="display-5 mb-5 text-dark-stroke">Testimonials</h2>
-                    </div>
-                    <!-- Testimonials -->
-                    <div class="col-md-10 mx-auto text-center pb-7">
-                        <div class="tiny-slider arrow-md-none arrow-bordered arrow-large arrow-round">
-                            <div class="tiny-slider-inner" data-gutter="0" data-edge="50" data-autoplay="false"
-                                data-arrow="true" data-dots="false" data-items="1">
-
-                                <!-- Testimonial item -->
-                                <div class="item px-3 px-md-6">
-                                    <div
-                                        class="position-absolute top-50 start-50 translate-middle display-1 text-body z-index-n9 opacity-1">
-                                        <i class="fas fa-quote-left"></i>
-                                    </div>
-                                    <div class="avatar"><img class="avatar-img rounded-circle"
-                                            src="assets/images/avatar/01.jpg" alt="avatar"></div>
-                                    <p class="lead">The good gathering doesn't bearing day Stars over Open behold May
-                                        male tree replenish don't blessed beast days earth fifth let multiply and he
-                                        every blessed to upon behold grass divided brought was that dry I Were image
-                                        waters own bring light subdue Meat</p>
-                                    <h6 class="mb-0 mt-3">Adam Ross</h6>
-                                    <span class="small">Software Developer</span>
-                                </div>
-
-                                <!-- Testimonial item -->
-                                <div class="item px-3 px-md-6">
-                                    <div
-                                        class="position-absolute top-50 start-50 translate-middle display-1 text-body z-index-n9 opacity-1">
-                                        <i class="fas fa-quote-left"></i>
-                                    </div>
-                                    <div class="avatar"><img class="avatar-img rounded-circle"
-                                            src="assets/images/avatar/02.jpg" alt="avatar"></div>
-                                    <p class="lead">Two before narrow not relied how except moment myself Dejection
-                                        assurance mrs led certainly So gate at no only none open Betrayed at properly it
-                                        of graceful on Dinner abroad am depart ye turned hearts as me wished Therefore
-                                        allowance.</p>
-                                    <h6 class="mb-0 mt-3">Allen Smith</h6>
-                                    <span class="small">Founder and CEO</span>
-                                </div>
-
-                                <!-- Testimonial item -->
-                                <div class="item px-3 px-md-6">
-                                    <div
-                                        class="position-absolute top-50 start-50 translate-middle display-1 text-body z-index-n9 opacity-1">
-                                        <i class="fas fa-quote-left"></i>
-                                    </div>
-                                    <div class="avatar"><img class="avatar-img rounded-circle"
-                                            src="assets/images/avatar/03.jpg" alt="avatar"></div>
-                                    <p class="lead">How promotion excellent curiosity yet attempted happiness Gay
-                                        prosperous impression had conviction For every delay death ask style Me mean
-                                        able my by in they Extremity now strangers contained breakfast him discourse
-                                        additions.</p>
-                                    <h6 class="mb-0 mt-3">Jessica Mores</h6>
-                                    <span class="small">Human Resource</span>
-                                </div>
-
+				<div class="row">
+					<!-- Full screen button -->
+					<div class="col-md-4 mb-6">
+						<h6 class="mb-2">Image Title</h6>
+						<div class="position-relative">
+							<!-- Full screen button -->
+							<a class="card-element-hover position-absolute top-50 start-50 translate-middle bg-primary p-3"
+                             href="assets/images/IMG-20240319-WA0022.jpg" 
+                                data-glightbox="description: .custom-desc1"
+                                data-gallery="full-popup"
+                                data-desc-position="bottom">
+                             <i class="bi bi-fullscreen display-9 text-white"></i>
+                            </a>
+							<!-- Card Image description -->
+							<img class="rounded" src="assets/images/IMG-20240319-WA0022.jpg" alt="">
+                            <div class="glightbox-desc custom-desc1">
+                                <h4 class="text-dark">Image Title</h4>
+                                {{-- <p class="text-dark">You can add links and any HTML you want. You can define description's specific position on each slide (bottom, top, left, right). Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Magni id molestias placeat doloremque sequi impedit nostrum cum explicabo porro illum inventore accusantium quia ad assumenda enim tenetur deserunt, ex quis? Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Expedita beatae corporis vel praesentium velit dignissimos sunt nostrum recusandae, aut aspernatur at officiis perferendis fugiat, a rem aperiam optio, debitis enim!</p>
+                                <a href="#" class="btn btn-line btn-dark">Button</a> --}}
                             </div>
-                        </div>
-                    </div>
-                </div><!-- row END -->
-            </div>
-        </section>
-        <!-- =======================
-Testimonials END -->
+						</div>
+					</div>	
+
+                    <div class="col-md-4 mb-6">
+						<h6 class="mb-2">Image Title</h6>
+						<div class="position-relative">
+							<!-- Full screen button -->
+							<a class="card-element-hover position-absolute top-50 start-50 translate-middle bg-primary p-3"
+                             href="assets/images/IMG-20240319-WA0031.jpg" 
+                                data-glightbox="description: .custom-desc1"
+                                data-gallery="full-popup"
+                                data-desc-position="bottom">
+                             <i class="bi bi-fullscreen display-9 text-white"></i>
+                            </a>
+							<!-- Card Image description -->
+							<img class="rounded" src="assets/images/IMG-20240319-WA0031.jpg" alt="">
+                            <div class="glightbox-desc custom-desc1">
+                                <h4 class="text-dark">Image Title</h4>
+                                {{-- <p class="text-dark">You can add links and any HTML you want. You can define description's specific position on each slide (bottom, top, left, right). Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Magni id molestias placeat doloremque sequi impedit nostrum cum explicabo porro illum inventore accusantium quia ad assumenda enim tenetur deserunt, ex quis? Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Expedita beatae corporis vel praesentium velit dignissimos sunt nostrum recusandae, aut aspernatur at officiis perferendis fugiat, a rem aperiam optio, debitis enim!</p>
+                                <a href="#" class="btn btn-line btn-dark">Button</a> --}}
+                            </div>
+						</div>
+					</div>	
+
+                    <div class="col-md-4 mb-6">
+						<h6 class="mb-2">Image Title</h6>
+						<div class="position-relative">
+							<!-- Full screen button -->
+							<a class="card-element-hover position-absolute top-50 start-50 translate-middle bg-primary p-3"
+                             href="assets/images/IMG-20240319-WA0033.jpg" 
+                                data-glightbox="description: .custom-desc1"
+                                data-gallery="full-popup"
+                                data-desc-position="bottom">
+                             <i class="bi bi-fullscreen display-9 text-white"></i>
+                            </a>
+							<!-- Card Image description -->
+							<img class="rounded" src="assets/images/IMG-20240319-WA0033.jpg" alt="">
+                            <div class="glightbox-desc custom-desc1">
+                                <h4 class="text-dark">Image Title</h4>
+                                {{-- <p class="text-dark">You can add links and any HTML you want. You can define description's specific position on each slide (bottom, top, left, right). Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Magni id molestias placeat doloremque sequi impedit nostrum cum explicabo porro illum inventore accusantium quia ad assumenda enim tenetur deserunt, ex quis? Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Expedita beatae corporis vel praesentium velit dignissimos sunt nostrum recusandae, aut aspernatur at officiis perferendis fugiat, a rem aperiam optio, debitis enim!</p>
+                                <a href="#" class="btn btn-line btn-dark">Button</a> --}}
+                            </div>
+						</div>
+					</div>	                    
+				</div>
+                <div class="row">
+					<!-- Full screen button -->
+					<div class="col-md-4 mb-6">
+						<h6 class="mb-2">Image Title</h6>
+						<div class="position-relative">
+							<!-- Full screen button -->
+							<a class="card-element-hover position-absolute top-50 start-50 translate-middle bg-primary p-3"
+                             href="assets/images/IMG20211023130321.jpg" 
+                                data-glightbox="description: .custom-desc1"
+                                data-gallery="full-popup"
+                                data-desc-position="bottom">
+                             <i class="bi bi-fullscreen display-9 text-white"></i>
+                            </a>
+							<!-- Card Image description -->
+							<img class="rounded" style="height:200px" src="assets/images/IMG20211023130321.jpg" alt="">
+                            <div class="glightbox-desc custom-desc1">
+                                <h4 class="text-dark">Image Title</h4>
+                                {{-- <p class="text-dark">You can add links and any HTML you want. You can define description's specific position on each slide (bottom, top, left, right). Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Magni id molestias placeat doloremque sequi impedit nostrum cum explicabo porro illum inventore accusantium quia ad assumenda enim tenetur deserunt, ex quis? Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Expedita beatae corporis vel praesentium velit dignissimos sunt nostrum recusandae, aut aspernatur at officiis perferendis fugiat, a rem aperiam optio, debitis enim!</p>
+                                <a href="#" class="btn btn-line btn-dark">Button</a> --}}
+                            </div>
+						</div>
+					</div>	
+
+                    <div class="col-md-4 mb-6">
+						<h6 class="mb-2">Image Title</h6>
+						<div class="position-relative">
+							<!-- Full screen button -->
+							<a class="card-element-hover position-absolute top-50 start-50 translate-middle bg-primary p-3"
+                             href="assets/images/IMG20211113094816.jpg" 
+                                data-glightbox="description: .custom-desc1"
+                                data-gallery="full-popup"
+                                data-desc-position="bottom">
+                             <i class="bi bi-fullscreen display-9 text-white"></i>
+                            </a>
+							<!-- Card Image description -->
+							<img class="rounded" style="height:200px" src="assets/images/IMG20211113094816.jpg" alt="">
+                            <div class="glightbox-desc custom-desc1">
+                                <h4 class="text-dark">Image Title</h4>
+                                {{-- <p class="text-dark">You can add links and any HTML you want. You can define description's specific position on each slide (bottom, top, left, right). Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Magni id molestias placeat doloremque sequi impedit nostrum cum explicabo porro illum inventore accusantium quia ad assumenda enim tenetur deserunt, ex quis? Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Expedita beatae corporis vel praesentium velit dignissimos sunt nostrum recusandae, aut aspernatur at officiis perferendis fugiat, a rem aperiam optio, debitis enim!</p>
+                                <a href="#" class="btn btn-line btn-dark">Button</a> --}}
+                            </div>
+						</div>
+					</div>	
+
+                    <div class="col-md-4 mb-6">
+						<h6 class="mb-2">Image Title</h6>
+						<div class="position-relative">
+							<!-- Full screen button -->
+							<a class="card-element-hover position-absolute top-50 start-50 translate-middle bg-primary p-3"
+                             href="assets/images/vidt.jpg" 
+                                data-glightbox="description: .custom-desc1"
+                                data-gallery="full-popup"
+                                data-desc-position="bottom">
+                             <i class="bi bi-fullscreen display-9 text-white"></i>
+                            </a>
+							<!-- Card Image description -->
+							<img class="rounded" style="height:200px" src="assets/images/vidt.jpg" alt="">
+                            <div class="glightbox-desc custom-desc1">
+                                <h4 class="text-dark">Image Title</h4>
+                                {{-- <p class="text-dark">You can add links and any HTML you want. You can define description's specific position on each slide (bottom, top, left, right). Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Magni id molestias placeat doloremque sequi impedit nostrum cum explicabo porro illum inventore accusantium quia ad assumenda enim tenetur deserunt, ex quis? Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Expedita beatae corporis vel praesentium velit dignissimos sunt nostrum recusandae, aut aspernatur at officiis perferendis fugiat, a rem aperiam optio, debitis enim!</p>
+                                <a href="#" class="btn btn-line btn-dark">Button</a> --}}
+                            </div>
+						</div>
+					</div>	
+ 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 
     </main>
@@ -464,8 +471,10 @@ Footer START -->
                                 </li>
                                 <li class="nav-item"> <a class="nav-link active"
                                         href="{{ route('user.about') }}">About Us</a></li>
-                                <li class="nav-item"> <a class="nav-link"
-                                        href="{{ route('user.testimonial') }}">Testimonial</a></li>
+                                        <li class="nav-item"> <a class="nav-link"
+                                            href="{{ route('user.gallery') }}">Gallery</a></li>
+                                        <li class="nav-item"> <a class="nav-link"
+                                                href="{{ route('user.blog') }}">Blog Posts</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="{{ route('user.event') }}">Event
                                         Calendar</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="{{ route('user.contact') }}">Contact

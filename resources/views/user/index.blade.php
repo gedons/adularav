@@ -116,7 +116,9 @@ Header START -->
                         </li>
                         <li class="nav-item"> <a class="nav-link" href="{{ route('user.about') }}">About Us</a></li>
                         <li class="nav-item"> <a class="nav-link"
-                                href="{{ route('user.testimonial') }}">Testimonial</a></li>
+                            href="{{ route('user.gallery') }}">Gallery</a></li>
+                        <li class="nav-item"> <a class="nav-link"
+                                href="{{ route('user.blog') }}">Blog Posts</a></li>
                         <li class="nav-item"> <a class="nav-link" href="{{ route('user.event') }}">Event
                                 Calendar</a></li>
                         <li class="nav-item"> <a class="nav-link" href="{{ route('user.contact') }}">Contact Us</a>
@@ -178,9 +180,12 @@ Main Banner START -->
                                             class="animate__animated animate__fadeInUp animate__delay-1s text-white mb-1 mb-md-4 mt-md-0 mt-7">
                                             Let us raise a glass to your next
                                             special occasion</h5>
-                                        <h2
-                                            class="display-1 text-white-stroke text-primary-shadow d-block animate__animated animate__fadeInUp animate__delay-2s">
-                                            Concerts</h2>
+                                            <h2
+                                            class="display-3 text-white-stroke text-primary-shadow d-block animate__animated animate__fadeInUp animate__delay-2s text-center"
+                                            style="width: fit-content; max-width: 100%">
+                                            <span class="d-block d-sm-inline">Concerts</span>
+                                            </h2>
+                                        
                                         <!-- <p class="animate__animated animate__fadeInUp animate__delay-3s lead text-white">We're digital creative agency. We help our customers better manage their web presence in order to achieve greater success online.</p> -->
                                         <div class="animate__animated animate__fadeInUp mt-4 animate__delay-4s"><a
                                                 href="#" class="btn btn-primary">Get Started</a>
@@ -206,7 +211,7 @@ Main Banner START -->
 
                     <!-- Slide 2 START -->
                     <div class="h-100 bg-dark-overlay-4 bg-dark"
-                        style="background-image:url(assets/images/IMG20211022180926.jpg); background-position: center center; background-size: cover;">
+                        style="background-image:url(assets/images/IMG-20240319-WA0017.jpg); background-position: center center; background-size: cover;">
                         <div class="container h-100">
                             <div class="row d-flex h-100">
                                 <div class="col-md-8 justify-content-center align-self-center align-items-start">
@@ -214,9 +219,11 @@ Main Banner START -->
                                         <h5
                                             class="animate__animated animate__fadeInUp animate__delay-1s text-white mb-1 mb-md-4 mt-md-0 mt-7">
                                             Birthdays, Concerts and Weddings</h5>
-                                        <h2
-                                            class="display-1 text-white-stroke text-primary-shadow d-block animate__animated animate__fadeInUp animate__delay-2s">
-                                            Conferences</h2>
+                                            <h2
+                                            class="display-3 text-white-stroke text-primary-shadow d-block animate__animated animate__fadeInUp animate__delay-2s text-center"
+                                            style="width: fit-content; max-width: 100%">
+                                             <span class="d-block d-sm-inline">Conference</span>
+                                            </h2>
                                         <!-- <p class="animate__animated animate__fadeInUp animate__delay-3s lead text-white">We're digital creative agency. We help our customers better manage their web presence in order to achieve greater success online.</p> -->
                                         <div class="animate__animated animate__fadeInUp mt-4 animate__delay-4s"><a
                                                 href="#" class="btn btn-primary">Get Started</a></div>
@@ -238,9 +245,9 @@ Main Banner START -->
                                         <h5
                                             class="animate__animated animate__fadeInUp animate__delay-1s text-white mb-1 mb-md-4 mt-md-0 mt-7">
                                             memories are made and shared with love</h5>
-                                        <h2
-                                            class="display-1 text-white-stroke text-primary-shadow d-block animate__animated animate__fadeInUp animate__delay-2s">
-                                            Exibitions</h2>
+                                            <h5 class="display-3 text-white-stroke text-primary-shadow d-block animate__animated animate__fadeInUp animate__delay-2s">
+                                                <span class="d-block d-sm-inline">Exibitions</span>
+                                            </h5>
                                         <!-- <p class="animate__animated animate__fadeInUp animate__delay-3s lead text-white">We're digital creative agency. We help our customers better manage their web presence in order to achieve greater success online.</p> -->
                                         <div class="animate__animated animate__fadeInUp mt-4 animate__delay-4s"><a
                                                 href="#" class="btn btn-primary">Get Started</a></div>
@@ -306,155 +313,149 @@ video END -->
 
         <!-- =======================
 tour1 START -->
-        <section class="pt-4">
-            <div class="container">
-                <!-- Title -->
-                <div class="row d-flex justify-content-between align-items-center">
-                    <div class="col-sm-8 mb-3">
-                        <!-- <h2 class="display-5 mb-0 mb-sm-4 text-dark-stroke">Upcoming Events</h2> -->
-                    </div>
-                </div>
-                <!-- Portfolio items -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="tiny-slider dots-bordered">
-                            <div class="tiny-slider-inner" data-arrow="true" data-dots="true" data-items-xl="3"
-                                data-items-lg="3" data-items-md="3" data-items-sm="2" data-items-xs="1">
+<section class="pt-4">
+	<div class="container">
+			<!-- Title -->
+			<div class="row d-flex justify-content-between align-items-center">
+				<div class="col-sm-8 mb-3">
+					<h2 class="display-6 mb-0 mb-sm-4 text-dark-stroke">Our Venue</h2>
+				</div>
+			</div>
+		<!-- Portfolio items -->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="tiny-slider dots-bordered">
+					<div class="tiny-slider-inner" data-arrow="true" data-dots="true" data-items-xl="3"
+						data-items-lg="3" data-items-md="3" data-items-sm="2" data-items-xs="1">
 
-                                <!-- Card item START -->
-                                <div class="item">
-                                    <a href="assets/images/IMG-20240319-WA0021.jpg" class="card card-metro"
-                                        data-glightbox data-gallery="gallery-1">
-                                        <!-- Card Image -->
-                                        <div class="card-image">
-                                            <img src="assets/images/IMG-20240319-WA0025.jpg" alt="card image">
-                                        </div>
-                                        <!-- Card Overlay -->
-                                        <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/01.svg"
-                                                alt="">
-                                            <div class="mt-auto card-text">
-                                                <h5 class="text-white">The missing link in e-Mobility</h5>
-                                                <p class="small text-white mb-0 text-truncate">What hasn’t been a great
-                                                    fit in e-mobility until now.</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Card item END -->
+						<!-- Card item START -->
+						<div class="item">
+							<a href="assets/images/IMG-20240319-WA0021.jpg" class="card card-metro"
+								data-glightbox data-gallery="gallery-1">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img src="assets/images/IMG-20240319-WA0025.jpg" alt="card image">
+								</div>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">
+								 
+									<div class="mt-auto card-text">
+										<h5 class="text-white">The missing link in e-Mobility</h5>
+										<p class="small text-white mb-0 text-truncate">What hasn’t been a great
+											fit in e-mobility until now.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Card item END -->
 
-                                <!-- Card item START -->
-                                <div class="item">
-                                    <a href="assets/images/IMG-20240319-WA0024.jpg" data-glightbox data-gallery="gallery-2" class="card card-metro">
-                                        <!-- Card Image -->
-                                        <div class="card-image">
-                                            <img src="assets/images/IMG-20240319-WA0024.jpg"  alt="card image">
-                                        </div>
-                                        <!-- Card Overlay -->
-                                        <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/02.svg"
-                                                alt="">
-                                            <div class="mt-auto card-text">
-                                                <h5 class="text-white">Trumer brewed happiness</h5>
-                                                <p class="small text-white mb-0 text-truncate">Private brewery for
-                                                    excellent beer</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Card item END -->
+						<!-- Card item START -->
+						<div class="item">
+							<a href="assets/images/IMG-20240319-WA0024.jpg" data-glightbox data-gallery="gallery-1" class="card card-metro">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img src="assets/images/IMG-20240319-WA0024.jpg"  alt="card image">
+								</div>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">
+								   
+									<div class="mt-auto card-text">
+										<h5 class="text-white">Trumer brewed happiness</h5>
+										<p class="small text-white mb-0 text-truncate">Private brewery for
+											excellent beer</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Card item END -->
 
-                                <!-- Card item START -->
-                                <div class="item">
-                                    <a href="assets/images/IMG-20240319-WA0031.jpg"  data-glightbox data-gallery="gallery-3" class="card card-metro">
-                                        <!-- Card Image -->
-                                        <div class="card-image">
-                                            <img src="assets/images/IMG-20240319-WA0031.jpg" alt="card image">
-                                        </div>
-                                        <!-- Card Overlay -->
-                                        <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/03.svg"
-                                                alt="">
-                                            <div class="mt-auto card-text">
-                                                <h5 class="text-white">Enticing like the ocean</h5>
-                                                <p class="small text-white mb-0 text-truncate">Viktoria Louise is the
-                                                    blossoming fashion label of Vicky Heiler</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Card item END -->
+						<!-- Card item START -->
+						<div class="item">
+							<a href="assets/images/IMG-20240319-WA0031.jpg"  data-glightbox data-gallery="gallery-1" class="card card-metro">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img src="assets/images/IMG-20240319-WA0031.jpg" alt="card image">
+								</div>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">
+									
+									<div class="mt-auto card-text">
+										<h5 class="text-white">Enticing like the ocean</h5>
+										<p class="small text-white mb-0 text-truncate">Viktoria Louise is the
+											blossoming fashion label of Vicky Heiler</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Card item END -->
 
-                                <!-- Card item START -->
-                                <div class="item">
-                                    <a href="assets/images/IMG-20240319-WA0033.jpg" data-glightbox data-gallery="gallery-4" class="card card-metro">
-                                        <!-- Card Image -->
-                                        <div class="card-image">
-                                            <img src="assets/images/IMG-20240319-WA0033.jpg" alt="card image">
-                                        </div>
-                                        <!-- Card Overlay -->
-                                        <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/04.svg"
-                                                alt="">
-                                            <div class="mt-auto card-text">
-                                                <h5 class="text-white">Pure design branding</h5>
-                                                <p class="small text-white mb-0 text-truncate">Art collector and
-                                                    architect Axel</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Card item END -->
+						<!-- Card item START -->
+						<div class="item">
+							<a href="assets/images/IMG-20240319-WA0033.jpg" data-glightbox data-gallery="gallery-1" class="card card-metro">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img src="assets/images/IMG-20240319-WA0033.jpg" alt="card image">
+								</div>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">
+									 
+									<div class="mt-auto card-text">
+										<h5 class="text-white">Pure design branding</h5>
+										<p class="small text-white mb-0 text-truncate">Art collector and
+											architect Axel</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Card item END -->
 
-                                <!-- Card item START -->
-                                <div class="item">
-                                    <a href="assets/images/IMG-20240320-WA0020.jpg" data-glightbox data-gallery="gallery-5" class="card card-metro">
-                                        <!-- Card Image -->
-                                        <div class="card-image">
-                                            <img src="assets/images/IMG-20240320-WA0020.jpg" alt="card image">
-                                        </div>
-                                        <!-- Card Overlay -->
-                                        <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/05.svg"
-                                                alt="">
-                                            <div class="mt-auto card-text">
-                                                <h5 class="text-white">The missing link</h5>
-                                                <p class="small text-white mb-0 text-truncate">Small things that make
-                                                    difference</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Card item END -->
+						<!-- Card item START -->
+						<div class="item">
+							<a href="assets/images/IMG-20240320-WA0020.jpg" data-glightbox data-gallery="gallery-1" class="card card-metro">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img src="assets/images/IMG-20240320-WA0020.jpg" alt="card image">
+								</div>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">
+								   
+									<div class="mt-auto card-text">
+										<h5 class="text-white">The missing link</h5>
+										<p class="small text-white mb-0 text-truncate">Small things that make
+											difference</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Card item END -->
 
 
-                                <!-- Card item START -->
-                                <div class="item">
-                                    <a href="assets/images/IMG-20240320-WA0016.jpg" data-glightbox data-gallery="gallery-6" class="card card-metro">
-                                        <!-- Card Image -->
-                                        <div class="card-image">
-                                            <img src="assets/images/IMG-20240320-WA0016.jpg" alt="card image">
-                                        </div>
-                                        <!-- Card Overlay -->
-                                        <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/07.svg"
-                                                alt="">
-                                            <div class="mt-auto card-text">
-                                                <h5 class="text-white">Life's hard in the mountains</h5>
-                                                <p class="small text-white mb-0 text-truncate">Ten wineries with strong
-                                                    personalities, individual stories and multi-faceted wines</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Card item END -->
+						<!-- Card item START -->
+						<div class="item">
+							<a href="assets/images/IMG-20240320-WA0016.jpg" data-glightbox data-gallery="gallery-1" class="card card-metro">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img src="assets/images/IMG-20240320-WA0016.jpg" alt="card image">
+								</div>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">
+									 
+									<div class="mt-auto card-text">
+										<h5 class="text-white">Life's hard in the mountains</h5>
+										<p class="small text-white mb-0 text-truncate">Ten wineries with strong
+											personalities, individual stories and multi-faceted wines</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Card item END -->
 
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- row END -->
-            </div>
-        </section>
+					</div>
+				</div>
+			</div>
+		</div><!-- row END -->
+	</div>
+</section>
         <!-- =======================
 tour1 END -->
 
@@ -477,13 +478,12 @@ tour2 START -->
                                         <!-- Slider Info -->
                                         <div class="row justify-content-between mb-3 mb-md-5">
                                             <div class="col-md-8 animate__animated animate__fadeInUp">
-                                                <h2 class="d-block text-white display-6">Décor <span
-                                                        class="text-primary-stroke text-stroke-md">and </span>Design.
+                                                <h2 class="d-block text-white display-6">First <span
+                                                        class="text-primary-stroke text-stroke-md">Hall </span>
                                                 </h2>
                                             </div>
                                             <div class="col-md-4 animate__animated animate__fadeInUp">
-                                                <p class="lead text-white d-none d-md-block">Transform our event spaces
-                                                    into your dream setting with our expert décor and design services.
+                                                <p class="lead text-white d-none d-md-block">A majestic space designed to host grand celebrations and upscale events. With its soaring ceilings, elegant chandeliers, and spacious layout.
                                                 </p>
                                                 <a href="#" class="btn btn-line text-white mt-0 mt-md-4">Get
                                                     Started</a>
@@ -562,13 +562,12 @@ tour2 START -->
                                         <!-- Slider Info -->
                                         <div class="row justify-content-between mb-3 mb-md-5">
                                             <div class="col-md-8 animate__animated animate__fadeInUp">
-                                                <h2 class="text-white display-6"><span class="bg-primary p-2">Vendor
-                                                    </span><br> Coordination</h2>
+                                                <h2 class="d-block text-white display-6">Second <span
+                                                    class="text-primary-stroke text-stroke-md">Hall</span>
+                                            </h2>
                                             </div>
                                             <div class="col-md-4 animate__animated animate__fadeInUp">
-                                                <p class="lead text-white d-none d-md-block">Planning an event often
-                                                    requires the involvement of various vendors, from florists to
-                                                    photographers.</p>
+                                                <p class="lead text-white d-none d-md-block">This hall provides an inviting atmosphere for events, Featuring cozy seating arrangements, soft lighting, and stylish décor. </p>
                                                 <a href="#" class="btn btn-line text-white mt-0 mt-md-4">Get
                                                     Started</a>
                                             </div>
@@ -629,7 +628,7 @@ event START -->
                         <h2 class="display-5 mb-0 mb-sm-4 text-dark-stroke">Upcoming Events</h2>
                     </div>
                     <div class="col-sm-4 mb-4 text-start text-sm-end">
-                        <a href="#" class="btn btn-line text-dark mt-3">View our work</a>
+                        <a href="{{route('user.event')}}" class="btn btn-line text-primary mt-3">View more</a>
                     </div>
                 </div>
                 <!-- Portfolio items -->
@@ -641,15 +640,13 @@ event START -->
 
                                 <!-- Card item START -->
                                 <div class="item">
-                                    <a href="#" class="card card-metro">
+                                    <a href="{{route('user.singleEvent')}}" class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img src="assets/images/portfolio/01.jpg" alt="card image">
+                                            <img style="height:400px; width:100%" src="assets/images/imgkk.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
-                                        <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/01.svg"
-                                                alt="">
+                                        <div class="card-img-overlay d-flex flex-column">                                            
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">The missing link in e-Mobility</h5>
                                                 <p class="small text-white mb-0 text-truncate">What hasn’t been a great
@@ -662,15 +659,14 @@ event START -->
 
                                 <!-- Card item START -->
                                 <div class="item">
-                                    <a href="#" class="card card-metro">
+                                    <a href="{{route('user.singleEvent')}}" class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img src="assets/images/portfolio/02.jpg" alt="card image">
+                                            <img style="height:400px; width:100%" src="assets/images/vidt.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
                                         <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/02.svg"
-                                                alt="">
+                                           
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">Trumer brewed happiness</h5>
                                                 <p class="small text-white mb-0 text-truncate">Private brewery for
@@ -683,15 +679,14 @@ event START -->
 
                                 <!-- Card item START -->
                                 <div class="item">
-                                    <a href="#" data-glightbox class="card card-metro">
+                                    <a href="{{route('user.singleEvent')}}" data-glightbox class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img src="assets/images/portfolio/03.jpg" alt="card image">
+                                            <img style="height:400px; width:100%" src="assets/images/IMG20211023130321.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
                                         <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/03.svg"
-                                                alt="">
+                                            
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">Enticing like the ocean</h5>
                                                 <p class="small text-white mb-0 text-truncate">Viktoria Louise is the
@@ -704,15 +699,14 @@ event START -->
 
                                 <!-- Card item START -->
                                 <div class="item">
-                                    <a href="#" class="card card-metro">
+                                    <a href="{{route('user.singleEvent')}}" class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img src="assets/images/portfolio/04.jpg" alt="card image">
+                                            <img style="height:400px; width:100%" src="assets/images/IMG20211023130346.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
                                         <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/04.svg"
-                                                alt="">
+                                            
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">Pure design branding</h5>
                                                 <p class="small text-white mb-0 text-truncate">Art collector and
@@ -725,15 +719,14 @@ event START -->
 
                                 <!-- Card item START -->
                                 <div class="item">
-                                    <a href="#" class="card card-metro">
+                                    <a href="{{route('user.singleEvent')}}" class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img src="assets/images/portfolio/05.jpg" alt="card image">
+                                            <img style="height:400px; width:100%" src="assets/images/IMG20211023130350.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
                                         <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/05.svg"
-                                                alt="">
+                                           
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">The missing link</h5>
                                                 <p class="small text-white mb-0 text-truncate">Small things that make
@@ -746,15 +739,14 @@ event START -->
 
                                 <!-- Card item START -->
                                 <div class="item">
-                                    <a href="#" class="card card-metro">
+                                    <a href="{{route('user.singleEvent')}}" class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img src="assets/images/portfolio/06.jpg" alt="card image">
+                                            <img style="height:400px; width:100%" src="assets/images/IMG20211023130241.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
                                         <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/06.svg"
-                                                alt="">
+                                           
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">The blossoming fashion label </h5>
                                                 <p class="small text-white mb-0 text-truncate">These were the
@@ -767,15 +759,14 @@ event START -->
 
                                 <!-- Card item START -->
                                 <div class="item">
-                                    <a href="#" class="card card-metro">
+                                    <a href="{{route('user.singleEvent')}}" class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img src="assets/images/portfolio/07.jpg" alt="card image">
+                                            <img style="height:400px; width:100%" src="assets/images/IMG-20240319-WA0017.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
                                         <div class="card-img-overlay d-flex flex-column">
-                                            <img class="w-40" src="assets/images/clients/light/07.svg"
-                                                alt="">
+                                            
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">Life's hard in the mountains</h5>
                                                 <p class="small text-white mb-0 text-truncate">Ten wineries with strong
@@ -806,7 +797,7 @@ Blog START -->
                         <h2 class="display-5 mb-0 mb-sm-4 text-dark-stroke">Blog Posts</h2>
                     </div>
                     <div class="col-sm-4 mb-4 text-start text-sm-end">
-                        <a href="#" class="btn btn-line text-dark mt-3">View our work</a>
+                        <a href="#" class="btn btn-line text-primary mt-3">Trending Posts</a>
                     </div>
                 </div>
                 <div class="row">
@@ -815,7 +806,7 @@ Blog START -->
                         <div class="card card-metro">
                             <!-- Card Image -->
                             <div class="card-image">
-                                <img src="assets/images/blog/01.jpg" alt="card image">
+                                <img style="height:400px; width:100%"  src="assets/images/IMG-20240319-WA0033.jpg" alt="card image">
                             </div>
                             <!-- Card Overlay -->
                             <div class="card-img-overlay d-flex flex-column">
@@ -824,22 +815,20 @@ Blog START -->
                                     <span class="featured-label" title="Featured Blog"><i
                                             class="fas fa-star"></i></span>
 
-                                    <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
-                                        <!-- Card Categories -->
-                                        <div class="text-primary-hover">
-                                            <a href="#" class="text-white me-2">Business</a>
-                                        </div>
-                                        <!-- Divider -->
-                                        <i class="fas fa-circle smaller me-2 fw-bold"></i>
-                                        <!-- Min of read -->
-                                        <span>5 min read</span>
-                                    </div>
-
                                     <h4><a href="#" class="text-white text-primary-hover">Reliable sources to
                                             learn about folio</a></h4>
-                                    <p class="text-white text-truncate">He moonlights difficult engrossed it,
-                                        sportsmen. Interested has all Devonshire difficulty gay assistance joy</p>
-                                    <a href="#" class="btn btn-line text-white mb-0">Read Article</a>
+                                  
+                                        <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
+                                            <!-- Card Categories -->
+                                            <div class="text-primary-hover">
+                                                <a href="{{route('user.singleBlog')}}" class="text-white me-2">Admin</a>
+                                            </div>
+                                            <!-- Divider -->
+                                            <i class="fas fa-circle smaller me-2 fw-bold"></i>
+                                            <!-- Min of read -->
+                                            <span>5 min read</span>
+                                        </div>
+                                    <a href="{{route('user.singleBlog')}}" class="btn btn-line text-white mb-0">Read Article</a>
                                 </div>
                             </div>
                         </div>
@@ -850,26 +839,29 @@ Blog START -->
                         <div class="card card-metro">
                             <!-- Card Image -->
                             <div class="card-image">
-                                <img src="assets/images/blog/02.jpg" alt="card image">
+                                <img style="height:400px; width:100%"  src="assets/images/IMG-20240319-WA0024.jpg" alt="card image">
                             </div>
                             <!-- Card Overlay -->
                             <div class="card-img-overlay d-flex flex-column">
                                 <div class="mt-auto card-text">
-                                    <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
-                                        <!-- Card Categories -->
-                                        <div class="text-primary-hover">
-                                            <a href="#" class="text-white me-2">Start-up</a>
+                                    <!-- Featured label-->
+                                    <span class="featured-label" title="Featured Blog"><i
+                                            class="fas fa-star"></i></span>
+
+                                    <h4><a href="{{route('user.singleBlog')}}" class="text-white text-primary-hover">Reliable sources to
+                                            learn about folio</a></h4>
+                                  
+                                        <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
+                                            <!-- Card Categories -->
+                                            <div class="text-primary-hover">
+                                                <a href="#" class="text-white me-2">Admin</a>
+                                            </div>
+                                            <!-- Divider -->
+                                            <i class="fas fa-circle smaller me-2 fw-bold"></i>
+                                            <!-- Min of read -->
+                                            <span>5 min read</span>
                                         </div>
-                                        <!-- Divider -->
-                                        <i class="fas fa-circle smaller me-2 fw-bold"></i>
-                                        <!-- Min of read -->
-                                        <span>3 min read</span>
-                                    </div>
-                                    <h4><a href="#" class="text-white text-primary-hover">Never underestimate
-                                            the influence of folio</a></h4>
-                                    <p class="text-white text-truncate">See resolved goodness felicity shy civility
-                                        domestic had but. Drawings offended yet answered Jennings</p>
-                                    <a href="#" class="btn btn-line text-white mb-0">Read Article</a>
+                                    <a href="{{route('user.singleBlog')}}" class="btn btn-line text-white mb-0">Read Article</a>
                                 </div>
                             </div>
                         </div>
@@ -880,26 +872,29 @@ Blog START -->
                         <div class="card card-metro">
                             <!-- Card Image -->
                             <div class="card-image">
-                                <img src="assets/images/blog/03.jpg" alt="card image">
+                                <img style="height:400px; width:100%"  src="assets/images/IMG-20240320-WA0016.jpg" alt="card image">
                             </div>
                             <!-- Card Overlay -->
                             <div class="card-img-overlay d-flex flex-column">
                                 <div class="mt-auto card-text">
-                                    <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
-                                        <!-- Card Categories -->
-                                        <div class="text-primary-hover">
-                                            <a href="#" class="text-white me-2">Story</a>
+                                    <!-- Featured label-->
+                                    <span class="featured-label" title="Featured Blog"><i
+                                            class="fas fa-star"></i></span>
+
+                                    <h4><a href="{{route('user.singleBlog')}}" class="text-white text-primary-hover">Reliable sources to
+                                            learn about folio</a></h4>
+                                  
+                                        <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
+                                            <!-- Card Categories -->
+                                            <div class="text-primary-hover">
+                                                <a href="#" class="text-white me-2">Admin</a>
+                                            </div>
+                                            <!-- Divider -->
+                                            <i class="fas fa-circle smaller me-2 fw-bold"></i>
+                                            <!-- Min of read -->
+                                            <span>5 min read</span>
                                         </div>
-                                        <!-- Divider -->
-                                        <i class="fas fa-circle smaller me-2 fw-bold"></i>
-                                        <!-- Min of read -->
-                                        <span>6 min read</span>
-                                    </div>
-                                    <h4><a href="#" class="text-white text-primary-hover">Skills that you can
-                                            learn from business</a></h4>
-                                    <p class="text-white text-truncate">Rooms oh fully taken by worse do. Points afraid
-                                        but may end law lasted. Was out laughter raptures</p>
-                                    <a href="#" class="btn btn-line text-white mb-0">Read Article</a>
+                                    <a href="{{route('user.singleBlog')}}" class="btn btn-line text-white mb-0">Read Article</a>
                                 </div>
                             </div>
                         </div>
@@ -912,8 +907,8 @@ Blog START -->
                 <div class="row">
                     <div class="col-12">
                         <div class="text-center mt-5">
-                            <button type="button" class="btn btn-light">Load more! <i
-                                    class="fas fa-sync ms-3 text-primary"></i></button>
+                            <a href="{{route('user.blog')}}" class="btn btn-light">Load more! <i
+                                    class="fas fa-sync ms-3 text-primary"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1019,7 +1014,7 @@ Action box START -->
                         <h4 class="mb-0">Find out more about our services or book an event.</h4>
                     </div>
                     <div class="col-md-4 col-lg-3 text-md-end mt-4 mt-md-0">
-                        <a href="#" class="btn btn-lg btn-line btn-primary mb-0">Contact Us</a>
+                        <a href="{{route('user.contact')}}" class="btn btn-lg btn-line btn-primary mb-0">Contact Us</a>
                     </div>
                 </div> <!-- Row END -->
             </div>
@@ -1029,7 +1024,7 @@ Action box END -->
 
         <!-- =======================
 Cookie START -->
-        <section>
+        {{-- <section>
             <div class="container">
                 <div class="row justify-content-md-between">
                     <div class="alert alert-dismissible fade show bg-dark text-white position-fixed start-0 bottom-0 z-index-9 shadow rounded-0 p-4 ms-3 mb-3 col-9 col-md-3"
@@ -1052,7 +1047,7 @@ Cookie START -->
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- =======================
 Cookie START -->
 
@@ -1139,7 +1134,9 @@ Footer START -->
                                 <li class="nav-item"> <a class="nav-link active"
                                         href="{{ route('user.about') }}">About Us</a></li>
                                 <li class="nav-item"> <a class="nav-link"
-                                        href="{{ route('user.testimonial') }}">Testimonial</a></li>
+                                        href="{{ route('user.gallery') }}">Gallery</a></li>
+                                <li class="nav-item"> <a class="nav-link"
+                                            href="{{ route('user.blog') }}">Blog Posts</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="{{ route('user.event') }}">Event
                                         Calendar</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="{{ route('user.contact') }}">Contact
