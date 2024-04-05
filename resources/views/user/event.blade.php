@@ -173,223 +173,180 @@ Inner intro START -->
 Inner intro END -->
 
 <!-- =======================
-EVENT 1 START -->
-<section class="pt-0">
+event START -->
+<section class="pt-4">
 	<div class="container">
 		<!-- Title -->
-		<div class="row d-flex justify-content-between align-items-center mt-5">
+		<div class="row d-flex justify-content-between align-items-center">
 			<div class="col-sm-8 mb-3">
 				<h2 class="display-5 mb-0 mb-sm-4 text-dark-stroke">Upcoming Events</h2>
-			</div>
-			<div class="col-sm-4 mb-4 text-start text-sm-end">
-				<a href="#" class="btn btn-line text-dark mt-3">Swipe</a>
-			</div>
+			</div>		 
 		</div>
+		<!-- Portfolio items -->
 		<div class="row">
-			<!-- Card item START -->
-			<div class="col-sm-6 col-lg-4 mb-30">
-				<div class="card card-metro">
-					<!-- Card Image -->
-					<div class="card-image">
-						<img src="assets/images/blog/01.jpg" alt="card image">
-					</div>
-					<!-- Card Overlay -->
-					<div class="card-img-overlay d-flex flex-column">
-						<div class="mt-auto card-text">
-							<!-- Featured label-->
-							<span class="featured-label" title="Featured Blog"><i class="fas fa-star"></i></span>
+			<div class="col-lg-12">
+				<div class="tiny-slider dots-bordered">
+					<div class="tiny-slider-inner" data-arrow="false" data-dots="true" data-items-xl="3"
+						data-items-lg="3" data-items-md="3" data-items-sm="2" data-items-xs="1">
 
-							<div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
-								<!-- Card Categories -->
-								<div class="text-primary-hover">
-									<a href="#" class="text-white me-2">Business</a>
+						<!-- Card item START -->
+						<div class="item">
+							<a href="{{route('user.singleEvent')}}" class="card card-metro">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img style="height:400px; width:100%" src="assets/images/imgkk.jpg" alt="card image">
 								</div>
-								<!-- Divider -->
-								<i class="fas fa-circle smaller me-2 fw-bold"></i>
-								<!-- Min of read -->
-								<span>5 min read</span>
-							</div>
-
-							<h4><a href="#" class="text-white text-primary-hover">Reliable sources to learn about folio</a></h4>
-							<p class="text-white text-truncate">He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire difficulty gay assistance joy</p>
-							<a href="#" class="btn btn-line text-white mb-0">Read Article</a>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">    									
+									<!-- Min of read -->
+									<i class="display-10 text-white bi bi-clock"></i>
+									<span class="text-white card-text">5 days time</span>                                        
+									<div class="mt-auto card-text">
+										<h5 class="text-white">The missing link in e-Mobility</h5>
+										<p class="small text-white mb-0 text-truncate">What hasn’t been a great
+											fit in e-mobility until now.</p>											
+									</div>
+								</div>
+							</a>
 						</div>
+						<!-- Card item END -->
+
+						<!-- Card item START -->
+						<div class="item">
+							<a href="{{route('user.singleEvent')}}" class="card card-metro">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img style="height:400px; width:100%" src="assets/images/vidt.jpg" alt="card image">
+								</div>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">
+									<i class="display-10 text-white bi bi-clock"></i>
+									<span class="text-white">3 days time</span> 
+									<div class="mt-auto card-text">
+										<h5 class="text-white">Trumer brewed happiness</h5>
+										<p class="small text-white mb-0 text-truncate">Private brewery for
+											excellent beer</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Card item END -->
+
+						<!-- Card item START -->
+						<div class="item">
+							<a href="{{route('user.singleEvent')}}" data-glightbox class="card card-metro">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img style="height:400px; width:100%" src="assets/images/IMG20211023130321.jpg" alt="card image">
+								</div>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">
+									<i class="display-10 text-white bi bi-clock"></i>
+									<span class="text-white">5 days time</span> 
+									<div class="mt-auto card-text">
+										<h5 class="text-white">Enticing like the ocean</h5>
+										<p class="small text-white mb-0 text-truncate">Viktoria Louise is the
+											blossoming fashion label of Vicky Heiler</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Card item END -->
+
+						<!-- Card item START -->
+						<div class="item">
+							<a href="{{route('user.singleEvent')}}" class="card card-metro">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img style="height:400px; width:100%" src="assets/images/IMG20211023130346.jpg" alt="card image">
+								</div>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">
+									<i class="display-10 text-white bi bi-clock"></i>
+									<span class="text-white">5 days time</span> 
+									<div class="mt-auto card-text">
+										<h5 class="text-white">Pure design branding</h5>
+										<p class="small text-white mb-0 text-truncate">Art collector and
+											architect Axel</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Card item END -->
+
+						<!-- Card item START -->
+						<div class="item">
+							<a href="{{route('user.singleEvent')}}" class="card card-metro">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img style="height:400px; width:100%" src="assets/images/IMG20211023130350.jpg" alt="card image">
+								</div>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">
+									<i class="display-10 text-white bi bi-clock"></i>
+									<span class="text-white">5 days time</span> 
+									<div class="mt-auto card-text">
+										<h5 class="text-white">The missing link</h5>
+										<p class="small text-white mb-0 text-truncate">Small things that make
+											difference</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Card item END -->
+
+						<!-- Card item START -->
+						<div class="item">
+							<a href="{{route('user.singleEvent')}}" class="card card-metro">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img style="height:400px; width:100%" src="assets/images/IMG20211023130241.jpg" alt="card image">
+								</div>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">
+									<i class="display-10 text-white bi bi-clock"></i>
+									<span class="text-white">5 days time</span> 
+									<div class="mt-auto card-text">
+										<h5 class="text-white">The blossoming fashion label </h5>
+										<p class="small text-white mb-0 text-truncate">These were the
+											attributes that moodley had to convey.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Card item END -->
+
+						<!-- Card item START -->
+						<div class="item">
+							<a href="{{route('user.singleEvent')}}" class="card card-metro">
+								<!-- Card Image -->
+								<div class="card-image">
+									<img style="height:400px; width:100%" src="assets/images/IMG-20240319-WA0017.jpg" alt="card image">
+								</div>
+								<!-- Card Overlay -->
+								<div class="card-img-overlay d-flex flex-column">
+									<i class="display-10 text-white bi bi-clock"></i>
+									<span class="text-white">5 days time</span> 
+									<div class="mt-auto card-text">
+										<h5 class="text-white">Life's hard in the mountains</h5>
+										<p class="small text-white mb-0 text-truncate">Ten wineries with strong
+											personalities, individual stories and multi-faceted wines</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- Card item END -->
+
 					</div>
 				</div>
 			</div>
-			<!-- Card item END -->
-			<!-- Card item START -->
-			<div class="col-sm-6 col-lg-4 mb-30">
-				<div class="card card-metro">
-					<!-- Card Image -->
-					<div class="card-image">
-						<img src="assets/images/blog/02.jpg" alt="card image">
-					</div>
-					<!-- Card Overlay -->
-					<div class="card-img-overlay d-flex flex-column">
-						<div class="mt-auto card-text">
-							<div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
-								<!-- Card Categories -->
-								<div class="text-primary-hover">
-									<a href="#" class="text-white me-2">Start-up</a>
-								</div>
-								<!-- Divider -->
-								<i class="fas fa-circle smaller me-2 fw-bold"></i>
-								<!-- Min of read -->
-								<span>3 min read</span>
-							</div>
-							<h4><a href="#" class="text-white text-primary-hover">Never underestimate the influence of folio</a></h4>
-							<p class="text-white text-truncate">See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered Jennings</p>
-							<a href="#" class="btn btn-line text-white mb-0">Read Article</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Card item END -->
-			<!-- Card item START -->
-			<div class="col-sm-6 col-lg-4 mb-30">
-				<div class="card card-metro">
-					<!-- Card Image -->
-					<div class="card-image">
-						<img src="assets/images/blog/03.jpg" alt="card image">
-					</div>
-					<!-- Card Overlay -->
-					<div class="card-img-overlay d-flex flex-column">
-						<div class="mt-auto card-text">
-							<div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
-								<!-- Card Categories -->
-								<div class="text-primary-hover">
-									<a href="#" class="text-white me-2">Story</a>
-								</div>
-								<!-- Divider -->
-								<i class="fas fa-circle smaller me-2 fw-bold"></i>
-								<!-- Min of read -->
-								<span>6 min read</span>
-							</div>
-							<h4><a href="#" class="text-white text-primary-hover">Skills that you can learn from business</a></h4>
-							<p class="text-white text-truncate">Rooms oh fully taken by worse do. Points afraid but may end law lasted. Was out laughter raptures</p>
-							<a href="#" class="btn btn-line text-white mb-0">Read Article</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Card item END -->
-
 		</div><!-- row END -->
 	</div>
 </section>
 <!-- =======================
-EVENT 1 END -->
+event END -->
 
-<!-- =======================
-EVENT 2 START -->
-<section class="pt-1">
-	<div class="container">
-		<div class="row">
-			<!-- Card item START -->
-			<div class="col-sm-6 col-lg-4 mb-30">
-				<div class="card card-metro">
-					<!-- Card Image -->
-					<div class="card-image">
-						<img src="assets/images/blog/01.jpg" alt="card image">
-					</div>
-					<!-- Card Overlay -->
-					<div class="card-img-overlay d-flex flex-column">
-						<div class="mt-auto card-text">
-							<!-- Featured label-->
-							<span class="featured-label" title="Featured Blog"><i class="fas fa-star"></i></span>
 
-							<div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
-								<!-- Card Categories -->
-								<div class="text-primary-hover">
-									<a href="#" class="text-white me-2">Business</a>
-								</div>
-								<!-- Divider -->
-								<i class="fas fa-circle smaller me-2 fw-bold"></i>
-								<!-- Min of read -->
-								<span>5 min read</span>
-							</div>
-
-							<h4><a href="#" class="text-white text-primary-hover">Reliable sources to learn about folio</a></h4>
-							<p class="text-white text-truncate">He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire difficulty gay assistance joy</p>
-							<a href="#" class="btn btn-line text-white mb-0">Read Article</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Card item END -->
-			<!-- Card item START -->
-			<div class="col-sm-6 col-lg-4 mb-30">
-				<div class="card card-metro">
-					<!-- Card Image -->
-					<div class="card-image">
-						<img src="assets/images/blog/02.jpg" alt="card image">
-					</div>
-					<!-- Card Overlay -->
-					<div class="card-img-overlay d-flex flex-column">
-						<div class="mt-auto card-text">
-							<div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
-								<!-- Card Categories -->
-								<div class="text-primary-hover">
-									<a href="#" class="text-white me-2">Start-up</a>
-								</div>
-								<!-- Divider -->
-								<i class="fas fa-circle smaller me-2 fw-bold"></i>
-								<!-- Min of read -->
-								<span>3 min read</span>
-							</div>
-							<h4><a href="#" class="text-white text-primary-hover">Never underestimate the influence of folio</a></h4>
-							<p class="text-white text-truncate">See resolved goodness felicity shy civility domestic had but. Drawings offended yet answered Jennings</p>
-							<a href="#" class="btn btn-line text-white mb-0">Read Article</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Card item END -->
-			<!-- Card item START -->
-			<div class="col-sm-6 col-lg-4 mb-30">
-				<div class="card card-metro">
-					<!-- Card Image -->
-					<div class="card-image">
-						<img src="assets/images/blog/03.jpg" alt="card image">
-					</div>
-					<!-- Card Overlay -->
-					<div class="card-img-overlay d-flex flex-column">
-						<div class="mt-auto card-text">
-							<div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
-								<!-- Card Categories -->
-								<div class="text-primary-hover">
-									<a href="#" class="text-white me-2">Story</a>
-								</div>
-								<!-- Divider -->
-								<i class="fas fa-circle smaller me-2 fw-bold"></i>
-								<!-- Min of read -->
-								<span>6 min read</span>
-							</div>
-							<h4><a href="#" class="text-white text-primary-hover">Skills that you can learn from business</a></h4>
-							<p class="text-white text-truncate">Rooms oh fully taken by worse do. Points afraid but may end law lasted. Was out laughter raptures</p>
-							<a href="#" class="btn btn-line text-white mb-0">Read Article</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Card item END -->
-
-		</div><!-- row END -->
-
-		<!-- Load more START -->
-		<div class="row">
-			<div class="col-12">
-				<div class="text-center mt-5">
-					<button type="button" class="btn btn-light">Load more! <i class="fas fa-sync ms-3 text-primary"></i></button>
-				</div>
-			</div>
-		</div>
-		<!-- Load more END -->
-	</div>
-</section>
-<!-- =======================
-EVENT 2 END -->
 
 </main>
 <!-- **************** MAIN CONTENT END **************** -->
