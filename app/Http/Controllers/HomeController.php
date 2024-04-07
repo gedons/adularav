@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\BlogPost;
 use App\Models\SliderImage;
+use App\Models\GalleryImage;
 
 class HomeController extends Controller
 {
@@ -62,7 +63,8 @@ class HomeController extends Controller
 
     public function gallery()
     {
-        return view('gallery');
+        $galleries = GalleryImage::all();
+        return view('gallery', compact('galleries'));
     }
 
     public function contact()
@@ -79,9 +81,14 @@ class HomeController extends Controller
     {
         return view('blogCreate');
     }
-    
+
     public function sliderCreate()
     {
         return view('sliderCreate');
+    }
+
+    public function galleryCreate()
+    {
+        return view('galleryCreate');
     }
 }

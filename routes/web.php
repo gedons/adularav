@@ -5,6 +5,8 @@ use App\Http\Controllers\UserFrontController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\GalleryController;
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -18,6 +20,7 @@ Route::get('/admin/events', [App\Http\Controllers\HomeController::class, 'events
 Route::get('/admin/events/create', [App\Http\Controllers\HomeController::class, 'eventCreate'])->name('eventCreate');
 Route::get('/admin/blogs/create', [App\Http\Controllers\HomeController::class, 'blogCreate'])->name('blogCreate');
 Route::get('/admin/sliders/create', [App\Http\Controllers\HomeController::class, 'sliderCreate'])->name('sliderCreate');
+Route::get('/admin/galleries/create', [App\Http\Controllers\HomeController::class, 'galleryCreate'])->name('galleryCreate');
 Route::get('/admin/bookings', [App\Http\Controllers\HomeController::class, 'bookings'])->name('bookings');
 Route::get('/admin/blogs', [App\Http\Controllers\HomeController::class, 'blogs'])->name('blogs');
 Route::get('/admin/sliders', [App\Http\Controllers\HomeController::class, 'sliders'])->name('sliders');
@@ -42,6 +45,13 @@ Route::delete('/blog/{blog}', [BlogController::class, 'destroy'])->name('blog.de
 //slider routes
 Route::post('/sliders', [SliderController::class, 'store'])->name('slider.store');
 Route::delete('/slider/{slider}', [SliderController::class, 'destroy'])->name('slider.destroy');
+
+//gallery routes
+Route::post('/galleries', [GalleryController::class, 'store'])->name('gallery.store');
+Route::get('/gallery/{gallery}', [GalleryController::class, 'show'])->name('gallery.show');
+Route::get('/gallery/{gallery}/edit', [GalleryController::class, 'edit'])->name('gallery.edit');
+Route::put('/gallery/{gallery}', [GalleryController::class, 'update'])->name('gallery.update');
+Route::delete('/gallery/{gallery}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
 // end admin route
 
 
