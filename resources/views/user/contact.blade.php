@@ -229,8 +229,9 @@ Contact form END -->
 <!-- =======================
 Google map START -->
 <section class="p-0 h-400">
-	<iframe class="w-100 h-400 grayscale" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.74076684379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sin!4v1586000412513!5m2!1sen!2sin" height="500" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+	<iframe class="w-100 h-400 grayscale" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.471901292649!2d7.444822173354697!3d9.111777587691146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b0000700153%3A0x225cfca4e7c47f4f!2sAduvie%20Events%20Centre!5e0!3m2!1sen!2str!4v1712288115192!5m2!1sen!2str" height="500" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
 </section>
+
 <!-- =======================
 Google map END -->
 

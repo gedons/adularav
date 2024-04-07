@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\BlogPost;
+use App\Models\SliderImage;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //get all 
+        //get all
         $events = Event::all();
         $blogs = BlogPost::all();
 
@@ -55,7 +56,8 @@ class HomeController extends Controller
 
     public function sliders()
     {
-        return view('sliders');
+        $sliders = SliderImage::all();
+        return view('sliders', compact('sliders'));
     }
 
     public function gallery()
@@ -76,5 +78,10 @@ class HomeController extends Controller
     public function blogCreate()
     {
         return view('blogCreate');
+    }
+    
+    public function sliderCreate()
+    {
+        return view('sliderCreate');
     }
 }
