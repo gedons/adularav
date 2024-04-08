@@ -6,6 +6,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\AdminController;
 
 
 // Route::get('/', function () {
@@ -56,6 +57,10 @@ Route::get('/gallery/{gallery}', [GalleryController::class, 'show'])->name('gall
 Route::get('/gallery/{gallery}/edit', [GalleryController::class, 'edit'])->name('gallery.edit');
 Route::put('/gallery/{gallery}', [GalleryController::class, 'update'])->name('gallery.update');
 Route::delete('/gallery/{gallery}', [GalleryController::class, 'destroy'])->name('gallery.destroy');
+
+Route::get('/admin/profile', [AdminController::class, 'edit'])->middleware('auth')->name('admin.profile');
+Route::put('/admin/profile', [AdminController::class, 'update'])->middleware('auth')->name('admin.profile.update');
+
 // end admin route
 
 
