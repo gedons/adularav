@@ -13,7 +13,7 @@
 
     <!-- Google Font -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&amp;family=Rubik:wght@400;500;700&amp;family=Spartan:wght@400;700;900&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&amp;family=Rubik:wght@250;500;700&amp;family=Spartan:wght@400;700;900&amp;display=swap"
         rel="stylesheet">
 
     <!-- Plugins CSS -->
@@ -131,7 +131,7 @@ Header START -->
                 <div class="nav flex-nowrap align-items-center">
                     <!-- Nav Button -->
                     <div class="nav-item d-none d-xl-block">
-                        <a href="#" class="btn btn-sm btn-primary mb-0 mx-2">Get Started</a>
+                        <a href="{{route('user.book')}}" class="btn btn-sm btn-primary mb-0 mx-2">Book Now</a>
                     </div>
                 </div>
                 <!-- Nav right END -->
@@ -185,10 +185,10 @@ Main Banner START -->
                                             style="width: fit-content; max-width: 100%">
                                             <span class="d-block d-sm-inline">Concerts</span>
                                             </h2>
-                                        
+
                                         <!-- <p class="animate__animated animate__fadeInUp animate__delay-3s lead text-white">We're digital creative agency. We help our customers better manage their web presence in order to achieve greater success online.</p> -->
                                         <div class="animate__animated animate__fadeInUp mt-4 animate__delay-4s"><a
-                                                href="#" class="btn btn-primary">Get Started</a>
+                                                href="{{route('user.book')}}" class="btn btn-primary">Book Now</a>
                                             <div class="float-md-end mt-md-2 -mt-7 mb-3">
                                                 <a class="btn btn-primary btn-lg btn-round btn-ripple me-2 align-middle d-inline-block"
                                                     data-glightbox data-gallery="office-tour"
@@ -226,7 +226,7 @@ Main Banner START -->
                                             </h2>
                                         <!-- <p class="animate__animated animate__fadeInUp animate__delay-3s lead text-white">We're digital creative agency. We help our customers better manage their web presence in order to achieve greater success online.</p> -->
                                         <div class="animate__animated animate__fadeInUp mt-4 animate__delay-4s"><a
-                                                href="#" class="btn btn-primary">Get Started</a></div>
+                                                href="{{route('user.book')}}" class="btn btn-primary">Book Now</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -250,7 +250,7 @@ Main Banner START -->
                                             </h5>
                                         <!-- <p class="animate__animated animate__fadeInUp animate__delay-3s lead text-white">We're digital creative agency. We help our customers better manage their web presence in order to achieve greater success online.</p> -->
                                         <div class="animate__animated animate__fadeInUp mt-4 animate__delay-4s"><a
-                                                href="#" class="btn btn-primary">Get Started</a></div>
+                                                href="{{route('user.book')}}" class="btn btn-primary">Book Now</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -338,7 +338,7 @@ tour1 START -->
 								</div>
 								<!-- Card Overlay -->
 								<div class="card-img-overlay d-flex flex-column">
-								 
+
 									<div class="mt-auto card-text">
 										<h5 class="text-white">The missing link in e-Mobility</h5>
 										<p class="small text-white mb-0 text-truncate">What hasn’t been a great
@@ -358,7 +358,7 @@ tour1 START -->
 								</div>
 								<!-- Card Overlay -->
 								<div class="card-img-overlay d-flex flex-column">
-								   
+
 									<div class="mt-auto card-text">
 										<h5 class="text-white">Trumer brewed happiness</h5>
 										<p class="small text-white mb-0 text-truncate">Private brewery for
@@ -378,7 +378,7 @@ tour1 START -->
 								</div>
 								<!-- Card Overlay -->
 								<div class="card-img-overlay d-flex flex-column">
-									
+
 									<div class="mt-auto card-text">
 										<h5 class="text-white">Enticing like the ocean</h5>
 										<p class="small text-white mb-0 text-truncate">Viktoria Louise is the
@@ -398,7 +398,7 @@ tour1 START -->
 								</div>
 								<!-- Card Overlay -->
 								<div class="card-img-overlay d-flex flex-column">
-									 
+
 									<div class="mt-auto card-text">
 										<h5 class="text-white">Pure design branding</h5>
 										<p class="small text-white mb-0 text-truncate">Art collector and
@@ -418,7 +418,7 @@ tour1 START -->
 								</div>
 								<!-- Card Overlay -->
 								<div class="card-img-overlay d-flex flex-column">
-								   
+
 									<div class="mt-auto card-text">
 										<h5 class="text-white">The missing link</h5>
 										<p class="small text-white mb-0 text-truncate">Small things that make
@@ -439,7 +439,7 @@ tour1 START -->
 								</div>
 								<!-- Card Overlay -->
 								<div class="card-img-overlay d-flex flex-column">
-									 
+
 									<div class="mt-auto card-text">
 										<h5 class="text-white">Life's hard in the mountains</h5>
 										<p class="small text-white mb-0 text-truncate">Ten wineries with strong
@@ -485,8 +485,6 @@ tour2 START -->
                                             <div class="col-md-4 animate__animated animate__fadeInUp">
                                                 <p class="lead text-white d-none d-md-block">A majestic space designed to host grand celebrations and upscale events. With its soaring ceilings, elegant chandeliers, and spacious layout.
                                                 </p>
-                                                <a href="#" class="btn btn-line text-white mt-0 mt-md-4">Get
-                                                    Started</a>
                                             </div>
                                         </div>
                                         <!-- Slider Image -->
@@ -568,8 +566,6 @@ tour2 START -->
                                             </div>
                                             <div class="col-md-4 animate__animated animate__fadeInUp">
                                                 <p class="lead text-white d-none d-md-block">This hall provides an inviting atmosphere for events, Featuring cozy seating arrangements, soft lighting, and stylish décor. </p>
-                                                <a href="#" class="btn btn-line text-white mt-0 mt-md-4">Get
-                                                    Started</a>
                                             </div>
                                         </div>
                                         <!-- Slider Image -->
@@ -592,13 +588,13 @@ tour2 START -->
                 </div>
 
                 <!-- Social links and arrow START -->
-                <div class="container mt-n5 d-none d-md-block">
+                {{-- <div class="container mt-n5 d-none d-md-block">
                     <div class="row justify-content-between position-relative align-items-center">
                         <!-- Social sites link -->
                         <div class="col-md-6">
                             <div class="d-flex mt-n2">
                                 <a class="btn btn-primary btn-round btn-ripple me-2 align-middle d-inline-block"
-                                    data-glightbox data-gallery="office-tour" href="https://youtu.be/n_Cn8eFo7u8"> <i
+                                    data-glightbox data-gallery="office-tour" href="https://youtu.be/vvdkK07niqk"> <i
                                         class="fas fa-play"></i></a>
                                 <div class="align-middle d-inline-block">
                                     <h6 class="mb-0 text-dark">Office tour</h6>
@@ -608,7 +604,7 @@ tour2 START -->
                         </div>
 
                     </div>
-                </div>
+                </div> --}}
                 <!-- Social links and arrow END -->
 
 
@@ -625,7 +621,7 @@ event START -->
                 <!-- Title -->
                 <div class="row d-flex justify-content-between align-items-center">
                     <div class="col-sm-8 mb-3">
-                        <h2 class="display-5 mb-0 mb-sm-4 text-dark-stroke">Upcoming Events</h2>
+                        <h2 class="display-5 mb-0 mb-sm-4 text-dark-stroke">Our Gallery</h2>
                     </div>
                     <div class="col-sm-4 mb-4 text-start text-sm-end">
                         <a href="{{route('user.event')}}" class="btn btn-line text-primary mt-3">View more</a>
@@ -643,10 +639,10 @@ event START -->
                                     <a href="{{route('user.singleEvent')}}" class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img style="height:400px; width:100%" src="assets/images/imgkk.jpg" alt="card image">
+                                            <img style="height:250px; width:100%" src="assets/images/imgkk.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
-                                        <div class="card-img-overlay d-flex flex-column">                                            
+                                        <div class="card-img-overlay d-flex flex-column">
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">The missing link in e-Mobility</h5>
                                                 <p class="small text-white mb-0 text-truncate">What hasn’t been a great
@@ -662,11 +658,11 @@ event START -->
                                     <a href="{{route('user.singleEvent')}}" class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img style="height:400px; width:100%" src="assets/images/vidt.jpg" alt="card image">
+                                            <img style="height:250px; width:100%" src="assets/images/vidt.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
                                         <div class="card-img-overlay d-flex flex-column">
-                                           
+
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">Trumer brewed happiness</h5>
                                                 <p class="small text-white mb-0 text-truncate">Private brewery for
@@ -682,11 +678,11 @@ event START -->
                                     <a href="{{route('user.singleEvent')}}" data-glightbox class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img style="height:400px; width:100%" src="assets/images/IMG20211023130321.jpg" alt="card image">
+                                            <img style="height:250px; width:100%" src="assets/images/IMG20211023130321.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
                                         <div class="card-img-overlay d-flex flex-column">
-                                            
+
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">Enticing like the ocean</h5>
                                                 <p class="small text-white mb-0 text-truncate">Viktoria Louise is the
@@ -702,11 +698,11 @@ event START -->
                                     <a href="{{route('user.singleEvent')}}" class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img style="height:400px; width:100%" src="assets/images/IMG20211023130346.jpg" alt="card image">
+                                            <img style="height:250px; width:100%" src="assets/images/IMG20211023130346.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
                                         <div class="card-img-overlay d-flex flex-column">
-                                            
+
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">Pure design branding</h5>
                                                 <p class="small text-white mb-0 text-truncate">Art collector and
@@ -722,11 +718,11 @@ event START -->
                                     <a href="{{route('user.singleEvent')}}" class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img style="height:400px; width:100%" src="assets/images/IMG20211023130350.jpg" alt="card image">
+                                            <img style="height:250px; width:100%" src="assets/images/IMG20211023130350.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
                                         <div class="card-img-overlay d-flex flex-column">
-                                           
+
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">The missing link</h5>
                                                 <p class="small text-white mb-0 text-truncate">Small things that make
@@ -742,11 +738,11 @@ event START -->
                                     <a href="{{route('user.singleEvent')}}" class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img style="height:400px; width:100%" src="assets/images/IMG20211023130241.jpg" alt="card image">
+                                            <img style="height:250px; width:100%" src="assets/images/IMG20211023130241.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
                                         <div class="card-img-overlay d-flex flex-column">
-                                           
+
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">The blossoming fashion label </h5>
                                                 <p class="small text-white mb-0 text-truncate">These were the
@@ -762,11 +758,11 @@ event START -->
                                     <a href="{{route('user.singleEvent')}}" class="card card-metro">
                                         <!-- Card Image -->
                                         <div class="card-image">
-                                            <img style="height:400px; width:100%" src="assets/images/IMG-20240319-WA0017.jpg" alt="card image">
+                                            <img style="height:250px; width:100%" src="assets/images/IMG-20240319-WA0017.jpg" alt="card image">
                                         </div>
                                         <!-- Card Overlay -->
                                         <div class="card-img-overlay d-flex flex-column">
-                                            
+
                                             <div class="mt-auto card-text">
                                                 <h5 class="text-white">Life's hard in the mountains</h5>
                                                 <p class="small text-white mb-0 text-truncate">Ten wineries with strong
@@ -786,6 +782,104 @@ event START -->
         <!-- =======================
 event END -->
 
+<!-- =======================
+Images START -->
+<section class="pt-4">
+	<div class="container">
+		<div class="row">
+			<!-- Card item START -->
+			<div class="col-lg-6 mb-5">
+				<div class="card border-0 rounded-0">
+					<!-- Card Image -->
+					<div class="card-image order-1 order-lg-2 me-0 me-lg-8">
+						<!-- Card image -->
+						<img style="height: 250px" class="w-100" src="assets/images/IMG-20240319-WA0024.jpg" alt="card image">
+						<!-- Card image popup -->
+						<a class="card-element-hover position-absolute start-0 bottom-0 bg-primary p-3" data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240319-WA0024.jpg"><i class="fas fa-expand text-white"></i></a>
+					</div>
+					<!-- Card body -->
+					<div class="card-body order-2 order-lg-1 position-relative bg-primary p-3 p-md-4 p-xl-5 ms-0 ms-lg-7 mb-0 mb-lg-n8">
+						<div class="mt-auto card-text">
+							<h4 class="text-white">Bespoke Floral Arrangements</h4>
+							<p class="text-white mb-3 text-truncate">From striking centerpieces to delicate bouquets</p>
+							<a data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240319-WA0024.jpg" class="btn btn-dark btn-line">Enlarge</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item END -->
+
+			<!-- Card item START -->
+			<div class="col-lg-6 mb-5">
+				<div class="card border-0 rounded-0">
+					<!-- Card Image -->
+					<div class="card-image me-0 me-lg-7">
+						<!-- Card image -->
+						<img style="height: 275px" class="w-100" src="assets/images/IMG-20240320-WA0020.jpg" alt="card image">
+						<!-- Card image popup -->
+						<a class="card-element-hover position-absolute start-0 top-0 bg-primary p-3"  data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240320-WA0020.jpg"><i class="fas fa-expand text-white"></i></a>
+					</div>
+					<!-- Card body -->
+					<div class="card-body bg-primary p-3 p-md-4 p-xl-5 me-0 me-lg-7 mt-0 mt-lg-n8">
+						<div class="mt-auto card-text">
+							<h4 class="text-white">Creative Lighting Design</h4>
+							<p class="text-white mb-3 text-truncate">Dynamic, vibrant colors for a lively celebration</p>
+							<a data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240320-WA0020.jpg" class="btn btn-dark btn-line">Enlarge</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item END -->
+
+			<!-- Card item START -->
+			<div class="col-lg-6 mb-5">
+				<div class="card border-0 rounded-0">
+					<!-- Card Image -->
+					<div class="card-image ms-0 ms-lg-7">
+						<!-- Card image -->
+						<img style="height: 275px" class="w-100" src="assets/images/IMG-20240319-WA0028.jpg" alt="card image">
+						<!-- Card image popup -->
+						<a class="card-element-hover position-absolute end-0 top-0 bg-primary p-3"  data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240319-WA0028.jpg"><i class="fas fa-expand text-white"></i></a>
+					</div>
+					<!-- Card body -->
+					<div class="card-body bg-primary p-3 p-md-4 p-xl-5 me-0 me-lg-7 mt-0 mt-lg-n8">
+						<div class="mt-auto card-text">
+							<h4 class="text-white">Exceptional Cuisine</h4>
+							<p class="text-white mb-3 text-truncate">Crafted dishes made with the finest ingredients</p>
+							<a data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240319-WA0028.jpg" class="btn btn-dark btn-line">Enlarge</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item END -->
+
+			<!-- Card item START -->
+			<div class="col-lg-6 mb-1 mt-lg-8">
+				<div class="card border-0 rounded-0">
+					<!-- Card Image -->
+					<div class="card-image order-1 order-lg-2 me-0 me-lg-8 mt-0 mt-lg-n8">
+						<!-- Card image -->
+						<img style="height:275px;" src="assets/images/vidt.jpg" alt="card image">
+						<!-- Card image popup -->
+						<a class="card-element-hover position-absolute start-0 bottom-0 bg-primary p-3"  data-glightbox data-gallery="portfolio" href="assets/images/vidt.jpg"><i class="fas fa-expand text-white"></i></a>
+					</div>
+					<!-- Card body -->
+					<div class="card-body order-2 order-lg-1 position-relative bg-primary p-3 p-md-4 p-xl-5 ms-0 ms-lg-10 mb-0 mb-lg-n10">
+						<div class="mt-auto card-text">
+							<h4 class="text-white">Experience the Difference</h4>
+							<p class="text-white mb-3 text-truncate">All round excellence</p>
+							<a data-glightbox data-gallery="portfolio" href="assets/images/vidt.jpg" class="btn btn-dark btn-line">Enlarge</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Card item END -->
+		</div><!-- Row END -->
+
+</section>
+<!-- =======================
+Images END -->
+
 
         <!-- =======================
 Blog START -->
@@ -797,7 +891,7 @@ Blog START -->
                         <h2 class="display-5 mb-0 mb-sm-4 text-dark-stroke">Blog Posts</h2>
                     </div>
                     <div class="col-sm-4 mb-4 text-start text-sm-end">
-                        <a href="#" class="btn btn-line text-primary mt-3">Trending Posts</a>
+                        <a href="{{route('user.blog')}}" class="btn btn-line text-primary mt-3">Trending Posts</a>
                     </div>
                 </div>
                 <div class="row">
@@ -806,7 +900,7 @@ Blog START -->
                         <div class="card card-metro">
                             <!-- Card Image -->
                             <div class="card-image">
-                                <img style="height:400px; width:100%"  src="assets/images/IMG-20240319-WA0033.jpg" alt="card image">
+                                <img style="height:250px; width:100%"  src="assets/images/IMG-20240319-WA0033.jpg" alt="card image">
                             </div>
                             <!-- Card Overlay -->
                             <div class="card-img-overlay d-flex flex-column">
@@ -817,7 +911,7 @@ Blog START -->
 
                                     <h4><a href="#" class="text-white text-primary-hover">Reliable sources to
                                             learn about folio</a></h4>
-                                  
+
                                         <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
                                             <!-- Card Categories -->
                                             <div class="text-primary-hover">
@@ -839,7 +933,7 @@ Blog START -->
                         <div class="card card-metro">
                             <!-- Card Image -->
                             <div class="card-image">
-                                <img style="height:400px; width:100%"  src="assets/images/IMG-20240319-WA0024.jpg" alt="card image">
+                                <img style="height:250px; width:100%"  src="assets/images/IMG-20240319-WA0024.jpg" alt="card image">
                             </div>
                             <!-- Card Overlay -->
                             <div class="card-img-overlay d-flex flex-column">
@@ -850,7 +944,7 @@ Blog START -->
 
                                     <h4><a href="{{route('user.singleBlog')}}" class="text-white text-primary-hover">Reliable sources to
                                             learn about folio</a></h4>
-                                  
+
                                         <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
                                             <!-- Card Categories -->
                                             <div class="text-primary-hover">
@@ -872,7 +966,7 @@ Blog START -->
                         <div class="card card-metro">
                             <!-- Card Image -->
                             <div class="card-image">
-                                <img style="height:400px; width:100%"  src="assets/images/IMG-20240320-WA0016.jpg" alt="card image">
+                                <img style="height:250px; width:100%"  src="assets/images/IMG-20240320-WA0016.jpg" alt="card image">
                             </div>
                             <!-- Card Overlay -->
                             <div class="card-img-overlay d-flex flex-column">
@@ -883,7 +977,7 @@ Blog START -->
 
                                     <h4><a href="{{route('user.singleBlog')}}" class="text-white text-primary-hover">Reliable sources to
                                             learn about folio</a></h4>
-                                  
+
                                         <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
                                             <!-- Card Categories -->
                                             <div class="text-primary-hover">
@@ -1062,7 +1156,7 @@ Footer START -->
             <div class="row">
 
                 <!-- Footer Widget 1 -->
-                <div class="col-md-6 col-lg-3 mb-5">
+                <div class="col-md-6 col-lg-4 mb-5">
                     <img src="assets/images/main.jpeg" alt="Logo Light" class="navbar-brand-item"
                         style="width: 80px; height: 50px" />
                     <p>Aduvie Event Center, where every moment is an occasion to remember!</p>
@@ -1094,7 +1188,7 @@ Footer START -->
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M14.8486 5.65845C13.1442 5.65845 11.7626 7.0401 11.7626 8.74446C11.7626 8.95304 11.7831 9.15581 11.822 9.35119C11.8846 9.66589 11.7924 9.99153 11.5741 10.2267C11.3558 10.4619 11.0379 10.578 10.7194 10.5389C8.51116 10.268 6.50248 9.35556 4.88498 7.9954C4.91649 8.59732 5.12515 9.23671 5.57799 9.90654L6.25677 10.9106L5.14211 11.3863L4.92704 11.4781C5.0869 11.6609 5.2791 11.8487 5.49369 12.0332C5.73717 12.2425 5.97247 12.4165 6.14726 12.5381C6.23408 12.5985 6.30452 12.645 6.35171 12.6755C6.37527 12.6907 6.39294 12.7018 6.40383 12.7086L6.41495 12.7155L6.41519 12.7157L6.41551 12.7159L6.41578 12.7161L6.41619 12.7163L6.41647 12.7165L7.96448 13.655L6.34397 14.4653C6.26374 14.5054 6.18367 14.5412 6.10393 14.573C6.42924 14.8471 6.82517 15.0995 7.2464 15.2986L8.63623 15.9556L7.47226 16.9598C6.8369 17.508 6.19778 17.9166 5.36946 18.1326C6.59681 18.7875 8.00315 19.1596 9.49941 19.1596C14.3045 19.1596 18.1746 15.325 18.1746 10.6256V10.1059L18.5998 9.80721C19.2636 9.34107 19.7329 8.71068 20.0689 7.99004H18.5398H17.9084L17.637 7.41994C17.1401 6.37633 16.0772 5.65845 14.8486 5.65845ZM3.56882 12.9581C3.38031 13.174 3.29093 13.4642 3.33193 13.7553C3.44474 14.5563 3.92441 15.2462 4.45444 15.7728C4.59838 15.9158 4.75232 16.0531 4.91396 16.184C4.88926 16.1909 4.86437 16.1975 4.83925 16.2038C4.35789 16.3243 3.70926 16.3494 2.62755 16.2434C2.20934 16.2024 1.81014 16.4273 1.62841 16.8062C1.44668 17.185 1.5212 17.6371 1.81492 17.9376C3.75693 19.9245 6.48413 21.1596 9.49941 21.1596C15.212 21.1596 19.8978 16.7239 20.1628 11.126C21.4521 10.0429 22.0976 8.57673 22.4458 7.24263C22.5241 6.94292 22.459 6.62387 22.2696 6.37873C22.0803 6.13359 21.788 5.99004 21.4783 5.99004H19.1247C18.2201 4.58853 16.6437 3.65845 14.8486 3.65845C12.1796 3.65845 9.99072 5.71435 9.7793 8.32892C7.91032 7.84456 6.2705 6.78758 5.05863 5.35408C4.83759 5.09261 4.49814 4.9624 4.15894 5.00897C3.81974 5.05554 3.52794 5.27241 3.38555 5.58378C2.78087 6.90597 2.66434 8.43104 3.34116 9.98046L3.10746 10.0802C2.64466 10.2777 2.40073 10.7884 2.5379 11.2725C2.72276 11.925 3.14129 12.5011 3.56882 12.9581Z"
+                                            d="M14.8486 5.65845C13.1442 5.65845 11.7626 7.0401 11.7626 8.74446C11.7626 8.95304 11.7831 9.15581 11.822 9.35119C11.8846 9.66589 11.7924 9.99153 11.5741 10.2267C11.3558 10.4619 11.0379 10.578 10.7194 10.5389C8.51116 10.268 6.50248 9.35556 4.88498 7.9954C4.91649 8.59732 5.12515 9.23671 5.57799 9.90654L6.25677 10.9106L5.14211 11.3863L4.92704 11.4781C5.0869 11.6609 5.2791 11.8487 5.49369 12.0332C5.73717 12.2425 5.97247 12.4165 6.14726 12.5381C6.23408 12.5985 6.30452 12.645 6.35171 12.6755C6.37527 12.6907 6.39294 12.7018 6.40383 12.7086L6.41495 12.7155L6.41519 12.7157L6.41551 12.7159L6.41578 12.7161L6.41619 12.7163L6.41647 12.7165L7.96448 13.655L6.34397 14.4653C6.26374 14.5054 6.18367 14.5412 6.10393 14.573C6.42924 14.8471 6.82517 15.0995 7.2464 15.2986L8.63623 15.9556L7.47226 16.9598C6.8369 17.508 6.19778 17.9166 5.36946 18.1326C6.59681 18.7875 8.00315 19.1596 9.49941 19.1596C14.3045 19.1596 18.1746 15.325 18.1746 10.6256V10.1059L18.5998 9.80721C19.2636 9.34107 19.7329 8.71068 20.0689 7.99004H18.5398H17.9084L17.637 7.41994C17.1401 6.37633 16.0772 5.65845 14.8486 5.65845ZM3.56882 12.9581C3.38031 13.174 3.29093 13.4642 3.33193 13.7553C3.44474 14.5563 3.92441 15.2462 4.45444 15.7728C4.59838 15.9158 4.75232 16.0531 4.91396 16.184C4.88926 16.1909 4.86437 16.1975 4.83925 16.2038C4.35789 16.3243 3.70926 16.3494 2.62755 16.2434C2.20934 16.2024 1.81014 16.4273 1.62841 16.8062C1.44668 17.185 1.5212 17.6371 1.81492 17.9376C3.75693 19.9245 6.48413 21.1596 9.49941 21.1596C15.212 21.1596 19.8978 16.7239 20.1628 11.126C21.4521 10.0429 22.0976 8.57673 22.4458 7.24263C22.5241 6.94292 22.459 6.62387 22.2696 6.37873C22.0803 6.13359 21.788 5.99004 21.4783 5.99004H19.1247C18.2201 4.58853 16.6437 3.65845 14.8486 3.65845C12.1796 3.65845 9.99072 5.71435 9.7793 8.32892C7.91032 7.84456 6.2705 6.78758 5.05863 5.35408C4.83759 5.09261 4.49814 4.9624 4.15894 5.00897C3.81974 5.05554 3.52794 5.27241 3.38555 5.58378C2.78087 6.90597 2.66434 8.43104 3.34116 9.98046L3.10746 10.0802C2.64466 10.2777 2.25073 10.7884 2.5379 11.2725C2.72276 11.925 3.14129 12.5011 3.56882 12.9581Z"
                                             fill="#ffffff"></path>
                                     </g>
                                 </svg></a>
@@ -1114,7 +1208,7 @@ Footer START -->
                 </div>
 
                 <!-- Footer Widget 2 -->
-                <div class="col-md-6 col-lg-3 mb-5">
+                <div class="col-md-6 col-lg-4 mb-5">
                     <h5 class="mb-4 text-white">Our office</h5>
                     <!-- Address 1 -->
                     <p class="text-white mb-2">Abuja, Nigeria (HQ)</p>
@@ -1123,32 +1217,8 @@ Footer START -->
 
                 </div>
 
-                <!-- Footer Widget 3 -->
-                <div class="col-md-6 col-lg-3 mb-5">
-                    <h5 class="mb-4 text-white">Useful links</h5>
-                    <div class="row">
-                        <div class="col-6">
-                            <ul class="nav flex-column text-primary-hover">
-                                <li class="nav-item"> <a class="nav-link" href="{{ route('user.index') }}">Home</a>
-                                </li>
-                                <li class="nav-item"> <a class="nav-link active"
-                                        href="{{ route('user.about') }}">About Us</a></li>
-                                <li class="nav-item"> <a class="nav-link"
-                                        href="{{ route('user.gallery') }}">Gallery</a></li>
-                                <li class="nav-item"> <a class="nav-link"
-                                            href="{{ route('user.blog') }}">Blog Posts</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="{{ route('user.event') }}">Event
-                                        Calendar</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="{{ route('user.contact') }}">Contact
-                                        Us</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
                 <!-- Footer Widget 4 -->
-                <div class="col-md-6 col-lg-3 mb-5">
+                <div class="col-md-6 col-lg-4 mb-5">
                     <h5 class="mb-4 text-white">Stay in touch</h5>
                     <form>
                         <label class="form-label">Have questions about hosting your events?</label>

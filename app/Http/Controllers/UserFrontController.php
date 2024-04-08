@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\ContactMessageCreated;
+use App\Models\Event;
 
 class UserFrontController extends Controller
 {
@@ -44,6 +45,12 @@ class UserFrontController extends Controller
     public function gallery()
     {
         return view('user.gallery');
+    }
+
+    public function book()
+    {
+        $events = Event::all();
+        return view('user.book', compact('events'));
     }
     public function blog()
     {

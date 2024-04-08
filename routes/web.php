@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BookingController;
 
 
 // Route::get('/', function () {
@@ -75,4 +76,7 @@ Route::get('/blog-post', [UserFrontController::class, 'blog'])->name('user.blog'
 Route::get('/single-blog', [UserFrontController::class, 'singleBlog'])->name('user.singleBlog');
 Route::get('/single-event', [UserFrontController::class, 'singleEvent'])->name('user.singleEvent');
 Route::get('/gallery', [UserFrontController::class, 'gallery'])->name('user.gallery');
+Route::get('/book-now', [UserFrontController::class, 'book'])->name('user.book');
+Route::post('/bookings', [BookingController::class, 'create'])->name('booking.create');
+
 // end user routes
