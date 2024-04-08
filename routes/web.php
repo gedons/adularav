@@ -63,6 +63,11 @@ Route::delete('/gallery/{gallery}', [GalleryController::class, 'destroy'])->name
 Route::get('/admin/profile', [AdminController::class, 'edit'])->middleware('auth')->name('admin.profile');
 Route::put('/admin/profile', [AdminController::class, 'update'])->middleware('auth')->name('admin.profile.update');
 
+//admin booking
+Route::delete('/booking/{booking}', [BookingController::class, 'destroy'])->middleware('auth')->name('booking.destroy');
+Route::get('/booking/{booking}', [BookingController::class, 'show'])->middleware('auth')->name('booking.show');
+Route::post('/booking/{booking}', [BookingController::class, 'sendEmail'])->middleware('auth')->name('booking.email');
+
 // end admin route
 
 

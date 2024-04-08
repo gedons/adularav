@@ -411,7 +411,7 @@ JS libraries, plugins and custom scripts -->
 	$(document).ready(function() {
 	  setTimeout(function() {
 		$(".alert").alert("close");
-	  }, 9000);
+	  }, 10000);
 	});
 	</script>
 

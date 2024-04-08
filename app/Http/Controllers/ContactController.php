@@ -27,34 +27,34 @@ class ContactController extends Controller
     }
 
     public function sendEmail(Request $request, $id)
-{
-    // Validate the request data (message is required)
-    $rules = [
-        'message' => 'required|string',
-    ];
+    {
+        // Validate the request data (message is required)
+        $rules = [
+            'message' => 'required|string',
+        ];
 
-    $validator = Validator::make($request->all(), $rules);
+        $validator = Validator::make($request->all(), $rules);
 
-    if ($validator->fails()) {
-        return back()->withErrors($validator)->withInput();
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->withInput();
+        }
+
+        // Fetch the contact message to reply to
+        $contactMessage = ContactMessage::findOrFail($id);
+
+        // Send reply email to user
+        $this->sendReplyEmail($contactMessage, $request->message);
+
+        // Flash success message
+        $request->session()->flash('success', 'Email has been sent successfully!');
+
+        return redirect()->route('contact');
     }
 
-    // Fetch the contact message to reply to
-    $contactMessage = ContactMessage::findOrFail($id);
-
-    // Send reply email to user
-    $this->sendReplyEmail($contactMessage, $request->message);
-
-    // Flash success message
-    $request->session()->flash('success', 'Your reply has been sent successfully!');
-
-    return redirect()->route('contact');
-}
-
-// Helper function to send reply email
-private function sendReplyEmail(ContactMessage $contactMessage, $replyMessage)
-{
-    Mail::to($contactMessage->email)->send(new ContactReply($contactMessage, $replyMessage));
-}
+    // Helper function to send reply email
+    private function sendReplyEmail(ContactMessage $contactMessage, $replyMessage)
+    {
+        Mail::to($contactMessage->email)->send(new ContactReply($contactMessage, $replyMessage));
+    }
 
 }

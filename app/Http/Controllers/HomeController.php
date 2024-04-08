@@ -8,6 +8,7 @@ use App\Models\BlogPost;
 use App\Models\SliderImage;
 use App\Models\GalleryImage;
 use App\Models\ContactMessage;
+use App\Models\Booking;
 
 class HomeController extends Controller
 {
@@ -47,7 +48,8 @@ class HomeController extends Controller
 
     public function bookings()
     {
-        return view('bookings');
+        $bookings = Booking::all();
+        return view('bookings', compact('bookings'));
     }
 
     public function blogs()
