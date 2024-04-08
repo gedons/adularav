@@ -69,8 +69,6 @@
 								</span>
 							</a>
 							<div class="clearfix"></div>
-
-
 						</div>
 					</div>
 					<ul class="nav">

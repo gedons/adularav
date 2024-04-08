@@ -15,7 +15,7 @@
 <body>
 	<div class="wrapper">
 		<div class="main-header">
-			<div class="logo-header">           
+			<div class="logo-header">
 				<a href="{{ url('/') }}" class="logo">
 					Admin Dashboard
 				</a>
@@ -26,30 +26,29 @@
 			</div>
 			<nav class="navbar navbar-header navbar-expand-lg">
 				<div class="container-fluid">
-					
-		 
+
+
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
-					 
-					 
+
+
 						<li class="nav-item dropdown">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="../adminAssets/assets/img/profile.jpg" alt="user-img" width="36" class="img-circle"><span >Hizrian</span></span> </a>
+                            <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="../../adminAssets/assets/img/profile.jpg" alt="user-img" width="36" class="img-circle"><span >{{ Auth::user()->name }}</span></span> </a>
+
 							<ul class="dropdown-menu dropdown-user">
 								<li>
 									<div class="user-box">
-										<div class="u-img"><img src="../adminAssets/assets/img/profile.jpg" alt="user"></div>
+										<div class="u-img"><img src="../../adminAssets/assets/img/profile.jpg" alt="user"></div>
 										<div class="u-text">
-											<h4>Hizrian</h4>
-											<p class="text-muted">hello@themekita.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+											<h4>{{ Auth::user()->name }}</h4>
+											<p class="text-muted">{{ Auth::user()->email }}</p><a href="{{route('admin.profile')}}" class="btn btn-rounded btn-primary btn-sm">View Profile</a></div>
 										</div>
 									</li>
 									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#"><i class="ti-user"></i> My Profile</a>
-									<a class="dropdown-item" href="#"></i> My Balance</a>
-									<a class="dropdown-item" href="#"><i class="ti-email"></i> Inbox</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#"><i class="ti-settings"></i> Account Setting</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Logout</a>
+									<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Logout</a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
 								</ul>
 								<!-- /.dropdown-user -->
 							</li>
@@ -68,61 +67,40 @@
 								<span>
 									Welcome
 									<span class="user-level">{{ Auth::user()->name }}</span>
-									<span class="caret"></span>
 								</span>
 							</a>
 							<div class="clearfix"></div>
-
-							<div class="collapse in" id="collapseExample" aria-expanded="true" style="">
-								<ul class="nav">
-									<li>
-										<a href="#profile">
-											<span class="link-collapse">My Profile</span>
-										</a>
-									</li>
-									<li>
-										<a href="#edit">
-											<span class="link-collapse">Edit Profile</span>
-										</a>
-									</li>
-									<li>
-										<a href="#settings">
-											<span class="link-collapse">Settings</span>
-										</a>
-									</li>
-								</ul>
-							</div>
 						</div>
 					</div>
 					<ul class="nav">
 						<li class="nav-item">
 							<a href="{{ route('home') }}">
 								<i class="la la-dashboard"></i>
-								<p>Dashboard</p>								 
+								<p>Dashboard</p>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a href="{{ route('events') }}">
 								<i class="la la-table"></i>
-								<p>Events</p>								
+								<p>Events</p>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a href="{{ route('bookings') }}">
 								<i class="la la-keyboard-o"></i>
-								<p>User Bookings</p>								
+								<p>User Bookings</p>
 							</a>
 						</li>
 						<li class="nav-item active">
 							<a href="{{ route('blogs') }}">
 								<i class="la la-jsfiddle"></i>
-								<p>Blog</p>								
+								<p>Blog</p>
 							</a>
-						</li>	
+						</li>
 						<li class="nav-item">
 							<a class="#" data-toggle="collapse" href="#collapsefExample" aria-expanded="true">
-								<span>							
-								<i class="la la-th"></i>		 
+								<span>
+								<i class="la la-th"></i>
 									<span class="user-level">Pages</span>
 									<span class="caret"></span>
 								</span>
@@ -149,21 +127,21 @@
 								</ul>
 							</div>
 
-						</li>										
+						</li>
 						<li class="nav-item">
 							<a href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                                <i class="la la-fast-backward"></i>	
-                                <p>Logout</p>															
+                                <i class="la la-fast-backward"></i>
+                                <p>Logout</p>
 							</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
-						</li>						 
+						</li>
 					</ul>
 				</div>
 			</div>
-			 
+
 				<div class="main-panel h-100">
 					<div class="content">
 						<div class="container-fluid">
@@ -173,11 +151,11 @@
 										{{ session('success') }}
 									</div>
 							@endif
-							<div class="row">							
+							<div class="row">
 								<div class="col-md-12">
 									<div class="card">
-										<div class="card-header">										
-											<a href="{{route('blogCreate')}}" class="btn btn-link float-right">Create New Post </a>		
+										<div class="card-header">
+											<a href="{{route('blogCreate')}}" class="btn btn-link float-right">Create New Post </a>
 										</div>
 										<div class="card-body">
 											<div class="table-responsive">
@@ -188,7 +166,7 @@
 															<th scope="col">Image</th>
 															<th scope="col">Post Title</th>
 															<th scope="col">Content</th>
-                                                            <th scope="col">Created</th>															
+                                                            <th scope="col">Created</th>
 															<th scope="col">Actions</th>
 														</tr>
 													</thead>
@@ -199,7 +177,7 @@
 																<td><img src="{{ $blog->url }}" alt="Blog Image" style="max-width: 100px; height: 60px;"></td>
 																<td>{{ $blog->title }}</td>
 																<td>{{ $blog->content }}</td>
-																<td>{{ $blog->created_at->diffForHumans(); }}</td>																																													
+																<td>{{ $blog->created_at->diffForHumans(); }}</td>
 																<td  class="td-actions text-right">
 																	<div class="form-button-action">
 																		<a href="{{ route('blog.edit', $blog->id) }}" data-toggle="tooltip" title="Edit Post" class="btn btn-link <btn-simple-primary">
@@ -216,14 +194,14 @@
 																</td>
 															</tr>
 														@endforeach
-														
+
 													</tbody>
 												</table>
 											</div>
 										</div>
 									</div>
 								</div>
-								
+
 							</div>
 						</div>
 					</div>
@@ -235,16 +213,16 @@
 										<a class="nav-link" href="https://www.aduvieevents.com">
 											Aduvie Events Center
 										</a>
-									</li>								
+									</li>
 								</ul>
 							</nav>
 							<div class="copyright ml-auto">
 								2024, made with <i class="la la-heart heart text-danger"></i> by <a href="https://www.gedonidev.vercel.app">NTech</a>
-							</div>				
+							</div>
 						</div>
 					</footer>
 				</div>
-		
+
 		</div>
 	</div>
 
@@ -266,7 +244,7 @@
 	$(document).ready(function() {
 	  setTimeout(function() {
 		$(".alert").alert("close");
-	  }, 3000); 
+	  }, 3000);
 	});
 	</script>
 </html>
