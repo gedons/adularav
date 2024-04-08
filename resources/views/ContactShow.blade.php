@@ -101,7 +101,7 @@
 								<p>Dashboard</p>
 							</a>
 						</li>
-						<li class="nav-item active">
+						<li class="nav-item ">
 							<a href="{{ route('events') }}">
 								<i class="la la-table"></i>
 								<p>Events</p>
@@ -166,68 +166,51 @@
             <div class="main-panel">
 				<div class="content">
 					<div class="container-fluid">
-						<h4 class="page-title">Events</h4>
+						<h4 class="page-title">Message Details</h4>
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">Add New Event</div>
+										<div class="card-title">Message From <b>{{$contact->name}}</b></div>
 									</div>
-                                    <form method="POST" action="{{ route('events.store') }}" enctype="multipart/form-data">
+                                    <form method="POST" action="{{ route('contact.email', $contact->id) }}" enctype="multipart/form-data">
                                         @csrf
                                         <div class="card-body">
                                             <div class="form-group">
-                                                <label for="name">Event Name</label>
-                                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" id="name" required autocomplete="name" autofocus placeholder="Enter Event Name">
-                                                <small id="nameHelp" class="form-text text-muted">The name of the event.</small>
-                                                @error('name')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="name">Event Date</label>
-                                                <input type="date" class="form-control @error('date') is-invalid @enderror" name="date" value="{{ old('date') }}" id="date">
-                                                <small id="nameHelp" class="form-text text-muted">The date of the event.</small>
-                                                @error('date')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="email">Email Address</label>
-                                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" id="email" placeholder="Enter Email">
-                                                <small id="emailHelp" class="form-text text-muted">Email of the client. An email confirmation will be sent.</small>
-                                                @error('email')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
+                                                <label for="name">User Name</label>
+                                                <input type="text" disabled value="{{ $contact->name }}" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" id="name" required autocomplete="name" autofocus >
                                             </div>
 
-                                                <div class="form-group">
-                                                    <label for="exampleFormControlFile1">Event Image</label>
-                                                    <input type="file" class="form-control-file @error('image') is-invalid @enderror" name="image" id="exampleFormControlFile1">
-                                                    @error('image')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="comment">Description</label>
-                                                    <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="comment" rows="5"></textarea>
-                                                    @error('description')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                                </div>
+                                            <div class="form-group">
+                                                <label for="email">User Email</label>
+                                                <input type="email" disabled value="{{ $contact->email }}" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" id="email" required autocomplete="email" autofocus >
                                             </div>
+
+                                            <div class="form-group">
+                                                <label for="email">Subject</label>
+                                                <input type="text" disabled value="{{ $contact->subject }}" class="form-control @error('subject') is-invalid @enderror" name="subject" value="{{ old('subject') }}" id="subject" required autocomplete="subject" autofocus >
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="email">Message</label>
+                                                <input type="text" disabled value="{{ $contact->message }}" class="form-control @error('message') is-invalid @enderror" name="message" value="{{ old('message') }}" id="message" required autocomplete="message" autofocus >
+                                            </div>
+                                        </div>
+
+                                        <div class="card-body">
+                                            <h4 class="page-title">Reply</h4>
+                                            <div class="form-group">
+                                                <label for="email">Message</label>
+                                                <textarea  class="form-control @error('message') is-invalid @enderror" name="message" value="{{ old('message') }}" rows="5"></textarea>
+                                                @error('message')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                            </div>
+                                        </div>
                                             <div class="card-action">
-                                                <button type="submit" class="btn btn-primary">Create Event</button>
+                                                <button type="submit" class="btn btn-primary">Send</button>
                                             </div>
                                         </div>
                                     </form>

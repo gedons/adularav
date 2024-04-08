@@ -27,6 +27,10 @@ Route::get('/admin/sliders', [App\Http\Controllers\HomeController::class, 'slide
 Route::get('/admin/gallery', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');
 Route::get('/admin/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 
+Route::delete('/contact/{contact}', [App\Http\Controllers\ContactController::class, 'destroy'])->name('contact.destroy');
+Route::get('/message/{contact}/view', [App\Http\Controllers\ContactController::class, 'show'])->name('contact.show');
+Route::post('/contact/{contact}', [App\Http\Controllers\ContactController::class, 'sendEmail'])->name('contact.email');
+
 
 //event routes
 Route::post('/events', [EventController::class, 'store'])->name('events.store');
@@ -59,6 +63,7 @@ Route::delete('/gallery/{gallery}', [GalleryController::class, 'destroy'])->name
 Route::get('/', [UserFrontController::class, 'index'])->name('user.index');
 Route::get('/about-us', [UserFrontController::class, 'about'])->name('user.about');
 Route::get('/contact-us', [UserFrontController::class, 'contact'])->name('user.contact');
+Route::post('/contact-send', [UserFrontController::class, 'send'])->name('contact.send');
 Route::get('/events', [UserFrontController::class, 'event'])->name('user.event');
 Route::get('/blog-post', [UserFrontController::class, 'blog'])->name('user.blog');
 Route::get('/single-blog', [UserFrontController::class, 'singleBlog'])->name('user.singleBlog');

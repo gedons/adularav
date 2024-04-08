@@ -7,6 +7,7 @@ use App\Models\Event;
 use App\Models\BlogPost;
 use App\Models\SliderImage;
 use App\Models\GalleryImage;
+use App\Models\ContactMessage;
 
 class HomeController extends Controller
 {
@@ -69,7 +70,8 @@ class HomeController extends Controller
 
     public function contact()
     {
-        return view('contact');
+        $contacts = ContactMessage::all();
+        return view('contact', compact('contacts'));
     }
 
     public function eventCreate()

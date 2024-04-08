@@ -179,39 +179,65 @@ Contact form START -->
 			<div class="col-lg-3">
 				<h3>Contact us</h3>
 				<p>Get in touch with us to see how we can help you with your project</p>
+                @if (session('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('success') }}
+                    </div>
+                @endif
 			</div>
 			<!-- Form -->
 			<div class="col-lg-9">
 				<!-- Form START -->
-				<form class="contact-form form-line" id="contact-form" name="contactform" method="POST" action="https://folio.webestica.com/assets/include/contact-action.php">
+				<form class="contact-form form-line" id="contact-form"  method="POST" action="{{ route('contact.send') }}">
+                    @csrf
 					<!-- Main form -->
 					<div class="row">
 						<div class="col-md-6">
 							<!-- name -->
 							<div class="mb-3 position-relative">
-								<input required id="con-name" name="name" type="text" class="form-control" placeholder="Name">
+								<input required placeholder="Name" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}">
 								<span class="focus-border"></span>
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 							</div>
 						</div>
 						<div class="col-md-6">
 							<!-- email -->
 							<div class="mb-3 position-relative">
-								<input required id="con-email" name="email" type="email" class="form-control" placeholder="E-mail">
-								<span class="focus-border"></span>
+								<input required placeholder="Email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
+                                <span class="focus-border"></span>
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 							</div>
 						</div>
 						<div class="col-md-12">
 							<!-- Subject -->
 							<div class="mb-3 position-relative">
-								<input required id="con-subject" name="subject" type="text" class="form-control" placeholder="Subject">
-								<span class="focus-border"></span>
+								<input required placeholder="Subject" class="form-control @error('subject') is-invalid @enderror" id="subject" name="subject" value="{{ old('subject') }}">
+                                <span class="focus-border"></span>
+                                @error('subject')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 							</div>
 						</div>
 						<div class="col-md-12">
 							<!-- Message -->
 							<div class="mb-3 position-relative">
-								<textarea required id="con-message" name="message" cols="40" rows="6" class="form-control" placeholder="Message"></textarea>
-								<span class="focus-border"></span>
+								<textarea required placeholder="Message" class="form-control @error('message') is-invalid @enderror" id="message" name="message" rows="5">{{ old('message') }}</textarea>
+                                <span class="focus-border"></span>
+                                @error('message')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 							</div>
 						</div>
 						<!-- submit button -->
@@ -389,10 +415,17 @@ JS libraries, plugins and custom scripts -->
 <!-- Vendors -->
 <script src="assets/vendor/jarallax/jarallax.min.js"></script>
 <script src="assets/vendor/tiny-slider/tiny-slider.js"></script>
+<script src="adminAssets/assets/js/core/jquery.3.2.1.min.js"></script>
 
 <!-- Template Functions -->
 <script src="assets/js/functions.js"></script>
-
+<script>
+	$(document).ready(function() {
+	  setTimeout(function() {
+		$(".alert").alert("close");
+	  }, 9000);
+	});
+	</script>
 </body>
 
 </html>
