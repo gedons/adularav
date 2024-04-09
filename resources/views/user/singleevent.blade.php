@@ -15,15 +15,15 @@
 	<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&amp;family=Rubik:wght@400;500;700&amp;family=Spartan:wght@400;700;900&amp;display=swap" rel="stylesheet">
 
 	<!-- Plugins CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/animate/animate.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/tiny-slider/tiny-slider.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/aos/aos.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/glightbox/css/glightbox.css') }}">
 
 	<!-- Theme CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 
 </head>
 
@@ -31,7 +31,7 @@
 
 <!-- =======================
 Header START -->
-<header class="navbar-header-static navbar-sticky">
+<header class="navbar-sticky-bg-dark navbar-sticky">
 
 
 	<!-- Logo Nav START -->
@@ -41,7 +41,7 @@ Header START -->
 			<a class="navbar-brand" href="index.html">
 				<!-- Logo SVG Code -->
 
-				 <img src="assets/images/main.jpeg" alt="Logo Light" class="navbar-brand-item" style="width: 80px; height: 50px" />
+				 <img src="{{asset('assets/images/main.jpeg')}}" alt="Logo Light" class="navbar-brand-item" style="width: 80px; height: 50px" />
 			</a>
 			<!-- Logo END -->
 
@@ -85,7 +85,7 @@ Header END -->
 
 <!-- =======================
 Inner intro START -->
-<section class="bg-parallax bg-dark-overlay-4 py-5 py-md-8" style="background:url(assets/images/pagebanner.jpg) no-repeat center center; background-size:cover;">
+<section class="bg-parallax bg-dark-overlay-4 py-5 py-md-8" style="background:url({{asset('assets/images/pagebanner.jpg')}}) no-repeat center center; background-size:cover;">
 	<!-- Shape Decoration START -->
 	<figure class="position-absolute end-0 bottom-0 mb-n6 me-8 d-none d-lg-block">
 		<svg width="180" height="188" viewBox="0 0 379 395" xmlns="http://www.w3.org/2000/svg">
@@ -162,7 +162,7 @@ Inner intro START -->
 					<ol class="breadcrumb breadcrumb-dark">
 						<li class="breadcrumb-item text-white"><a href="index.html">Aduvie Events Center</a></li>
 						<li class="breadcrumb-item text-white">Event Calender</li>
-						<li class="breadcrumb-item text-white">Event Name</li>
+						<li class="breadcrumb-item text-white">{{$event->name}}</li>
 					</ol>
 				</nav>
 				</h5>
@@ -180,30 +180,20 @@ EVENT 1 START -->
 		<div class="row d-flex justify-content-md-between">
 			<!-- Overview -->
 			<div class="col-md-6">
-				<h3>Project overview</h3>
-				<p>Son agreed to others Exeter period myself few yet nature. Mention Mr manners opinion if garrets enabled. To occasional dissimilar impossible sentiments. Do fortune account written prepare invited no passage.</p>
-				<a class="btn btn-line text-dark mb-4" href="#">Launch Project</a>
+				<h3>{{$event->name}}</h3>
+				<p>{{$event->description}}</p>
 			</div>
 			<!-- Detail -->
 			<div class="col-md-3 col-lg-2">
 				<div class="mb-4">
 					<h6><i class="far fa-user me-2"></i>Client:</h6>
-					<p>Dead Beta Two Scissors</p>
-				</div>
-				<div class="mb-4">
-					<h6><i class="far fa-compass me-2"></i>Location:</h6>
-					<p>NY, United States</p>
+					<p class="text-danger">[Protected]</p>
 				</div>
 			</div>
 			<!-- Services -->
 			<div class="col-md-3 col-lg-2">
-				<h6><i class="fas fa-briefcase me-2"></i>Services:</h6>
-				<ul>
-					<li>Branding </li>
-					<li>Brand strategy </li>
-					<li>Corporate identity design </li>
-					<li>Brand story </li>
-				</ul>
+				<h6><i class="far fa-compass me-2"></i>Location:</h6>
+					<p>Aduvie Events Center</p>
 			</div>
 		</div>
 	</div>
@@ -219,20 +209,16 @@ EVENT 2 START -->
 		<div class="row g-0">
 			<!-- Image -->
 			<div class="col-lg-6">
-				<a class="d-block" data-glightbox data-gallery="portfolio" href="assets/images/portfolio/big/07.jpg">
-					<img class="w-100" src="assets/images/portfolio/big/07.jpg" alt="">
+				<a class="d-block" data-glightbox data-gallery="portfolio" href="{{$event->url}}">
+					<img style="height: 250px" class="w-100" src="{{$event->url}}" alt="">
 				</a>
 			</div>
 			<!-- Details -->
 			<div class="col-lg-6">
-				<div class="pt-5 pt-lg-0 pt-xl-5 ps-lg-6">
-					<h3>Project Requirement</h3>
-					<p>Too months nay end change relied on who beauty wishes matter. Shew of john real park so rest we on. Ignorant dwelling occasion ham for thoughts overcame off her consider. Polite it Elinor is depend. His not get talked effect worthy Barton.</p>
-					<ul class="list-group list-group-borderless list-group-icon-primary-bg mb-5">
-						<li class="list-group-item"><i class="fas fa-check"></i>Maintained Windows Servers</li>
-						<li class="list-group-item"><i class="fas fa-check"></i>Supported Windows workstations</li>
-						<li class="list-group-item"><i class="fas fa-check"></i>Designed machines/server and trained employees</li>
-					</ul>
+				<div class="pt-5 pt-lg-0 pt-xl-1 ps-lg-6">
+					<h3>More Details</h3>
+					<p>{{$event->description}}</p>
+
 				</div>
 			</div>
 		</div>
@@ -254,7 +240,7 @@ Footer START -->
 
             <!-- Footer Widget 1 -->
             <div class="col-md-6 col-lg-4 mb-5">
-                <img src="assets/images/main.jpeg" alt="Logo Light" class="navbar-brand-item"
+                <img src="{{asset('assets/images/main.jpeg')}}" alt="Logo Light" class="navbar-brand-item"
                     style="width: 80px; height: 50px" />
                 <p>Aduvie Event Center, where every moment is an occasion to remember!</p>
                 <div class="d-flex me-auto">
@@ -369,14 +355,14 @@ JS libraries, plugins and custom scripts -->
 <!-- Bootstrap JS -->
 <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Vendors -->
-<script src="assets/vendor/glightbox/js/glightbox.js"></script>
-<script src="assets/vendor/jarallax/jarallax.min.js"></script>
-<script src="assets/vendor/tiny-slider/tiny-slider.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
+ <!-- Vendors -->
+ <script src="{{asset('assets/vendor/glightbox/js/glightbox.js')}}"></script>
+ <script src="{{asset('assets/vendor/jarallax/jarallax.min.js')}}"></script>
+ <script src="{{asset('assets/vendor/tiny-slider/tiny-slider.js')}}"></script>
+ <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
 
-<!-- Template Functions -->
-<script src="assets/js/functions.js"></script>
+ <!-- Template Functions -->
+ <script src="{{asset('assets/js/functions.js')}}"></script>
 
 </body>
 

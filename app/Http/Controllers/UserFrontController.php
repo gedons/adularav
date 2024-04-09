@@ -25,7 +25,8 @@ class UserFrontController extends Controller
 
     public function about()
     {
-        return view('user.about');
+        $galleries = GalleryImage::all();
+        return view('user.about', compact('galleries'));
     }
 
     public function contact()
@@ -44,9 +45,9 @@ class UserFrontController extends Controller
         return view('user.singleblog', compact('blog'));
     }
 
-    public function singleEvent()
+    public function singleEvent(Event $event)
     {
-        return view('user.singleevent');
+        return view('user.singleevent', compact('event'));
     }
 
     public function gallery()

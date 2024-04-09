@@ -79,7 +79,7 @@ Route::post('/contact-send', [UserFrontController::class, 'send'])->name('contac
 Route::get('/events', [UserFrontController::class, 'event'])->name('user.event');
 Route::get('/blog-post', [UserFrontController::class, 'blog'])->name('user.blog');
 Route::get('/single-blog/{blog}', [UserFrontController::class, 'singleBlog'])->name('user.singleBlog');
-Route::get('/single-event', [UserFrontController::class, 'singleEvent'])->name('user.singleEvent');
+Route::get('/single-event/{event}', [UserFrontController::class, 'singleEvent'])->name('user.singleEvent');
 Route::get('/gallery', [UserFrontController::class, 'gallery'])->name('user.gallery');
 Route::get('/book-now', [UserFrontController::class, 'book'])->name('user.book');
 Route::post('/bookings', [BookingController::class, 'create'])->name('booking.create');

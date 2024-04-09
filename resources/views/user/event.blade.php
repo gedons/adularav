@@ -31,7 +31,7 @@
 
 <!-- =======================
 Header START -->
-<header class="navbar-header-static navbar-sticky">
+<header class="navbar-sticky-bg-dark navbar-sticky">
 
 
 	<!-- Logo Nav START -->
@@ -192,7 +192,7 @@ event START -->
 						<!-- Card item START -->
                         @foreach ($events as $event)
 						<div class="item">
-							<a href="{{route('user.singleEvent')}}" class="card card-metro">
+							<a href="{{route('user.singleEvent', $event->id)}}" class="card card-metro">
 								<!-- Card Image -->
 								<div class="card-image">
 									<img style="height:250px; width:100%" src="{{$event->url}}" alt="card image">

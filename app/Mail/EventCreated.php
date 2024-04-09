@@ -30,7 +30,7 @@ class EventCreated extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Event Created',
+            subject: 'New Event Created',
         );
     }
 

@@ -31,7 +31,7 @@
 
 <!-- =======================
 Header START -->
-<header class="navbar-header-static navbar-sticky">
+<header class="navbar-sticky-bg-dark navbar-sticky">
 
 
 	<!-- Logo Nav START -->
@@ -308,148 +308,47 @@ About END -->
 
 <!-- =======================
 Venue START -->
-<section class="pt-5">
-	<div class="container">
-			<!-- Title -->
-			<div class="row d-flex justify-content-between align-items-center">
-				<div class="col-sm-8 mb-3">
-					<h2 class="display-6 mb-0 mb-sm-4 text-dark-stroke">Our Venue</h2>
-				</div>
-			</div>
-		<!-- Portfolio items -->
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="tiny-slider dots-bordered">
-					<div class="tiny-slider-inner" data-arrow="true" data-dots="true" data-items-xl="3"
-						data-items-lg="3" data-items-md="3" data-items-sm="2" data-items-xs="1">
+<section class="pt-4">
+    <div class="container">
+        <!-- Title -->
+        <div class="row d-flex justify-content-between align-items-center">
+            <div class="col-sm-8 mb-3">
+                <h2 class="display-5 mb-0 mb-sm-4 text-dark-stroke">Our Venue</h2>
+            </div>
+            <div class="col-sm-4 mb-4 text-start text-sm-end">
+                <a href="{{route('user.gallery')}}" class="btn btn-line text-primary mt-3">View more</a>
+            </div>
+        </div>
+        <!-- Portfolio items -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tiny-slider dots-bordered">
+                    <div class="tiny-slider-inner" data-arrow="false" data-dots="true" data-items-xl="3"
+                        data-items-lg="3" data-items-md="3" data-items-sm="2" data-items-xs="1">
 
-						<!-- Card item START -->
-						<div class="item">
-							<a href="assets/images/IMG-20240319-WA0021.jpg" class="card card-metro"
-								data-glightbox data-gallery="gallery-1">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img src="assets/images/IMG-20240319-WA0025.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-
-									<div class="mt-auto card-text">
-										<h5 class="text-white">The missing link in e-Mobility</h5>
-										<p class="small text-white mb-0 text-truncate">What hasn’t been a great
-											fit in e-mobility until now.</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="assets/images/IMG-20240319-WA0024.jpg" data-glightbox data-gallery="gallery-1" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img src="assets/images/IMG-20240319-WA0024.jpg"  alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-
-									<div class="mt-auto card-text">
-										<h5 class="text-white">Trumer brewed happiness</h5>
-										<p class="small text-white mb-0 text-truncate">Private brewery for
-											excellent beer</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="assets/images/IMG-20240319-WA0031.jpg"  data-glightbox data-gallery="gallery-1" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img src="assets/images/IMG-20240319-WA0031.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-
-									<div class="mt-auto card-text">
-										<h5 class="text-white">Enticing like the ocean</h5>
-										<p class="small text-white mb-0 text-truncate">Viktoria Louise is the
-											blossoming fashion label of Vicky Heiler</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="assets/images/IMG-20240319-WA0033.jpg" data-glightbox data-gallery="gallery-1" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img src="assets/images/IMG-20240319-WA0033.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-
-									<div class="mt-auto card-text">
-										<h5 class="text-white">Pure design branding</h5>
-										<p class="small text-white mb-0 text-truncate">Art collector and
-											architect Axel</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="assets/images/IMG-20240320-WA0020.jpg" data-glightbox data-gallery="gallery-1" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img src="assets/images/IMG-20240320-WA0020.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-
-									<div class="mt-auto card-text">
-										<h5 class="text-white">The missing link</h5>
-										<p class="small text-white mb-0 text-truncate">Small things that make
-											difference</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="assets/images/IMG-20240320-WA0016.jpg" data-glightbox data-gallery="gallery-1" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img src="assets/images/IMG-20240320-WA0016.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-
-									<div class="mt-auto card-text">
-										<h5 class="text-white">Life's hard in the mountains</h5>
-										<p class="small text-white mb-0 text-truncate">Ten wineries with strong
-											personalities, individual stories and multi-faceted wines</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-					</div>
-				</div>
-			</div>
-		</div><!-- row END -->
-	</div>
+                        <!-- Card item START -->
+                        @foreach ($galleries as $gallery)
+                        <div class="item">
+                            <a href="{{$gallery->url}}"  data-glightbox data-gallery="portfolio" class="card card-metro">
+                                <!-- Card Image -->
+                                <div class="card-image">
+                                    <img style="height:250px; width:100%" src="{{$gallery->url}}" alt="card image">
+                                </div>
+                                <!-- Card Overlay -->
+                                <div class="card-img-overlay d-flex flex-column">
+                                    <div class="mt-auto card-text">
+                                        <p class="small text-white mb-0 text-truncate">{{$gallery->gallerytext}}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        @endforeach
+                        <!-- Card item END -->
+                    </div>
+                </div>
+            </div>
+        </div><!-- row END -->
+    </div>
 </section>
 <!-- =======================
 Venue END -->

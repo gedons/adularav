@@ -31,7 +31,7 @@
 
 <!-- =======================
 Header START -->
-<header class="navbar-header-static navbar-sticky">
+<header class="navbar-sticky-bg-dark navbar-sticky">
 
 
 	<!-- Logo Nav START -->
