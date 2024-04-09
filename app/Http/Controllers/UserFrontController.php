@@ -9,12 +9,18 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\ContactMessageCreated;
 use App\Models\Event;
+use App\Models\SliderImage;
+use App\Models\GalleryImage;
+use App\Models\BlogPost;
 
 class UserFrontController extends Controller
 {
     public function index()
     {
-        return view('user.index');
+        $sliders = SliderImage::all();
+        $galleries = GalleryImage::all();
+        $blogs = BlogPost::all();
+        return view('user.index', compact('sliders','galleries','blogs'));
     }
 
     public function about()

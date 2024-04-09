@@ -189,26 +189,26 @@
 									</div>
 								</div>
 							</div>
-							{{-- <div class="col-md-3">
+							<div class="col-md-3">
 								<div class="card card-stats">
 									<div class="card-body">
 										<div class="row">
 											<div class="col-5">
 												<div class="icon-big text-center">
-													<i class="la la-times-circle-o text-danger"></i>
+													<i class="la la-sellsy text-primary"></i>
 												</div>
 											</div>
 											<div class="col-7 d-flex align-items-center">
 												<div class="numbers">
-													<p class="card-category">Errors</p>
-													<h4 class="card-title">23</h4>
+													<p class="card-category">User Bookings</p>
+													<h4 class="card-title">{{$totalBookings}}</h4>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-3">
+							{{-- <div class="col-md-3">
 								<div class="card card-stats">
 									<div class="card-body">
 										<div class="row">
@@ -228,6 +228,7 @@
 								</div>
 							</div> --}}
 						</div>
+
 
 						<div class="row">
 							<div class="col-md-12">
@@ -284,6 +285,60 @@
 
 						</div>
 
+                        <h4 class="page-title">User Bookings</h4>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-head-bg-primary table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Phone</th>
+                                                        <th scope="col">Date</th>
+                                                        <th scope="col">Status</th>
+                                                        <th scope="col">Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach($bookings as $booking)
+                                                        <tr>
+                                                            <td>{{ $loop->index + 1 }}</td>
+                                                            <td>{{ $booking->firstName }} {{ $booking->lastName }}</td>
+                                                            <td>{{ $booking->email }}</td>
+                                                            <td>{{ $booking->phone }}</td>
+                                                            <td>{{ $booking->date }}</td>
+                                                            <td>{{ $booking->status; }}</td>
+                                                            <td class="td-actions text-right">
+                                                                <div class="form-button-action">
+                                                                    <a href="{{ route('booking.show', $booking->id) }}" data-toggle="tooltip"   class="btn btn-outline-dark <btn-simple-primary">
+                                                                        Send Message
+                                                                    </a>
+                                                                    <form action="{{ route('booking.destroy', $booking->id) }}" method="POST" style="display: inline;">
+                                                                        @csrf
+                                                                        @method('DELETE')
+                                                                        <button type="submit" data-toggle="tooltip" title="Remove" onclick="return confirm('Are you sure you want to delete this event?')" class="btn btn-link btn-simple-danger">
+                                                                            <i class="la la-times"></i>
+                                                                        </button>
+                                                                    </form>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <h4 class="page-title">Blog Posts</h4>
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card">

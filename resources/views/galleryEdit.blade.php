@@ -179,7 +179,7 @@
                                             </div>
                                             </div>
                                             <div class="card-action">
-                                                <button type="submit" class="btn btn-primary">Create Gallery</button>
+                                                <button type="submit" class="btn btn-primary">Update Gallery</button>
                                             </div>
                                         </div>
                                     </form>

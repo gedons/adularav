@@ -32,12 +32,14 @@ class HomeController extends Controller
         //get all
         $events = Event::all();
         $blogs = BlogPost::all();
+        $bookings = Booking::all();
 
         //get count
         $totalEvents = Event::count();
         $totalBlogPosts = BlogPost::count();
+        $totalBookings = Booking::count();
 
-        return view('home',  compact('events', 'blogs', 'totalEvents', 'totalBlogPosts'));
+        return view('home',  compact('events', 'blogs', 'totalEvents', 'totalBlogPosts', 'bookings','totalBookings'));
     }
 
     public function events()

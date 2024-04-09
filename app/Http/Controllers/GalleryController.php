@@ -21,7 +21,7 @@ class GalleryController extends Controller
         // Validation rules
         $rules = [
             'gallerytext' => 'required|string|max:255',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:8048',
         ];
 
         // Validate request data

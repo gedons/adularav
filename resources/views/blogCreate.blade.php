@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
 	<link rel="stylesheet" href="../../adminAssets/assets/css/ready.css">
 	<link rel="stylesheet" href="../../adminAssets/assets/css/demo.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.2.1/classic/ckeditor.js" async></script>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -182,6 +183,9 @@
                                                     </span>
                                                 @enderror
                                                 </div>
+                                                <script>
+                                                    CKEDITOR.replace( 'content' );
+                                                </script>
                                             </div>
                                             <div class="card-action">
                                                 <button type="submit" class="btn btn-primary">Create Post</button>
@@ -226,4 +230,5 @@
 <script src="../../adminAssets/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 <script src="../../adminAssets/assets/js/ready.min.js"></script>
 <script src="../../adminAssets/assets/js/demo.js"></script>
+
 </html>
