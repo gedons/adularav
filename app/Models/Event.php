@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     protected $fillable = ['url','name', 'date', 'status', 'email', 'description'];
+
+    protected $casts = [
+        'date' => 'date',
+    ];
 }

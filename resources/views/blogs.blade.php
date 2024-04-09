@@ -176,10 +176,13 @@
 																<td>{{ $loop->index + 1 }}</td>
 																<td><img src="{{ $blog->url }}" alt="Blog Image" style="max-width: 100px; height: 60px;"></td>
 																<td>{{ $blog->title }}</td>
-																<td>{{ $blog->content }}</td>
+																<td>{{ Str::limit($blog->content, 100) }}</td>
 																<td>{{ $blog->created_at->diffForHumans(); }}</td>
 																<td  class="td-actions text-right">
 																	<div class="form-button-action">
+                                                                        <a href="{{ route('user.singleBlog', $blog->id) }}" target="_blank" data-toggle="tooltip" title="Edit Post" class="btn btn-link <btn-simple-primary">
+																			view post
+																		</a>
 																		<a href="{{ route('blog.edit', $blog->id) }}" data-toggle="tooltip" title="Edit Post" class="btn btn-link <btn-simple-primary">
 																			<i class="la la-edit"></i>
 																		</a>

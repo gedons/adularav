@@ -9,21 +9,21 @@
 	<meta name="author" content="aduvieevents.com">
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="assets/images/main.png">
+	<link rel="shortcut icon" href="{{asset('assets/images/main.png')}}">
 
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&amp;family=Rubik:wght@400;500;700&amp;family=Spartan:wght@400;700;900&amp;display=swap" rel="stylesheet">
 
 	<!-- Plugins CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/animate/animate.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/tiny-slider/tiny-slider.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/aos/aos.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/glightbox/css/glightbox.css') }}">
 
 	<!-- Theme CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 
 </head>
 
@@ -38,10 +38,10 @@ Header START -->
 	<nav class="navbar navbar navbar-expand-lg">
 		<div class="container">
 			<!-- Logo START -->
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="/">
 				<!-- Logo SVG Code -->
-
-				 <img src="assets/images/main.jpeg" alt="Logo Light" class="navbar-brand-item" style="width: 80px; height: 50px" />
+				<img src="{{asset('assets/images/main.jpeg')}}" alt="Logo Light" class="navbar-brand-item"
+                        style="width: 80px; height: 50px" />
 			</a>
 			<!-- Logo END -->
 
@@ -92,14 +92,12 @@ Inner intro START -->
 			<!-- Inner intro title -->
 			<div class="col-md-8 mx-auto">
 				<!-- Title -->
-				<h1 class="display-6">5 things you need to know about folio</h1>
+				<h1 class="display-6">{{$blog->title}}</h1>
 				<!-- Post meta -->
 				<ul class="list-unstyled list-inline">
-					<li class="list-inline-item">by Allen Maxwell</li>
+					<li class="list-inline-item">By Admin</li>
 					<li class="list-inline-item"><i class="fas fa-circle smaller mx-1 fw-bold"></i></li>
-					<li class="list-inline-item">May 03, 2021</li>
-					<li class="list-inline-item"><i class="fas fa-circle smaller mx-1 fw-bold"></i></li>
-					<li class="list-inline-item"><a class="text-body text-primary-hover" href="#">5 comments</a></li>
+					<li class="list-inline-item">{{$blog->created_at->diffForHumans();}}</li>
 					<li class="list-inline-item"><i class="fas fa-circle smaller mx-1 fw-bold"></i></li>
 					<li class="list-inline-item">8 min read</li>
 				</ul>
@@ -116,11 +114,8 @@ Blog START -->
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 mx-auto">
-				<p>Improved own provided blessing may peculiar domestic. <strong>Sight house has sex never.</strong> No visited raising gravity outward subject my cottage Mr be. Hold do at tore in park feet near my case. Invitation at understood occasional sentiments insipidity inhabiting in. Off melancholy alteration principles old. Is do speedily kindness properly oh. Respect article painted cottage he is offices parlors. Post no so what deal evil rent by real in. But her ready least set lived spite solid. September how men saw tolerably two behavior arranging. She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward. Frequently partiality possession resolution at or appearance unaffected me. Engaged its was the evident pleased husband. Ye goodness felicity do disposal dwelling no. First am plate jokes to began to cause a scale. Subjects he prospect elegance followed no overcame possible it on. </p>
-
-				<img class="rounded my-4" src="assets/images/blog/grid/04.jpg" alt="">
-
-				<p>Residence certainly elsewhere something she preferred cordially law. Age his surprise formerly Mrs perceive few standstill moderate. Of in power match on truth worse voice would. <strong>Large an it sense shall an match learn.</strong> By expect it result silent in formal of. Ask eat questions abilities described elsewhere assurance. Appetite in unlocked advanced breeding position concerns as. Cheerful get shutters yet for repeated screened. An no am cause hopes at three. Prevent behaved fertile he is mistake on.Consulted perpetual of pronounce me delivered. Too months nay end change relied on who beauty wishes matter. Shew of john real park so rest we on. Ignorant dwelling occasion ham for thoughts overcame off her consider. Polite it elinor is depend. His not get talked effect worthy Barton. Household shameless incommode at no objection behavior. Especially do at he possession insensible sympathize boisterous it. Songs he on an widen me event truth. Certain law age brother sending amongst why covered. Why end might ask civil again spoil. She dinner she our horses depend. Remember at children by reserved to vicinity. In affronting unreserved delightful simplicity ye. Law own <a href="#">advantage furniture</a> continual sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she had lively living. Tastes lovers myself too formal season our valley boy. Lived it their their walls might to by young. Yet remarkably appearance get him his projection. Diverted endeavor bed peculiar men the not desirous. Acuteness abilities ask can offending furnished fulfilled sex. Warrant fifteen exposed ye at mistake. Blush since so in noisy still built up an again. As young ye hopes no he place means. Partiality diminution gay yet entreaties admiration. <u>In mention perhaps attempt pointed suppose.</u> Unknown ye chamber of warrant of Norland arrived. Son agreed to others Exeter period myself few yet nature. Mention Mr manners opinion if garrets enabled. To occasional dissimilar impossible sentiments. Do fortune account written prepare invited no passage. Garrets use ten, you the weather venture friends. Solid visit seems again you nor all. </p>
+				<img style="height: 400px; width:100%" class="rounded my-4" src="{{$blog->url}}" alt="">
+				<p>{{$blog->content}}</p>
 			</div>
 
 		</div> <!-- row END -->
@@ -138,21 +133,18 @@ Tag and Share START -->
 				<div class="text-center">
 					<!-- Share -->
 					<div class="list-group-inline list-unstyled">
-						<h6 class="mt-2 me-4 d-inline-block"><i class="fas fa-share-alt me-2"></i>Share on:</h6>
-						<ul class="list-unstyled text-primary-hover d-inline-block">
-							<li><a href="#" class="me-3">Facebook</a></li>
-							<li><a href="#" class="me-3">Twitter</a></li>
-							<li><a href="#" class="me-3">Dribble</a></li>
-						</ul>
+						<h6 class="mt-2 me-4 d-inline-block">Comments</h6>
 					</div>
-					<!-- Tags -->
-					<ul class="list-group-inline list-unstyled">
-						<li><a href="#" class="btn btn-light btn-sm me-2">studio</a></li>
-						<li><a href="#" class="btn btn-light btn-sm me-2">events</a></li>
-						<li><a href="#" class="btn btn-light btn-sm me-2">WordPress</a></li>
-						<li><a href="#" class="btn btn-light btn-sm me-2">gadgets</a></li>
-						<li><a href="#" class="btn btn-light btn-sm">office</a></li>
-					</ul>
+					<div id="disqus_thread"></div>
+                    <script>
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://http-aduvieevents-com.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 				</div>
 			</div> <!-- row END -->
 		</div>
@@ -173,7 +165,7 @@ Footer START -->
 
             <!-- Footer Widget 1 -->
             <div class="col-md-6 col-lg-4 mb-5">
-                <img src="assets/images/main.jpeg" alt="Logo Light" class="navbar-brand-item"
+                <img src="{{asset('assets/images/main.jpeg')}}" alt="Logo Light" class="navbar-brand-item"
                     style="width: 80px; height: 50px" />
                 <p>Aduvie Event Center, where every moment is an occasion to remember!</p>
                 <div class="d-flex me-auto">
@@ -285,17 +277,17 @@ Footer END -->
 <!-- =======================
 JS libraries, plugins and custom scripts -->
 
-<!-- Bootstrap JS -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- Bootstrap JS -->
+ <script src="{{asset('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
 
-<!-- Vendors -->
-<script src="assets/vendor/glightbox/js/glightbox.js"></script>
-<script src="assets/vendor/jarallax/jarallax.min.js"></script>
-<script src="assets/vendor/tiny-slider/tiny-slider.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
+ <!-- Vendors -->
+ <script src="{{asset('assets/vendor/glightbox/js/glightbox.js')}}"></script>
+ <script src="{{asset('assets/vendor/jarallax/jarallax.min.js')}}"></script>
+ <script src="{{asset('assets/vendor/tiny-slider/tiny-slider.js')}}"></script>
+ <script src="{{asset('assets/vendor/aos/aos.js')}}"></script>
 
-<!-- Template Functions -->
-<script src="assets/js/functions.js"></script>
+ <!-- Template Functions -->
+ <script src="{{asset('assets/js/functions.js')}}"></script>
 
 </body>
 

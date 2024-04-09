@@ -177,7 +177,7 @@
                                             <div class="form-group">
                                                 <label for="email">Email Address</label>
                                                 <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" id="email" placeholder="Enter Email">
-                                                <small id="emailHelp" class="form-text text-muted">Email of the client. An email confirmation will be sent.</small>
+                                                <small id="emailHelp" class="form-text text-muted">Email of the client. A email confirmation will be sent.</small>
                                                 @error('email')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>

@@ -24,7 +24,7 @@ class BlogController extends Controller
         $rules = [
             'title' => 'required|string|max:255',
             'content' => 'required|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:9048',
         ];
 
         // Validate request data
@@ -69,7 +69,7 @@ class BlogController extends Controller
         $rules = [
             'title' => 'required|string|max:255',
             'content' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:9048',
         ];
 
         // Validate request data
@@ -112,7 +112,6 @@ class BlogController extends Controller
 
         return Redirect::route('blogs');
     }
-
 
     public function destroy($id)
     {

@@ -43,7 +43,7 @@ Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('eve
 
 //blog routes
 Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
-Route::get('/blogs/{blog}', [BlogController::class, 'show'])->name('blogs.show');
+// Route::get('/blog/{blog}', [UserFrontController::class, 'show'])->name('blogs.show');
 Route::get('/blogs/{blog}/edit', [BlogController::class, 'edit'])->name('blog.edit');
 Route::put('/blog/{blog}', [BlogController::class, 'update'])->name('blog.update');
 Route::delete('/blog/{blog}', [BlogController::class, 'destroy'])->name('blog.destroy');
@@ -78,7 +78,7 @@ Route::get('/contact-us', [UserFrontController::class, 'contact'])->name('user.c
 Route::post('/contact-send', [UserFrontController::class, 'send'])->name('contact.send');
 Route::get('/events', [UserFrontController::class, 'event'])->name('user.event');
 Route::get('/blog-post', [UserFrontController::class, 'blog'])->name('user.blog');
-Route::get('/single-blog', [UserFrontController::class, 'singleBlog'])->name('user.singleBlog');
+Route::get('/single-blog/{blog}', [UserFrontController::class, 'singleBlog'])->name('user.singleBlog');
 Route::get('/single-event', [UserFrontController::class, 'singleEvent'])->name('user.singleEvent');
 Route::get('/gallery', [UserFrontController::class, 'gallery'])->name('user.gallery');
 Route::get('/book-now', [UserFrontController::class, 'book'])->name('user.book');

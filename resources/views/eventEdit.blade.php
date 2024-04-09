@@ -206,9 +206,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="comment">Description</label>
-                                                    <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="comment" rows="5">
-                                                        {{ $event->description }}
-                                                    </textarea>
+                                                    <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="comment" rows="5">{{ $event->description }}</textarea>
                                                     @error('description')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>

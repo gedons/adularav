@@ -253,134 +253,33 @@ Inner intro END -->
                     </div>
                 </div>
 				<div class="row">
+                    @foreach ($galleries as $gallery)
 					<!-- Full screen button -->
 					<div class="col-md-4 mb-6">
-						<h6 class="mb-2">Image Title</h6>
+						<h6 class="mb-2">{{ Str::limit($gallery->gallerytext, 36) }}</h6>
 						<div class="position-relative">
 							<!-- Full screen button -->
 							<a class="card-element-hover position-absolute top-50 start-50 translate-middle bg-primary p-3"
-                             href="assets/images/IMG-20240319-WA0022.jpg"
-                                data-glightbox="description: .custom-desc1"
+                             href="{{$gallery->url}}"
+                                data-glightbox="description: {{$gallery->gallerytext}}"
                                 data-gallery="full-popup"
                                 data-desc-position="bottom">
                              <i class="bi bi-fullscreen display-9 text-white"></i>
                             </a>
 							<!-- Card Image description -->
-							<img class="rounded" src="assets/images/IMG-20240319-WA0022.jpg" alt="">
-                            <div class="glightbox-desc custom-desc1">
-                                <h4 class="text-dark">Image Title</h4>
+							<img class="rounded" style="height: 200px; width:100%;" src="{{$gallery->url}}" alt="">
+                            <div class="glightbox-desc {{$gallery->gallerytext}}">
+                                <h4 class="text-dark">{{$gallery->gallerytext}}</h4>
                                 {{-- <p class="text-dark">You can add links and any HTML you want. You can define description's specific position on each slide (bottom, top, left, right). Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Magni id molestias placeat doloremque sequi impedit nostrum cum explicabo porro illum inventore accusantium quia ad assumenda enim tenetur deserunt, ex quis? Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Expedita beatae corporis vel praesentium velit dignissimos sunt nostrum recusandae, aut aspernatur at officiis perferendis fugiat, a rem aperiam optio, debitis enim!</p>
                                 <a href="#" class="btn btn-line btn-dark">Button</a> --}}
                             </div>
 						</div>
 					</div>
+                    @endforeach
 
-                    <div class="col-md-4 mb-6">
-						<h6 class="mb-2">Image Title</h6>
-						<div class="position-relative">
-							<!-- Full screen button -->
-							<a class="card-element-hover position-absolute top-50 start-50 translate-middle bg-primary p-3"
-                             href="assets/images/IMG-20240319-WA0031.jpg"
-                                data-glightbox="description: .custom-desc1"
-                                data-gallery="full-popup"
-                                data-desc-position="bottom">
-                             <i class="bi bi-fullscreen display-9 text-white"></i>
-                            </a>
-							<!-- Card Image description -->
-							<img class="rounded" src="assets/images/IMG-20240319-WA0031.jpg" alt="">
-                            <div class="glightbox-desc custom-desc1">
-                                <h4 class="text-dark">Image Title</h4>
-                                {{-- <p class="text-dark">You can add links and any HTML you want. You can define description's specific position on each slide (bottom, top, left, right). Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Magni id molestias placeat doloremque sequi impedit nostrum cum explicabo porro illum inventore accusantium quia ad assumenda enim tenetur deserunt, ex quis? Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Expedita beatae corporis vel praesentium velit dignissimos sunt nostrum recusandae, aut aspernatur at officiis perferendis fugiat, a rem aperiam optio, debitis enim!</p>
-                                <a href="#" class="btn btn-line btn-dark">Button</a> --}}
-                            </div>
-						</div>
-					</div>
-
-                    <div class="col-md-4 mb-6">
-						<h6 class="mb-2">Image Title</h6>
-						<div class="position-relative">
-							<!-- Full screen button -->
-							<a class="card-element-hover position-absolute top-50 start-50 translate-middle bg-primary p-3"
-                             href="assets/images/IMG-20240319-WA0033.jpg"
-                                data-glightbox="description: .custom-desc1"
-                                data-gallery="full-popup"
-                                data-desc-position="bottom">
-                             <i class="bi bi-fullscreen display-9 text-white"></i>
-                            </a>
-							<!-- Card Image description -->
-							<img class="rounded" src="assets/images/IMG-20240319-WA0033.jpg" alt="">
-                            <div class="glightbox-desc custom-desc1">
-                                <h4 class="text-dark">Image Title</h4>
-                                {{-- <p class="text-dark">You can add links and any HTML you want. You can define description's specific position on each slide (bottom, top, left, right). Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Magni id molestias placeat doloremque sequi impedit nostrum cum explicabo porro illum inventore accusantium quia ad assumenda enim tenetur deserunt, ex quis? Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Expedita beatae corporis vel praesentium velit dignissimos sunt nostrum recusandae, aut aspernatur at officiis perferendis fugiat, a rem aperiam optio, debitis enim!</p>
-                                <a href="#" class="btn btn-line btn-dark">Button</a> --}}
-                            </div>
-						</div>
-					</div>
 				</div>
                 <div class="row">
-					<!-- Full screen button -->
-					<div class="col-md-4 mb-6">
-						<h6 class="mb-2">Image Title</h6>
-						<div class="position-relative">
-							<!-- Full screen button -->
-							<a class="card-element-hover position-absolute top-50 start-50 translate-middle bg-primary p-3"
-                             href="assets/images/IMG20211023130321.jpg"
-                                data-glightbox="description: .custom-desc1"
-                                data-gallery="full-popup"
-                                data-desc-position="bottom">
-                             <i class="bi bi-fullscreen display-9 text-white"></i>
-                            </a>
-							<!-- Card Image description -->
-							<img class="rounded" style="height:200px" src="assets/images/IMG20211023130321.jpg" alt="">
-                            <div class="glightbox-desc custom-desc1">
-                                <h4 class="text-dark">Image Title</h4>
-                                {{-- <p class="text-dark">You can add links and any HTML you want. You can define description's specific position on each slide (bottom, top, left, right). Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Magni id molestias placeat doloremque sequi impedit nostrum cum explicabo porro illum inventore accusantium quia ad assumenda enim tenetur deserunt, ex quis? Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Expedita beatae corporis vel praesentium velit dignissimos sunt nostrum recusandae, aut aspernatur at officiis perferendis fugiat, a rem aperiam optio, debitis enim!</p>
-                                <a href="#" class="btn btn-line btn-dark">Button</a> --}}
-                            </div>
-						</div>
-					</div>
 
-                    <div class="col-md-4 mb-6">
-						<h6 class="mb-2">Image Title</h6>
-						<div class="position-relative">
-							<!-- Full screen button -->
-							<a class="card-element-hover position-absolute top-50 start-50 translate-middle bg-primary p-3"
-                             href="assets/images/IMG20211113094816.jpg"
-                                data-glightbox="description: .custom-desc1"
-                                data-gallery="full-popup"
-                                data-desc-position="bottom">
-                             <i class="bi bi-fullscreen display-9 text-white"></i>
-                            </a>
-							<!-- Card Image description -->
-							<img class="rounded" style="height:200px" src="assets/images/IMG20211113094816.jpg" alt="">
-                            <div class="glightbox-desc custom-desc1">
-                                <h4 class="text-dark">Image Title</h4>
-                                {{-- <p class="text-dark">You can add links and any HTML you want. You can define description's specific position on each slide (bottom, top, left, right). Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Magni id molestias placeat doloremque sequi impedit nostrum cum explicabo porro illum inventore accusantium quia ad assumenda enim tenetur deserunt, ex quis? Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Expedita beatae corporis vel praesentium velit dignissimos sunt nostrum recusandae, aut aspernatur at officiis perferendis fugiat, a rem aperiam optio, debitis enim!</p>
-                                <a href="#" class="btn btn-line btn-dark">Button</a> --}}
-                            </div>
-						</div>
-					</div>
-
-                    <div class="col-md-4 mb-6">
-						<h6 class="mb-2">Image Title</h6>
-						<div class="position-relative">
-							<!-- Full screen button -->
-							<a class="card-element-hover position-absolute top-50 start-50 translate-middle bg-primary p-3"
-                             href="assets/images/vidt.jpg"
-                                data-glightbox="description: .custom-desc1"
-                                data-gallery="full-popup"
-                                data-desc-position="bottom">
-                             <i class="bi bi-fullscreen display-9 text-white"></i>
-                            </a>
-							<!-- Card Image description -->
-							<img class="rounded" style="height:200px" src="assets/images/vidt.jpg" alt="">
-                            <div class="glightbox-desc custom-desc1">
-                                <h4 class="text-dark">Image Title</h4>
-                                {{-- <p class="text-dark">You can add links and any HTML you want. You can define description's specific position on each slide (bottom, top, left, right). Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Magni id molestias placeat doloremque sequi impedit nostrum cum explicabo porro illum inventore accusantium quia ad assumenda enim tenetur deserunt, ex quis? Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Expedita beatae corporis vel praesentium velit dignissimos sunt nostrum recusandae, aut aspernatur at officiis perferendis fugiat, a rem aperiam optio, debitis enim!</p>
-                                <a href="#" class="btn btn-line btn-dark">Button</a> --}}
-                            </div>
-						</div>
-					</div>
 
 				</div>
 			</div>

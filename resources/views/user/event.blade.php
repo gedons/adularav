@@ -190,151 +190,26 @@ event START -->
 						data-items-lg="3" data-items-md="3" data-items-sm="2" data-items-xs="1">
 
 						<!-- Card item START -->
+                        @foreach ($events as $event)
 						<div class="item">
 							<a href="{{route('user.singleEvent')}}" class="card card-metro">
 								<!-- Card Image -->
 								<div class="card-image">
-									<img style="height:250px; width:100%" src="assets/images/imgkk.jpg" alt="card image">
+									<img style="height:250px; width:100%" src="{{$event->url}}" alt="card image">
 								</div>
 								<!-- Card Overlay -->
 								<div class="card-img-overlay d-flex flex-column">
 									<!-- Min of read -->
 									<i class="display-10 text-white bi bi-clock"></i>
-									<span class="text-white card-text">5 days time</span>
+									<span class="text-white card-text">{{$event->date->diffForHumans();}}</span>
 									<div class="mt-auto card-text">
-										<h5 class="text-white">The missing link in e-Mobility</h5>
-										<p class="small text-white mb-0 text-truncate">What hasn’t been a great
-											fit in e-mobility until now.</p>
+										<h5 class="text-white">{{$event->name}}</h5>
+										<p class="small text-white mb-0 text-truncate">{{Str::limit($event->description, 30)}}</p>
 									</div>
 								</div>
 							</a>
 						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="{{route('user.singleEvent')}}" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img style="height:250px; width:100%" src="assets/images/vidt.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-									<i class="display-10 text-white bi bi-clock"></i>
-									<span class="text-white">3 days time</span>
-									<div class="mt-auto card-text">
-										<h5 class="text-white">Trumer brewed happiness</h5>
-										<p class="small text-white mb-0 text-truncate">Private brewery for
-											excellent beer</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="{{route('user.singleEvent')}}" data-glightbox class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img style="height:250px; width:100%" src="assets/images/IMG20211023130321.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-									<i class="display-10 text-white bi bi-clock"></i>
-									<span class="text-white">5 days time</span>
-									<div class="mt-auto card-text">
-										<h5 class="text-white">Enticing like the ocean</h5>
-										<p class="small text-white mb-0 text-truncate">Viktoria Louise is the
-											blossoming fashion label of Vicky Heiler</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="{{route('user.singleEvent')}}" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img style="height:250px; width:100%" src="assets/images/IMG20211023130346.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-									<i class="display-10 text-white bi bi-clock"></i>
-									<span class="text-white">5 days time</span>
-									<div class="mt-auto card-text">
-										<h5 class="text-white">Pure design branding</h5>
-										<p class="small text-white mb-0 text-truncate">Art collector and
-											architect Axel</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="{{route('user.singleEvent')}}" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img style="height:250px; width:100%" src="assets/images/IMG20211023130350.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-									<i class="display-10 text-white bi bi-clock"></i>
-									<span class="text-white">5 days time</span>
-									<div class="mt-auto card-text">
-										<h5 class="text-white">The missing link</h5>
-										<p class="small text-white mb-0 text-truncate">Small things that make
-											difference</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="{{route('user.singleEvent')}}" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img style="height:250px; width:100%" src="assets/images/IMG20211023130241.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-									<i class="display-10 text-white bi bi-clock"></i>
-									<span class="text-white">5 days time</span>
-									<div class="mt-auto card-text">
-										<h5 class="text-white">The blossoming fashion label </h5>
-										<p class="small text-white mb-0 text-truncate">These were the
-											attributes that moodley had to convey.</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!-- Card item END -->
-
-						<!-- Card item START -->
-						<div class="item">
-							<a href="{{route('user.singleEvent')}}" class="card card-metro">
-								<!-- Card Image -->
-								<div class="card-image">
-									<img style="height:250px; width:100%" src="assets/images/IMG-20240319-WA0017.jpg" alt="card image">
-								</div>
-								<!-- Card Overlay -->
-								<div class="card-img-overlay d-flex flex-column">
-									<i class="display-10 text-white bi bi-clock"></i>
-									<span class="text-white">5 days time</span>
-									<div class="mt-auto card-text">
-										<h5 class="text-white">Life's hard in the mountains</h5>
-										<p class="small text-white mb-0 text-truncate">Ten wineries with strong
-											personalities, individual stories and multi-faceted wines</p>
-									</div>
-								</div>
-							</a>
-						</div>
+                        @endforeach
 						<!-- Card item END -->
 
 					</div>

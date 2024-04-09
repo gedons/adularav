@@ -765,14 +765,14 @@ Blog START -->
                                         <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
                                             <!-- Card Categories -->
                                             <div class="text-primary-hover">
-                                                <a href="{{route('user.singleBlog')}}" class="text-white me-2">Admin</a>
+                                                <a href="{{route('user.singleBlog', $blog->id)}}" class="text-white me-2">Admin</a>
                                             </div>
                                             <!-- Divider -->
                                             <i class="fas fa-circle smaller me-2 fw-bold"></i>
                                             <!-- Min of read -->
                                             <span>{{$blog->created_at->diffForHumans();}}</span>
                                         </div>
-                                    <a href="{{route('user.singleBlog')}}" class="text-white mb-0">{{$blog->title}}</a>
+                                    <a href="{{route('user.singleBlog', $blog->id)}}" class="text-white mb-0">{{$blog->title}}</a>
                                 </div>
                             </div>
                         </div>

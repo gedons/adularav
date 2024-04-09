@@ -35,12 +35,13 @@ class UserFrontController extends Controller
 
     public function event()
     {
-        return view('user.event');
+        $events = Event::all();
+        return view('user.event', compact('events'));
     }
 
-    public function singleBlog()
+    public function singleBlog(BlogPost $blog)
     {
-        return view('user.singleblog');
+        return view('user.singleblog', compact('blog'));
     }
 
     public function singleEvent()
@@ -50,7 +51,8 @@ class UserFrontController extends Controller
 
     public function gallery()
     {
-        return view('user.gallery');
+        $galleries = GalleryImage::all();
+        return view('user.gallery', compact('galleries'));
     }
 
     public function book()
@@ -60,7 +62,8 @@ class UserFrontController extends Controller
     }
     public function blog()
     {
-        return view('user.blog');
+        $blogs = BlogPost::all();
+        return view('user.blog', compact('blogs'));
     }
 
     public function send(Request $request)

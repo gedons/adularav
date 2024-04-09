@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use Illuminate\Support\Facades\Mail;
+use File;
 use App\Mail\EventCreated;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 
- 
+
 use Illuminate\Support\Facades\Validator;
 
 class EventController extends Controller
@@ -27,40 +28,40 @@ class EventController extends Controller
             'date' => 'required|date',
             'email' => 'required|email',
             'description' => 'required|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',  
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:9048',
         ];
-    
+
         // Validate request data
         $validator = Validator::make($request->all(), $rules);
-    
+
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 422); 
+            return response()->json($validator->errors(), 422);
         }
-    
+
         // Store image (with error handling)
         try {
             $imageName = time() . '.' . $request->image->extension();
             $request->image->move(public_path('images'), $imageName);
         } catch (Exception $e) {
-            return response()->json(['message' => 'Failed to upload image: ' . $e->getMessage()], 500);  
+            return response()->json(['message' => 'Failed to upload image: ' . $e->getMessage()], 500);
         }
-    
+
         // Create event (with error handling)
         try {
             $event = Event::create([
                 'name' => $request->name,
-                'date' => $request->date,                
+                'date' => $request->date,
                 'email' => $request->email,
                 'description' => $request->description,
                 'url' => '/images/' . $imageName,
             ]);
         } catch (Exception $e) {
-            return response()->json(['message' => 'Failed to create event: ' . $e->getMessage()], 500);  
+            return response()->json(['message' => 'Failed to create event: ' . $e->getMessage()], 500);
         }
-    
+
         // Send email notification
         Mail::to($request->email)->send(new EventCreated($event));
-    
+
         $request->session()->flash('success', 'Event created successfully!');
 
         return Redirect::route('events');
@@ -80,7 +81,7 @@ class EventController extends Controller
             'email' => 'required|email',
             'status' => 'required|string|in:pending,booked,completed',
             'description' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Optional image update
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:9048', // Optional image update
         ];
 
         // Validate request data
@@ -124,7 +125,7 @@ class EventController extends Controller
 
         $request->session()->flash('success', 'Event updated successfully!');
 
-        return Redirect::route('events', $event->id);  
+        return Redirect::route('events');
     }
 
 
@@ -134,11 +135,11 @@ class EventController extends Controller
         if (Storage::disk('public')->exists($event->url)) {
             Storage::disk('public')->delete($event->url);
         }
-    
+
         $event->delete();
 
         session()->flash('success', 'Event deleted successfully!');
         return redirect()->route('events');
     }
-    
+
 }

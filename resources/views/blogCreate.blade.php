@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
 	<link rel="stylesheet" href="../../adminAssets/assets/css/ready.css">
 	<link rel="stylesheet" href="../../adminAssets/assets/css/demo.css">
-    <script src="https://cdn.ckeditor.com/ckeditor5/41.2.1/classic/ckeditor.js" async></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.2.1/classic/ckeditor.js"></script>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -176,16 +176,17 @@
                                             </div>
                                                 <div class="form-group">
                                                     <label for="comment">Content</label>
-                                                    <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="comment" rows="5"></textarea>
+                                                    <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="content" rows="5"></textarea>
+                                                    <script>
+                                                        CKEDITOR.replace( 'content' );
+                                                    </script>
                                                     @error('content')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror
                                                 </div>
-                                                <script>
-                                                    CKEDITOR.replace( 'content' );
-                                                </script>
+
                                             </div>
                                             <div class="card-action">
                                                 <button type="submit" class="btn btn-primary">Create Post</button>

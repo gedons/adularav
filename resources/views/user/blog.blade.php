@@ -182,16 +182,17 @@ Blog START -->
                 <h2 class="display-5 mb-0 mb-sm-4 text-dark-stroke">Blog Posts</h2>
             </div>
             <div class="col-sm-4 mb-4 text-start text-sm-end">
-                <a href="#" class="btn btn-line text-primary mt-3">Trending Posts</a>
+                <a href="{{route('user.blog')}}" class="btn btn-line text-primary mt-3">Trending Posts</a>
             </div>
         </div>
         <div class="row">
+            @foreach ($blogs as $blog)
             <!-- Card item START -->
             <div class="col-sm-6 col-lg-4 mb-30">
                 <div class="card card-metro">
                     <!-- Card Image -->
                     <div class="card-image">
-                        <img style="height:400px; width:100%"  src="assets/images/IMG-20240319-WA0033.jpg" alt="card image">
+                        <img style="height:250px; width:100%"  src="{{$blog->url}}" alt="card image">
                     </div>
                     <!-- Card Overlay -->
                     <div class="card-img-overlay d-flex flex-column">
@@ -199,95 +200,36 @@ Blog START -->
                             <!-- Featured label-->
                             <span class="featured-label" title="Featured Blog"><i
                                     class="fas fa-star"></i></span>
-
-                            <h4><a href="#" class="text-white text-primary-hover">Reliable sources to
-                                    learn about folio</a></h4>
-
                                 <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
                                     <!-- Card Categories -->
                                     <div class="text-primary-hover">
-                                        <a href="{{route('user.singleBlog')}}" class="text-white me-2">Admin</a>
+                                        <a href="{{route('user.singleBlog', $blog->id)}}" class="text-white me-2">Admin</a>
                                     </div>
                                     <!-- Divider -->
                                     <i class="fas fa-circle smaller me-2 fw-bold"></i>
                                     <!-- Min of read -->
-                                    <span>5 min read</span>
+                                    <span>{{$blog->created_at->diffForHumans();}}</span>
                                 </div>
-                            <a href="{{route('user.singleBlog')}}" class="btn btn-line text-white mb-0">Read Article</a>
+                            <a href="{{route('user.singleBlog', $blog->id)}}" class="text-white mb-0">{{$blog->title}}</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Card item END -->
-            <!-- Card item START -->
-            <div class="col-sm-6 col-lg-4 mb-30">
-                <div class="card card-metro">
-                    <!-- Card Image -->
-                    <div class="card-image">
-                        <img style="height:400px; width:100%"  src="assets/images/IMG-20240319-WA0024.jpg" alt="card image">
-                    </div>
-                    <!-- Card Overlay -->
-                    <div class="card-img-overlay d-flex flex-column">
-                        <div class="mt-auto card-text">
-                            <!-- Featured label-->
-                            <span class="featured-label" title="Featured Blog"><i
-                                    class="fas fa-star"></i></span>
-
-                            <h4><a href="{{route('user.singleBlog')}}" class="text-white text-primary-hover">Reliable sources to
-                                    learn about folio</a></h4>
-
-                                <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
-                                    <!-- Card Categories -->
-                                    <div class="text-primary-hover">
-                                        <a href="#" class="text-white me-2">Admin</a>
-                                    </div>
-                                    <!-- Divider -->
-                                    <i class="fas fa-circle smaller me-2 fw-bold"></i>
-                                    <!-- Min of read -->
-                                    <span>5 min read</span>
-                                </div>
-                            <a href="{{route('user.singleBlog')}}" class="btn btn-line text-white mb-0">Read Article</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Card item END -->
-            <!-- Card item START -->
-            <div class="col-sm-6 col-lg-4 mb-30">
-                <div class="card card-metro">
-                    <!-- Card Image -->
-                    <div class="card-image">
-                        <img style="height:400px; width:100%"  src="assets/images/IMG-20240320-WA0016.jpg" alt="card image">
-                    </div>
-                    <!-- Card Overlay -->
-                    <div class="card-img-overlay d-flex flex-column">
-                        <div class="mt-auto card-text">
-                            <!-- Featured label-->
-                            <span class="featured-label" title="Featured Blog"><i
-                                    class="fas fa-star"></i></span>
-
-                            <h4><a href="{{route('user.singleBlog')}}" class="text-white text-primary-hover">Reliable sources to
-                                    learn about folio</a></h4>
-
-                                <div class="card-meta mb-3 d-flex flex-row align-items-center text-white">
-                                    <!-- Card Categories -->
-                                    <div class="text-primary-hover">
-                                        <a href="#" class="text-white me-2">Admin</a>
-                                    </div>
-                                    <!-- Divider -->
-                                    <i class="fas fa-circle smaller me-2 fw-bold"></i>
-                                    <!-- Min of read -->
-                                    <span>5 min read</span>
-                                </div>
-                            <a href="{{route('user.singleBlog')}}" class="btn btn-line text-white mb-0">Read Article</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
             <!-- Card item END -->
 
         </div><!-- row END -->
 
+        <!-- Load more START -->
+        {{-- <div class="row">
+            <div class="col-12">
+                <div class="text-center mt-5">
+                    <a href="{{route('user.blog')}}" class="btn btn-light">Load more! <i
+                            class="fas fa-sync ms-3 text-primary"></i></a>
+                </div>
+            </div>
+        </div> --}}
+        <!-- Load more END -->
     </div>
 </section>
 <!-- =======================

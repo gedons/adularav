@@ -179,9 +179,7 @@
                                             </div>
                                                 <div class="form-group">
                                                     <label for="comment">Content</label>
-                                                    <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="comment" rows="5">
-                                                        {{ $blog->content }}
-                                                    </textarea>
+                                                    <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="comment" rows="5">{{ $blog->content }}</textarea>
                                                     @error('content')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
