@@ -295,9 +295,10 @@ tour2 START -->
         <section class="position-relative p-0 mb-0 mb-md-5">
             <!-- Banner START -->
             <div class="tiny-slider dots-inside dots-bordered">
-                <div class="tiny-slider-inner pb-5 pb-lg-7" data-autoplay="true" data-autoplaytime="7000"
+                <div class="tiny-slider-inner pb-5 pb-lg-2" data-autoplay="true" data-autoplaytime="5000"
                     data-gutter="0" data-arrow="false" data-dots="true" data-items="1">
                     <!-- Slide 1 START -->
+                    @foreach ($homesliders as $homeslider)
                     <div class="item bg-white h-500 h-md-800 overflow-hidden">
                         <!-- Dark bg with pattern overlay -->
                         <div class="bg-dark h-400 h-md-600 position-absolute top-0 start-0 end-0 pattern-overlay-5">
@@ -308,13 +309,11 @@ tour2 START -->
                                     <div class="slider-content z-index-9 position-relative pt-7 pt-lg-9">
                                         <!-- Slider Info -->
                                         <div class="row justify-content-between mb-3 mb-md-5">
-                                            <div class="col-md-8 animate__animated animate__fadeInUp">
-                                                <h2 class="d-block text-white display-6">First <span
-                                                        class="text-primary-stroke text-stroke-md">Hall </span>
-                                                </h2>
-                                            </div>
                                             <div class="col-md-4 animate__animated animate__fadeInUp">
-                                                <p class="lead text-white d-none d-md-block">A majestic space designed to host grand celebrations and upscale events. With its soaring ceilings, elegant chandeliers, and spacious layout.
+                                                <h2 class="d-block text-white display-6">{{$homeslider->title}}</h2>
+                                            </div>
+                                            <div class="col-md-8 animate__animated animate__fadeInUp">
+                                                <p class="lead text-white d-none d-md-block">{{$homeslider->description}}
                                                 </p>
                                             </div>
                                         </div>
@@ -371,51 +370,16 @@ tour2 START -->
                                                 </svg>
                                             </figure>
                                             <!-- Image -->
-                                            <img src="assets/images/12.jpg" alt="">
+                                            <img src="{{$homeslider->url}}" style="height: 400px; width: 100%" alt="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    @endforeach
                     <!-- Slide 1 END -->
-                    <!-- Slide 2 START -->
-                    <div class="item bg-white h-500 h-md-800 overflow-hidden">
-                        <!-- Dark bg with pattern overlay -->
-                        <div class="bg-dark h-400 h-md-600 position-absolute top-0 start-0 end-0 pattern-overlay-5">
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="slider-content z-index-9 position-relative pt-7 pt-lg-9">
-                                        <!-- Slider Info -->
-                                        <div class="row justify-content-between mb-3 mb-md-5">
-                                            <div class="col-md-8 animate__animated animate__fadeInUp">
-                                                <h2 class="d-block text-white display-6">Second <span
-                                                    class="text-primary-stroke text-stroke-md">Hall</span>
-                                            </h2>
-                                            </div>
-                                            <div class="col-md-4 animate__animated animate__fadeInUp">
-                                                <p class="lead text-white d-none d-md-block">This hall provides an inviting atmosphere for events, Featuring cozy seating arrangements, soft lighting, and stylish décor. </p>
-                                            </div>
-                                        </div>
-                                        <!-- Slider Image -->
-                                        <div
-                                            class="bg-dark position-relative overflow-hidden animate__animated animate__fadeInUp">
-                                            <!-- Shape Decoration -->
-                                            <div
-                                                class="position-absolute end-0 bottom-0 zoom-2 d-none d-lg-block z-index-9">
-                                                <div class="bg-primary-overlay-dotted p-7 rotate-10"></div>
-                                            </div>
-                                            <!-- Image -->
-                                            <img src="assets/images/13.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide 2 END -->
+               
                 </div>
 
                 <!-- Social links and arrow START -->
@@ -494,141 +458,35 @@ event END -->
 
 <!-- =======================
 Images START -->
-<section class="pt-7">
-	<div class="container">
-		<div class="row">
-			<!-- Card item START -->
-			<div class="col-lg-6 mb-5">
-				<div class="card border-0 rounded-0">
-					<!-- Card Image -->
-					<div class="card-image order-1 order-lg-2 me-0 me-lg-8">
-						<!-- Card image -->
-						<img style="height: 250px" class="w-100" src="assets/images/IMG-20240319-WA0024.jpg" alt="card image">
-						<!-- Card image popup -->
-						<a class="card-element-hover position-absolute start-0 bottom-0 bg-primary p-3" data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240319-WA0024.jpg"><i class="fas fa-expand text-white"></i></a>
-					</div>
-					<!-- Card body -->
-					<div class="card-body order-2 order-lg-1 position-relative bg-primary p-3 p-md-4 p-xl-5 ms-0 ms-lg-7 mb-0 mb-lg-n8">
-						<div class="mt-auto card-text">
-							<h4 class="text-white">Bespoke Floral Arrangements</h4>
-							<p class="text-white mb-3 text-truncate">From striking centerpieces to delicate bouquets</p>
-							<a data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240319-WA0024.jpg" class="btn btn-dark btn-line">Enlarge</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Card item END -->
-
-			<!-- Card item START -->
-			<div class="col-lg-6 mb-5">
-				<div class="card border-0 rounded-0">
-					<!-- Card Image -->
-					<div class="card-image me-0 me-lg-7">
-						<!-- Card image -->
-						<img style="height: 275px" class="w-100" src="assets/images/IMG-20240320-WA0020.jpg" alt="card image">
-						<!-- Card image popup -->
-						<a class="card-element-hover position-absolute start-0 top-0 bg-primary p-3"  data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240320-WA0020.jpg"><i class="fas fa-expand text-white"></i></a>
-					</div>
-					<!-- Card body -->
-					<div class="card-body bg-primary p-3 p-md-4 p-xl-5 me-0 me-lg-7 mt-0 mt-lg-n8">
-						<div class="mt-auto card-text">
-							<h4 class="text-white">Creative Lighting Design</h4>
-							<p class="text-white mb-3 text-truncate">Dynamic, vibrant colors for a lively celebration</p>
-							<a data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240320-WA0020.jpg" class="btn btn-dark btn-line">Enlarge</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Card item END -->
-
-			<!-- Card item START -->
-			<div class="col-lg-6 mb-5">
-				<div class="card border-0 rounded-0">
-					<!-- Card Image -->
-					<div class="card-image ms-0 ms-lg-7">
-						<!-- Card image -->
-						<img style="height: 275px" class="w-100" src="assets/images/IMG-20240319-WA0028.jpg" alt="card image">
-						<!-- Card image popup -->
-						<a class="card-element-hover position-absolute end-0 top-0 bg-primary p-3"  data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240319-WA0028.jpg"><i class="fas fa-expand text-white"></i></a>
-					</div>
-					<!-- Card body -->
-					<div class="card-body bg-primary p-3 p-md-4 p-xl-5 me-0 me-lg-7 mt-0 mt-lg-n8">
-						<div class="mt-auto card-text">
-							<h4 class="text-white">Exceptional Cuisine</h4>
-							<p class="text-white mb-3 text-truncate">Crafted dishes made with the finest ingredients</p>
-							<a data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240319-WA0028.jpg" class="btn btn-dark btn-line">Enlarge</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Card item END -->
-
-			<!-- Card item START -->
-			<div class="col-lg-6 mb-1 mt-lg-8">
-				<div class="card border-0 rounded-0">
-					<!-- Card Image -->
-					<div class="card-image order-1 order-lg-2 me-0 me-lg-8 mt-0 mt-lg-n8">
-						<!-- Card image -->
-						<img style="height:275px;" src="assets/images/vidt.jpg" alt="card image">
-						<!-- Card image popup -->
-						<a class="card-element-hover position-absolute start-0 bottom-0 bg-primary p-3"  data-glightbox data-gallery="portfolio" href="assets/images/vidt.jpg"><i class="fas fa-expand text-white"></i></a>
-					</div>
-					<!-- Card body -->
-					<div class="card-body order-2 order-lg-1 position-relative bg-primary p-3 p-md-4 p-xl-5 ms-0 ms-lg-10 mb-0 mb-lg-n10">
-						<div class="mt-auto card-text">
-							<h4 class="text-white">Experience the Difference</h4>
-							<p class="text-white mb-3 text-truncate">All round excellence</p>
-							<a data-glightbox data-gallery="portfolio" href="assets/images/vidt.jpg" class="btn btn-dark btn-line">Enlarge</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-            <!-- Card item START -->
-			<div class="col-lg-6 mb-5">
-				<div class="card border-0 rounded-0">
-					<!-- Card Image -->
-					<div class="card-image ms-0 ms-lg-7">
-						<!-- Card image -->
-						<img style="height: 275px" class="w-100" src="assets/images/IMG-20240319-WA0030.jpg" alt="card image">
-						<!-- Card image popup -->
-						<a class="card-element-hover position-absolute end-0 top-0 bg-primary p-3"  data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240319-WA0030.jpg"><i class="fas fa-expand text-white"></i></a>
-					</div>
-					<!-- Card body -->
-					<div class="card-body bg-primary p-3 p-md-4 p-xl-5 me-0 me-lg-7 mt-0 mt-lg-n8">
-						<div class="mt-auto card-text">
-							<h4 class="text-white">Fun and Celebrations</h4>
-							<p class="text-white mb-3 text-truncate">Showcasing the cultural heritage of Nigeria</p>
-							<a data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240319-WA0030.jpg" class="btn btn-dark btn-line">Enlarge</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Card item END -->
-
-			<!-- Card item START -->
-			<div class="col-lg-6 mb-1 mt-lg-8">
-				<div class="card border-0 rounded-0">
-					<!-- Card Image -->
-					<div class="card-image order-1 order-lg-2 me-0 me-lg-8 mt-0 mt-lg-n8">
-						<!-- Card image -->
-						<img style="height:275px;" src="assets/images/IMG-20240319-WA0019.jpg" alt="card image">
-						<!-- Card image popup -->
-						<a class="card-element-hover position-absolute start-0 bottom-0 bg-primary p-3"  data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240319-WA0019.jpg"><i class="fas fa-expand text-white"></i></a>
-					</div>
-					<!-- Card body -->
-					<div class="card-body order-2 order-lg-1 position-relative bg-primary p-3 p-md-4 p-xl-5 ms-0 ms-lg-10 mb-0 mb-lg-n10">
-						<div class="mt-auto card-text">
-							<h4 class="text-white">Honoring Achievement </h4>
-							<p class="text-white mb-3 text-truncate">acknowledging achievements</p>
-							<a data-glightbox data-gallery="portfolio" href="assets/images/IMG-20240319-WA0019.jpg" class="btn btn-dark btn-line">Enlarge</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Card item END -->
-		</div><!-- Row END -->
-</section>
+    <section class="pt-7">
+        <div class="container">
+            <div class="row">
+                <!-- Card item START -->
+                @foreach ($homeimages as $homeimage)
+                    <div class="col-lg-6 mb-5">
+                        <div class="card border-0 rounded-0">
+                            <!-- Card Image -->
+                            <div class="card-image ms-0 ms-lg-7">
+                                <!-- Card image -->
+                                <img style="height: 275px" class="w-100" src="{{$homeimage->url}}" alt="card image">
+                                <!-- Card image popup -->
+                                <a class="card-element-hover position-absolute end-0 top-0 bg-primary p-3"  data-glightbox data-gallery="portfolio" href="{{$homeimage->url}}"><i class="fas fa-expand text-white"></i></a>
+                            </div>
+                            <!-- Card body -->
+                            <div class="card-body bg-primary p-3 p-md-4 p-xl-5 me-0 me-lg-7 mt-0 mt-lg-n8">
+                                <div class="mt-auto card-text">
+                                    <h4 class="text-white">{{$homeimage->headertext}}</h4>
+                                    <p class="text-white mb-3 text-truncate">{{$homeimage->bodytext}}</p>
+                                    <a data-glightbox  href="{{$homeimage->url}}" class="btn btn-dark btn-line">Enlarge</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                <!-- Card item END -->
+            </div> 
+        </div>
+    </section>
 <!-- =======================
 Images END -->
 

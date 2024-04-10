@@ -38,7 +38,7 @@ Header START -->
 	<nav class="navbar navbar navbar-expand-lg">
 		<div class="container">
 			<!-- Logo START -->
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="/">
 				<!-- Logo SVG Code -->
 
 				 <img src="assets/images/main.jpeg" alt="Logo Light" class="navbar-brand-item" style="width: 80px; height: 50px" />
@@ -85,7 +85,7 @@ Header END -->
 
 <!-- =======================
 Inner intro START -->
-<section class="bg-parallax bg-dark-overlay-4 py-5 py-md-8" style="background:url(assets/images/pagebanner.jpg) no-repeat center center; background-size:cover;">
+<section class="bg-parallax bg-dark-overlay-4 py-5 py-md-8" style="background:url({{$jumbotron->url}}) no-repeat center center; background-size:cover;">
 	<!-- Shape Decoration START -->
 	<figure class="position-absolute end-0 bottom-0 mb-n6 me-8 d-none d-lg-block">
 		<svg width="180" height="188" viewBox="0 0 379 395" xmlns="http://www.w3.org/2000/svg">

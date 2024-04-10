@@ -118,6 +118,21 @@
 											<span class="link-collapse">Gallery</span>
 										</a>
 									</li>
+                                    <li>
+										<a href="{{ route('jumbotrons') }}">
+											<span class="link-collapse">Jumbotrons</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="{{ route('home_sliders') }}">
+											<span class="link-collapse">Home Halls</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="{{ route('home_images') }}">
+											<span class="link-collapse">Home Images</span>
+										</a>
+									</li>
 									<li>
 										<a href="{{ route('contact') }}">
 											<span class="link-collapse">Contact</span>
@@ -208,25 +223,25 @@
 									</div>
 								</div>
 							</div>
-							{{-- <div class="col-md-3">
+							<div class="col-md-3">
 								<div class="card card-stats">
 									<div class="card-body">
 										<div class="row">
 											<div class="col-5">
 												<div class="icon-big text-center">
-													<i class="la la-heart-o text-primary"></i>
+													<i class="la la-folder-o text-danger"></i>
 												</div>
 											</div>
 											<div class="col-7 d-flex align-items-center">
 												<div class="numbers">
-													<p class="card-category">Followers</p>
-													<h4 class="card-title">+45K</h4>
+													<p class="card-category">Gallery</p>
+													<h4 class="card-title">{{$totalgallery}}</h4>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div> --}}
+							</div>
 						</div>
 
 

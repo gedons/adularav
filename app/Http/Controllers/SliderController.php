@@ -23,7 +23,7 @@ class SliderController extends Controller
         $rules = [
             'headertext' => 'required|string|max:255',
             'bodytext' => 'required|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:5048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:9096000',
         ];
 
         // Validate request data

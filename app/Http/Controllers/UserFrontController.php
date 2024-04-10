@@ -12,6 +12,9 @@ use App\Models\Event;
 use App\Models\SliderImage;
 use App\Models\GalleryImage;
 use App\Models\BlogPost;
+use App\Models\HomeSlider;
+use App\Models\HomeImage;
+use App\Models\Jumbotron;
 
 class UserFrontController extends Controller
 {
@@ -20,24 +23,29 @@ class UserFrontController extends Controller
         $sliders = SliderImage::all();
         $galleries = GalleryImage::all();
         $blogs = BlogPost::all();
-        return view('user.index', compact('sliders','galleries','blogs'));
+        $homesliders = HomeSlider::all();
+        $homeimages = HomeImage::all();
+        return view('user.index', compact('sliders','galleries','blogs','homesliders','homeimages'));
     }
 
     public function about()
     {
         $galleries = GalleryImage::all();
-        return view('user.about', compact('galleries'));
+        $jumbotron = Jumbotron::latest()->first();
+        return view('user.about', compact('galleries','jumbotron'));
     }
 
     public function contact()
     {
-        return view('user.contact');
+        $jumbotron = Jumbotron::latest()->first();
+        return view('user.contact',compact('jumbotron'));
     }
 
     public function event()
     {
         $events = Event::all();
-        return view('user.event', compact('events'));
+        $jumbotron = Jumbotron::latest()->first();
+        return view('user.event', compact('events','jumbotron'));
     }
 
     public function singleBlog(BlogPost $blog)
@@ -47,24 +55,28 @@ class UserFrontController extends Controller
 
     public function singleEvent(Event $event)
     {
-        return view('user.singleevent', compact('event'));
+        $jumbotron = Jumbotron::latest()->first();
+        return view('user.singleevent', compact('event','jumbotron'));
     }
 
     public function gallery()
     {
         $galleries = GalleryImage::all();
-        return view('user.gallery', compact('galleries'));
+        $jumbotron = Jumbotron::latest()->first();
+        return view('user.gallery', compact('galleries','jumbotron'));
     }
 
     public function book()
     {
         $events = Event::all();
-        return view('user.book', compact('events'));
+        $jumbotron = Jumbotron::latest()->first();
+        return view('user.book', compact('events','jumbotron'));
     }
     public function blog()
     {
         $blogs = BlogPost::all();
-        return view('user.blog', compact('blogs'));
+        $jumbotron = Jumbotron::latest()->first();
+        return view('user.blog', compact('blogs','jumbotron'));
     }
 
     public function send(Request $request)

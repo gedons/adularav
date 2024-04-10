@@ -9,6 +9,9 @@ use App\Models\SliderImage;
 use App\Models\GalleryImage;
 use App\Models\ContactMessage;
 use App\Models\Booking;
+use App\Models\HomeImage;
+use App\Models\HomeSlider;
+use App\Models\Jumbotron;
 
 class HomeController extends Controller
 {
@@ -38,8 +41,9 @@ class HomeController extends Controller
         $totalEvents = Event::count();
         $totalBlogPosts = BlogPost::count();
         $totalBookings = Booking::count();
+        $totalgallery = GalleryImage::count();
 
-        return view('home',  compact('events', 'blogs', 'totalEvents', 'totalBlogPosts', 'bookings','totalBookings'));
+        return view('home',  compact('events', 'blogs', 'totalEvents', 'totalBlogPosts', 'bookings','totalBookings','totalgallery'));
     }
 
     public function events()
@@ -76,6 +80,39 @@ class HomeController extends Controller
     {
         $contacts = ContactMessage::all();
         return view('contact', compact('contacts'));
+    }
+
+    public function jumbotrons()
+    {
+        $jumbotrons = Jumbotron::all();
+        return view('jumbotrons', compact('jumbotrons'));
+    }
+
+    public function home_sliders()
+    {
+        $home_sliders = HomeSlider::all();
+        return view('home_sliders', compact('home_sliders'));
+    }
+
+    public function home_images()
+    {
+        $home_images = HomeImage::all();
+        return view('home_images', compact('home_images'));
+    }
+
+    public function jumbotronCreate()
+    {
+        return view('jumbotronCreate');
+    }
+
+    public function homeimageCreate()
+    {
+        return view('homeimageCreate');
+    }
+
+    public function homesliderCreate()
+    {
+        return view('homesliderCreate');
     }
 
     public function eventCreate()

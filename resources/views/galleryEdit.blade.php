@@ -148,7 +148,7 @@
 							<div class="col-md-12">
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">Add New Image</div>
+										<div class="card-title">Edit Image</div>
 									</div>
                                     <form method="POST" action="{{ route('gallery.update', $gallery->id) }}" enctype="multipart/form-data">
                                         @csrf
