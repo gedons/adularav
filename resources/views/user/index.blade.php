@@ -189,11 +189,17 @@ Main Banner START -->
                                                 <div class="float-md-end mt-md-2 -mt-7 mb-3">
                                                 <a class="btn btn-primary btn-lg btn-round btn-ripple me-2 align-middle d-inline-block"
                                                     data-glightbox data-gallery="office-tour"
-                                                    href="https://youtu.be/vvdkK07niqk"> <i
-                                                        class="fas fa-play"></i></a>
+                                                    href="{{ asset( $tours->url) }}">
+                                                     <i
+                                                        class="fas fa-play"></i>
+                                                    </a>
                                                 <div class="align-middle d-inline-block">
-                                                    <h5 class="mb-0 text-white">take a tour</h5>
-                                                    <p class="mb-0 text-secondary">In 03:11 min</p>
+                                                @if(empty($tours))
+                                                <p class="mb-0 text-secondary">No tours available</p>
+                                                @else
+                                                        <h5 class="mb-0 text-white">take a tour</h5>
+                                                        <p class="mb-0 text-secondary">In {{$tours->title}} min</p>
+                                                @endif
                                                 </div>
                                             </div>
                                             </div>
@@ -215,25 +221,45 @@ Main Banner END -->
 
         <!-- =======================
 video START -->
-        <section class="pt-0">
+       <section class="pt-0">
             <div class="container">
+                  <!-- Title -->
+                <div class="row d-flex justify-content-between align-items-center">
+                    <div class="col-sm-8 mb-3 pt-7">
+                        <h2 class="display-5 mb-1 text-dark-stroke">Lets Take A Tour</h2>
+                    </div>
+                    <div class="col-sm-4 text-start text-sm-end">
+                        <a href="#" class="btn btn-line text-primary mt-3">5D Diagram of The Center</a>
+                    </div>
+                </div>
                 <div class="row justify-content-md-between">
                     <div class="col-12">
-                        <div class="col-sm-8 mb-3 mx-auto text-center pt-7">
-                            <h2 class="display-5 mb-5 text-dark-stroke">Lets Take A Tour</h2>
-                        </div>
-                        <div class="bg-parallax bg-dark-overlay-2 rounded overflow-hidden py-9"
-                            style="background:url(assets/images/vidt.jpg) no-repeat center center; background-size:cover;">
-                            <div class="position-absolute top-50 start-50 translate-middle py-9">
-                                <a class="zoom-hover d-block" data-glightbox data-gallery="video-4"
-                                    href="https://youtu.be/vvdkK07niqk">
-                                    <img class="rotate-infinite" src="assets/images/play-video-light.svg"
-                                        alt="play video">
-                                    <span class="position-absolute top-50 start-50 translate-middle"><i
-                                            class="bi bi-play text-white display-6"></i></span>
-                                </a>
+                      <div class="tiny-slider dots-inside dots-bordered">
+                        <div class="tiny-slider-inner pb-1 pb-lg-1" data-autoplay="true" data-autoplaytime="5000"
+                            data-gutter="0" data-arrow="false" data-dots="true" data-items="1">
+                            <!-- Slide 1 START -->
+                            @foreach ($diagrams as $diagram)
+                            <div class="item bg-white h-300 h-md-300 overflow-hidden">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="slider-content z-index-9 position-relative pt-2 pt-lg-2">
+                                                <div
+                                                    class="bg-dark position-relative overflow-hidden animate__animated animate__fadeInUp">
+                                                    <!-- Image -->
+                                                   <img src="{{ $diagram->url }}" class="img-fluid d-block w-100 h-lg-430 h-md-430 h-sm-300" alt="slider 1">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            @endforeach
+                            <!-- Slide 1 END -->
+
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -379,7 +405,7 @@ tour2 START -->
                     </div>
                     @endforeach
                     <!-- Slide 1 END -->
-               
+
                 </div>
 
                 <!-- Social links and arrow START -->
@@ -484,7 +510,7 @@ Images START -->
                     </div>
                 @endforeach
                 <!-- Card item END -->
-            </div> 
+            </div>
         </div>
     </section>
 <!-- =======================

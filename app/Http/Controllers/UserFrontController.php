@@ -15,6 +15,8 @@ use App\Models\BlogPost;
 use App\Models\HomeSlider;
 use App\Models\HomeImage;
 use App\Models\Jumbotron;
+use App\Models\Diagram;
+use App\Models\Tour;
 
 class UserFrontController extends Controller
 {
@@ -25,7 +27,9 @@ class UserFrontController extends Controller
         $blogs = BlogPost::all();
         $homesliders = HomeSlider::all();
         $homeimages = HomeImage::all();
-        return view('user.index', compact('sliders','galleries','blogs','homesliders','homeimages'));
+        $diagrams = Diagram::all();
+        $tours = Tour::latest()->first();
+        return view('user.index', compact('sliders','galleries','blogs','homesliders','homeimages','diagrams','tours'));
     }
 
     public function about()

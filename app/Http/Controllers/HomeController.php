@@ -12,6 +12,8 @@ use App\Models\Booking;
 use App\Models\HomeImage;
 use App\Models\HomeSlider;
 use App\Models\Jumbotron;
+use App\Models\Diagram;
+use App\Models\Tour;
 
 class HomeController extends Controller
 {
@@ -100,6 +102,18 @@ class HomeController extends Controller
         return view('home_images', compact('home_images'));
     }
 
+    public function diagrams()
+    {
+        $diagrams = Diagram::all();
+        return view('diagrams', compact('diagrams'));
+    }
+
+    public function tours()
+    {
+        $tours = Tour::all();
+        return view('tours', compact('tours'));
+    }
+
     public function jumbotronCreate()
     {
         return view('jumbotronCreate');
@@ -133,5 +147,15 @@ class HomeController extends Controller
     public function galleryCreate()
     {
         return view('galleryCreate');
+    }
+
+    public function diagramCreate()
+    {
+        return view('diagramCreate');
+    }
+
+    public function tourCreate()
+    {
+        return view('tourCreate');
     }
 }

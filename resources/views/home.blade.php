@@ -133,6 +133,16 @@
 											<span class="link-collapse">Home Images</span>
 										</a>
 									</li>
+                                    <li>
+										<a href="{{ route('diagrams') }}">
+											<span class="link-collapse">5d Diagram</span>
+										</a>
+									</li>
+                                    <li>
+										<a href="{{ route('tours') }}">
+											<span class="link-collapse">Video Tour</span>
+										</a>
+									</li>
 									<li>
 										<a href="{{ route('contact') }}">
 											<span class="link-collapse">Contact</span>

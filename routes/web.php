@@ -11,6 +11,8 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\HomeImageController;
 use App\Http\Controllers\HomeSliderController;
+use App\Http\Controllers\DiagramController;
+use App\Http\Controllers\TourController;
 
 
 // Route::get('/', function () {
@@ -29,10 +31,15 @@ Route::get('/admin/sliders/create', [App\Http\Controllers\HomeController::class,
 Route::get('/admin/jumbotron/create', [App\Http\Controllers\HomeController::class, 'jumbotronCreate'])->name('jumbotronCreate');
 Route::get('/admin/home_images/create', [App\Http\Controllers\HomeController::class, 'homeimageCreate'])->name('homeimageCreate');
 Route::get('/admin/home_sliders/create', [App\Http\Controllers\HomeController::class, 'homesliderCreate'])->name('homesliderCreate');
+Route::get('/admin/diagram/create', [App\Http\Controllers\HomeController::class, 'diagramCreate'])->name('diagramCreate');
+Route::get('/admin/tour/create', [App\Http\Controllers\HomeController::class, 'tourCreate'])->name('tourCreate');
 
 Route::get('/admin/jumbotrons', [App\Http\Controllers\HomeController::class, 'jumbotrons'])->name('jumbotrons');
 Route::get('/admin/home_sliders', [App\Http\Controllers\HomeController::class, 'home_sliders'])->name('home_sliders');
 Route::get('/admin/home_images', [App\Http\Controllers\HomeController::class, 'home_images'])->name('home_images');
+Route::get('/admin/diagrams', [App\Http\Controllers\HomeController::class, 'diagrams'])->name('diagrams');
+Route::get('/admin/tours', [App\Http\Controllers\HomeController::class, 'tours'])->name('tours');
+
 
 Route::get('/admin/galleries/create', [App\Http\Controllers\HomeController::class, 'galleryCreate'])->name('galleryCreate');
 Route::get('/admin/bookings', [App\Http\Controllers\HomeController::class, 'bookings'])->name('bookings');
@@ -95,6 +102,18 @@ Route::delete('/home_image/{home_image}', [HomeImageController::class, 'destroy'
 Route::post('/home_image', [HomeImageController::class, 'store'])->middleware('auth')->name('home_image.store');
 Route::get('/home_image/{home_image}/edit', [HomeImageController::class, 'edit'])->name('home_image.edit');
 Route::put('/home_image/{home_image}', [HomeImageController::class, 'update'])->name('home_image.update');
+
+//admin 5d slider
+Route::delete('/diagram/{diagram}', [DiagramController::class, 'destroy'])->middleware('auth')->name('diagram.destroy');
+Route::post('/diagram', [DiagramController::class, 'store'])->middleware('auth')->name('diagram.store');
+Route::get('/diagram/{diagram}/edit', [DiagramController::class, 'edit'])->name('diagram.edit');
+Route::put('/diagram/{diagram}', [DiagramController::class, 'update'])->middleware('auth')->name('diagram.update');
+
+// admin video tour
+Route::delete('/tour/{tour}', [TourController::class, 'destroy'])->middleware('auth')->name('tour.destroy');
+Route::post('/tour', [TourController::class, 'store'])->middleware('auth')->name('tour.store');
+Route::get('/tour/{tour}/edit', [TourController::class, 'edit'])->name('tour.edit');
+Route::put('/tour/{tour}', [TourController::class, 'update'])->middleware('auth')->name('tour.update');
 // end admin route
 
 
